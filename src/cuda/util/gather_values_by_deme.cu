@@ -25,12 +25,12 @@ C = [X[D1], X[D2], ..., X[Dm]]
 */
 
 
-void gather_values_by_deme(thrust::device_vector<int> &indices, 
-			   thrust::device_vector<int> &demes, 
-			   thrust::device_vector<int> &deme_specific_value, 
-			   thrust::device_vector<int> &ans)
+void gather_values_by_deme(thrust::host_vector<int> &indices, 
+			   thrust::host_vector<int> &demes, 
+			   thrust::host_vector<int> &deme_specific_value, 
+			   thrust::host_vector<int> &ans)
 	{
-	thrust::device_vector<int> demes_of_indices(indices.size());
+	thrust::host_vector<int> demes_of_indices(indices.size());
 	thrust::gather(indices.begin(), indices.end(), demes.begin(), demes_of_indices.begin());
 
 	ans.resize(indices.size());
@@ -39,12 +39,12 @@ void gather_values_by_deme(thrust::device_vector<int> &indices,
 	}
 
 
-void gather_values_by_deme(thrust::device_vector<int> &indices, 
-			   thrust::device_vector<int> &demes, 
-			   thrust::device_vector<float> &deme_specific_value, 
-			   thrust::device_vector<float> &ans)
+void gather_values_by_deme(thrust::host_vector<int> &indices, 
+			   thrust::host_vector<int> &demes, 
+			   thrust::host_vector<float> &deme_specific_value, 
+			   thrust::host_vector<float> &ans)
 	{
-	thrust::device_vector<int> demes_of_indices(indices.size());
+	thrust::host_vector<int> demes_of_indices(indices.size());
 	thrust::gather(indices.begin(), indices.end(), demes.begin(), demes_of_indices.begin());
 
 	ans.resize(indices.size());

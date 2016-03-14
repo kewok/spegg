@@ -1,19 +1,23 @@
 #include <species/update/updatebehavior.h>
 
+
 void UpdateBehavior::determine_mortality(inds_stochastic *species)
 	{
 	/*
-	* Code that actually changes the individual's vital state (dead=0, alive=1) during each time step. The value of the individual's probability of survival (stored in \code species->phenotype[MORTALITY_PHENOTYPE_INDEX] \endcode is set in an external function (e.g., something like \code update_mySpecies::determine_survivorship_probability() \endcode or something like that.).
+	* Code that actually changes the individual's vital state (dead=0, alive=1) during each time step. The value of the individual's probability of survival (stored in \code species->phenotype[MORTALITY_PHENOTYPE] \endcode is set in an external function (e.g., something like \code update_mySpecies::determine_survivorship_probability() \endcode or something like that.).
 	*/
+
 	//Specify the individuals indices
-	thrust::device_vector<int> individuals(species->size);
+	thrust::host_vector<int> individuals(species->size);
 	thrust::sequence(individuals.begin(), individuals.begin() + species->size, 0);
 
 	// Draw the random numbers
-	thrust::device_vector<float> rand(species->size);
-	// wrap the vector
-	float *rand_ptr = raw_pointer_cast(&rand[0]);
-	curandGenerateUniform(species->gen, rand_ptr, species->size);
+	thrust::host_vector<float> rand(species->size);
+	for (int i=0; i < rand.size(); i++)
+		{
+		rand[i] = gsl_rng_uniform(species->gen);
+		}
+	float *rand_ptr = (&rand[0]);
 
 	//Set up mortality.
 	simulate_mortality mortality_functor(rand_ptr);

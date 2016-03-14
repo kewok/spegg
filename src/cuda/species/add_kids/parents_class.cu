@@ -2,7 +2,6 @@
 #include <species/add_kids/mating_kernel_functors.h>
 #include <util/footimer2.h>
 
-// since we are ignoring genetics and using an external curand generator here, this is OK:
 
 Parents::Parents(inds_stochastic *species) 
 	{
@@ -50,10 +49,11 @@ void Parents::determine_parental_reproductive_potential()
 	{
 	/* these two steps determine_female_parent_eligibility and determine_male_parent_eligibility are almost certainly redundant and should be refactored */
 	determine_female_parent_eligibility();
+
 	determine_male_parent_eligibility();
 
 	reduce_by_key_with_zeros(deme, will_reproduceM, reproductive_males_per_deme, size, Num_Demes); 
-
+	
 	female_fecundity();
 
 	Potential_Number_of_Kids = thrust::reduce(kids_per_mom.begin(), kids_per_mom.end());
@@ -72,9 +72,9 @@ void Parents::finalize_parental_reproductive_probabilities()
 	determine_probability_individual_becomes_male_parent();
 	}
 
+
 void Parents::determine_female_parent_eligibility()
 	{
-	// Default template that may be overriden by derived class 
 	thrust::fill(will_reproduceF.begin(), will_reproduceF.begin() + size, 0);
 	
 	//Set up eligibility functor.
@@ -87,7 +87,6 @@ void Parents::determine_female_parent_eligibility()
 
 void Parents::determine_male_parent_eligibility()
 	{
-	// Default template that may be overriden by derived class 
 	thrust::fill(will_reproduceM.begin(), will_reproduceM.begin() + size, 0);
 	
 	//Set up eligibility functor.
@@ -108,6 +107,7 @@ void Parents::female_fecundity()
 	thrust::copy(probability_individual_becomes_female_parent.begin(), probability_individual_becomes_female_parent.end(), kids_per_mom.begin());
 	}
 
+
 void Parents::determine_probability_individual_becomes_female_parent()
 	{
 	/* Virtual void placeholders to be replaced by species-specific parents class*/
@@ -117,4 +117,5 @@ void Parents::determine_probability_individual_becomes_male_parent()
 	{
 	/* Virtual void placeholder to be replaced by species-specific parents class*/
 	}
+
 

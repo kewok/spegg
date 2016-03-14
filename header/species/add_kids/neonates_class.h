@@ -1,68 +1,67 @@
 #ifndef EGGS_NEONATES_H
 #define EGGS_NEONATES_H
 
-#include <curand.h>
+#include <gsl/gsl_rng.h>
+#include <gsl/gsl_randist.h>
 #include <thrust/host_vector.h>
-#include <thrust/device_vector.h>
 #include <thrust/functional.h>
 #include <species/inds_stochastic.h>
-#include <util/reduce_by_key_with_zeroes.h>
 #include <species/deme_specific_data_class.h>
+#include <util/reduce_by_key_with_zeroes.h>
 #include <util/amplify.h>
 #include <math/mating_thrust_prob_table_demes.h>
 #include <math/random_variables_functions.h>
 
-class EggsNeonates 
+class EggsNeonates
 	{
 	public:
-		EggsNeonates(inds_stochastic *species, thrust::device_vector<int> &kids_per_mom);
+		EggsNeonates(inds_stochastic *species, thrust::host_vector<int> &kids_per_mom);
 
-		void inherit_genotypes(thrust::device_vector<float> &probability_individuals_become_mothers,
-				       thrust::device_vector<float> &probability_individuals_become_fathers);
+		void inherit_genotypes(thrust::host_vector<float> &probability_individuals_become_mothers,
+					 thrust::host_vector<float> &probability_individuals_become_fathers);
 
 		int previous_pop_size;
 		int Total_Number_of_Neonates;
 
-		thrust::device_vector<int> Neonates_per_Deme;
+		thrust::host_vector<int> Neonates_per_Deme;
 
-		thrust::device_vector<int> kids_deme; 
+		thrust::host_vector<int> kids_deme; 
 
-	protected:
-		class inds *species;
-		curandGenerator_t gen;
-		int nloci, nphen, Num_Demes;
+		protected:
+			class inds *species;
+			gsl_rng *gen;	
+			int nloci, nphen, Num_Demes;
 
-		thrust::device_vector<float> mutation_magnitude;
-		thrust::device_vector<float> mutation_rate;
+			thrust::host_vector<float> mutation_magnitude;
+			thrust::host_vector<float> mutation_rate;
 
-		void Determine_Neonate_Population_Sizes(DemeSettings *subpopParameters,
-							thrust::device_vector<int> &everybodys_deme,
-							thrust::device_vector<int> &kids_per_mom,			
-							thrust::device_vector<int> &current_deme_sizes,
-							thrust::device_vector<int> &maximum_deme_sizes);
+			void Determine_Neonate_Population_Sizes(DemeSettings *subpopParameters,
+								thrust::host_vector<int> &everybodys_deme,
+								thrust::host_vector<int> &kids_per_mom,			
+								thrust::host_vector<int> &current_deme_sizes,
+								thrust::host_vector<int> &maximum_deme_sizes);
 
-		void get_maternally_derived_genotype(thrust::device_vector<float> &probability_individuals_become_mothers, thrust::device_vector<float> *&mgenotype, thrust::device_vector<float> *&fgenotype);
+			void get_maternally_derived_genotype(thrust::host_vector<float> &probability_individuals_become_mothers, thrust::host_vector<float> *&mgenotype, thrust::host_vector<float> *&fgenotype);
 
-		void get_paternally_derived_genotype(thrust::device_vector<float> &probability_individuals_become_fathers, thrust::device_vector<float> *&mgenotype, thrust::device_vector<float> *&fgenotype);
+			void get_paternally_derived_genotype(thrust::host_vector<float> &probability_individuals_become_fathers, thrust::host_vector<float> *&mgenotype, thrust::host_vector<float> *&fgenotype);
 
+			void egg_mortality(DemeSettings *subpopParameters);
 
-		void egg_mortality(DemeSettings *subpopParameters);
+			void recombine(thrust::host_vector<float> &rand,
+						 thrust::host_vector<int> &parent,
+						 thrust::host_vector<int> &parity,
+						 thrust::host_vector<float> *&parents_fgenotype,
+						 thrust::host_vector<float> *&parents_mgenotype,
+						 thrust::host_vector<float> &kids_genotype,
+						 int locus_ID);
 
-		void recombine(thrust::device_vector<float> &rand,
-				     thrust::device_vector<int> &parent,
-				     thrust::device_vector<int> &parity,
-				     thrust::device_vector<float> *&parents_fgenotype,
-				     thrust::device_vector<float> *&parents_mgenotype,
-				     thrust::device_vector<float> &kids_genotype,
-				     int locus_ID);
+			thrust::host_vector<float> recomb_rate;
 
-		thrust::host_vector<float> recomb_rate;
+			void mutate(thrust::host_vector<float> *&parents_fgenotype, thrust::host_vector<float> *&parents_mgenotype);
 
-		void mutate(thrust::device_vector<float> *&parents_fgenotype,thrust::device_vector<float> *&parents_mgenotype);
+			void prepare_genotype_phenotype_map();
 
-		void prepare_genotype_phenotype_map();
-
-		void integrate_kids();
+			void integrate_kids();
 	};
 
 // make sure there are no more kids than spaces available
@@ -91,7 +90,6 @@ struct adjust_kids_functor
 			}
 		}
 	};
-
 
 struct recombination_functor
 	{

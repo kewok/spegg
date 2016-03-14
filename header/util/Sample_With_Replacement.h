@@ -6,10 +6,11 @@
 #include <thrust/host_vector.h>
 #include <util/sampling_event.h>
 
+
 class Sample_With_Replacement : public SamplingEvent
 	{
 	public:
-		Sample_With_Replacement(SamplingInput *sampling_input, curandGenerator_t gen )
+		Sample_With_Replacement(SamplingInput *sampling_input, gsl_rng * gen )
 			{
 			this->sampling_input = sampling_input;
 			this->gen = gen;

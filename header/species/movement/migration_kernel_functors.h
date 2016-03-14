@@ -5,16 +5,16 @@
 #include "math.h"
 #include <util/thrust_functors.h>
 
-#include <thrust/device_vector.h>
+#include <thrust/host_vector.h>
 #include <thrust/functional.h>
 
 /* Functors related to migration */
 
 struct determine_if_migratory
 	{
-/* 
-* A thrust functor that draws a Bernoulli random variable which determines whether an individual migrates during each time step. The migration probability is presumably calculated separately, as is the uniform random number. 
-*/
+	/* 
+	* A thrust functor that draws a Bernoulli random variable which determines whether an individual migrates during each time step. The migration probability is presumably calculated separately, as is the uniform random number. 
+	*/
 	/* 
 		Elements in the tuple.
 
@@ -32,19 +32,18 @@ struct determine_if_migratory
 		}
 	};
 
-
 struct move_individuals_functor
 	{
-/* 
-* A thrust functor that simulates migration by reassigning the deme of the migrating individual. 
-*/
+	/* 
+	* A thrust functor that simulates migration by reassigning the deme of the migrating individual. 
+	*/
 
 	/* 
 		Elements in the tuple.
 
 
 		----------------------
-		0: individual's deme
+		0: individual's subpopulation
 		1: whether the individual migrates
 		2: individual's destination
 	*/ 

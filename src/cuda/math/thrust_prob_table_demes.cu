@@ -1,7 +1,6 @@
 #include <math/thrust_prob_table_demes.h>
 #include <util/footimer2.h>
 #include <thrust/binary_search.h>
-#include <thrust/device_vector.h>
 #include <thrust/distance.h>
 #include <thrust/fill.h>
 #include <thrust/functional.h>
@@ -42,22 +41,24 @@ struct adjust_randoms_functor
 		}
 	};
 
-void ThrustProbTable_demes::adjust_randoms(thrust::device_vector<float>::iterator uniform_begin, thrust::device_vector<float>::iterator uniform_end,
-thrust::device_vector<int>::iterator deme_offsets_begin, thrust::device_vector<int>::iterator deme_offsets_end,
-thrust::device_vector<int>::iterator inds_deme_begin, thrust::device_vector<int>::iterator inds_deme_end)
+void ThrustProbTable_demes::adjust_randoms(thrust::host_vector<float>::iterator uniform_begin, thrust::host_vector<float>::iterator uniform_end,
+thrust::host_vector<int>::iterator deme_offsets_begin, thrust::host_vector<int>::iterator deme_offsets_end,
+thrust::host_vector<int>::iterator inds_deme_begin, thrust::host_vector<int>::iterator inds_deme_end)
 	{
-	// Determine the number of demes.
+// Note the number of populations.
+
 	int n = thrust::distance(deme_offsets_begin, deme_offsets_end);
 
-	// Figure out the bounds for each deme in terms of their values in the cumulative probability table
-	thrust::device_vector<float> bounds(n);
+
+	// Figure out the bounds for each subpopulation in terms of their values in the cumulative probability table
+	thrust::host_vector<float> bounds(n);
 
 	thrust::gather(deme_offsets_begin, deme_offsets_end,cumulative_prob.begin(),bounds.begin());
 	
-	thrust::device_vector<int> temp(n);
+	thrust::host_vector<int> temp(n);
 	thrust::copy(deme_offsets_begin, deme_offsets_end, temp.begin());
 
-	float *cumul_prob_bounds = raw_pointer_cast(&bounds[0]);
+	float *cumul_prob_bounds = &bounds[0];
 	// Instantiate the random number adjuster
 	adjust_randoms_functor adjuster(cumul_prob_bounds);
 

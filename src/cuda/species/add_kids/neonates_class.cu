@@ -1,8 +1,8 @@
 #include <species/add_kids/neonates_class.h>
 
-/* One problem with a separate neonates class is that all this stuff has to get copied back into example species. Performance cost seems minimal but more extensive profiling seems warranted. */
+/* One problem with a separate neonates class is that all this stuff has to get copied back into example species. It might just not be worth it depending on the performance cost. */
 
-EggsNeonates::EggsNeonates(inds_stochastic *species, thrust::device_vector<int> &kids_per_mom) 
+EggsNeonates::EggsNeonates(inds_stochastic *species, thrust::host_vector<int> &kids_per_mom) 
 	{
 	this->species = species;
 	this->gen = species->gen;
@@ -26,18 +26,16 @@ EggsNeonates::EggsNeonates(inds_stochastic *species, thrust::device_vector<int> 
 
 	amplify_sequence( Neonates_per_Deme, Num_Demes, kids_deme );
 
-	// See to it that the allocated deme gets the neonates assigned.
 	integrate_kids();
-
 	mutation_magnitude.resize(Total_Number_of_Neonates);
 	mutation_rate.resize(Total_Number_of_Neonates);
 	}
 
 void EggsNeonates::Determine_Neonate_Population_Sizes(DemeSettings *demeParameters,
-						      thrust::device_vector<int> &everybodys_deme,
-						      thrust::device_vector<int> &kids_per_mom,
-						      thrust::device_vector<int> &current_deme_sizes,
-						      thrust::device_vector<int> &maximum_deme_sizes)
+						      thrust::host_vector<int> &everybodys_deme,
+						      thrust::host_vector<int> &kids_per_mom,
+						      thrust::host_vector<int> &current_deme_sizes,
+						      thrust::host_vector<int> &maximum_deme_sizes)
 	{
 	/*
 	* Because there are often more neonates than max_deme_sizes, this function culls the surplus neonates at random by determining the number of neonates each deme can contribute
@@ -54,8 +52,8 @@ void EggsNeonates::Determine_Neonate_Population_Sizes(DemeSettings *demeParamete
 	}
 
 
-void EggsNeonates::inherit_genotypes(thrust::device_vector<float> &probability_individuals_become_mothers,
-				 thrust::device_vector<float> &probability_individuals_become_fathers)
+void EggsNeonates::inherit_genotypes(thrust::host_vector<float> &probability_individuals_become_mothers,
+				 thrust::host_vector<float> &probability_individuals_become_fathers)
 	{
 	get_maternally_derived_genotype(probability_individuals_become_mothers, species->mgenotype, species->fgenotype);
 	get_paternally_derived_genotype(probability_individuals_become_fathers, species->mgenotype, species->fgenotype);
@@ -63,24 +61,27 @@ void EggsNeonates::inherit_genotypes(thrust::device_vector<float> &probability_i
 	}
 
 
-void EggsNeonates::get_maternally_derived_genotype(thrust::device_vector<float> &probability_individuals_become_mothers,
-					     thrust::device_vector<float> *&mgenotype,
-					     thrust::device_vector<float> *&fgenotype)
+void EggsNeonates::get_maternally_derived_genotype(thrust::host_vector<float> &probability_individuals_become_mothers,
+					     thrust::host_vector<float> *&mgenotype,
+					     thrust::host_vector<float> *&fgenotype)
 	{
 	/*
 	* Calculate the offspring's genotypes at the maternally inherited loci. This function will determine who the mother is, and generate a haploid gamete from the mother that will be grafted on to the offspring.
 	*/
 	mating_ThrustProbTable_demes at;
-	thrust::device_vector<int> mother_index(Total_Number_of_Neonates);
-	thrust::device_vector<float> rand(Total_Number_of_Neonates);
-	thrust::device_vector<int> parity(Total_Number_of_Neonates);
-	float *rand_ptr = raw_pointer_cast(&rand[0]);
+	thrust::host_vector<int> mother_index(Total_Number_of_Neonates);
+	thrust::host_vector<float> rand(Total_Number_of_Neonates);
+	thrust::host_vector<int> parity(Total_Number_of_Neonates);
+
 /*
 	Feed reproductive probablity into the setup of the alias table.
 	Draw from the alias table to determine mothers.
 */
 	at.setup(probability_individuals_become_mothers.begin(), probability_individuals_become_mothers.begin() + previous_pop_size);
-	curandGenerateUniform(gen, rand_ptr, Total_Number_of_Neonates);
+	for (int i=0; i < rand.size(); i++)
+		{
+		rand[i] = gsl_rng_uniform(gen);
+		}	
 	at.determine_key_offsets( Num_Demes, species->deme_sizes );
 	at.adjust_randoms(rand.begin(), rand.end(), kids_deme.begin(), kids_deme.end());
 
@@ -94,23 +95,25 @@ void EggsNeonates::get_maternally_derived_genotype(thrust::device_vector<float> 
 //Recombination for fgenotype
 	for (int i = 0 ; i < nloci ; i++) 
 		{
-		curandGenerateUniform(gen, rand_ptr, Total_Number_of_Neonates);
-        	recombine(rand, mother_index, parity, fgenotype, mgenotype, fgenotype[i], i);
+		for (int j=0; j < rand.size(); j++)
+			{
+			rand[j] = gsl_rng_uniform(gen);
+			}
+		recombine(rand, mother_index, parity, fgenotype, mgenotype, fgenotype[i], i);
 		}
 	}
 
-void EggsNeonates::get_paternally_derived_genotype(thrust::device_vector<float> &probability_individuals_become_fathers,
-					     thrust::device_vector<float> *&mgenotype,
-					     thrust::device_vector<float> *&fgenotype)
+void EggsNeonates::get_paternally_derived_genotype(thrust::host_vector<float> &probability_individuals_become_fathers,
+					     thrust::host_vector<float> *&mgenotype,
+					     thrust::host_vector<float> *&fgenotype)
 	{
 	/*
 	* Calculate the offspring's genotypes at the paternally inherited loci. This function will determine who the mother is, and generate a haploid gamete from the mother that will be grafted on to the offspring.
 	*/
 	mating_ThrustProbTable_demes at;
-	thrust::device_vector<int> father_index(Total_Number_of_Neonates);
-	thrust::device_vector<float> rand(Total_Number_of_Neonates);
-	thrust::device_vector<int> parity(Total_Number_of_Neonates);
-	float *rand_ptr = raw_pointer_cast(&rand[0]);
+	thrust::host_vector<int> father_index(Total_Number_of_Neonates);
+	thrust::host_vector<float> rand(Total_Number_of_Neonates);
+	thrust::host_vector<int> parity(Total_Number_of_Neonates);
 	
 	/*
 	Directly use phenotype[1] as the reproductive probability.
@@ -118,14 +121,17 @@ void EggsNeonates::get_paternally_derived_genotype(thrust::device_vector<float> 
 	Feed reproductive probablity into the setup of the alias table.
 	Draw from the alias table to determine fathers.
 	*/
-	
 	at.setup(probability_individuals_become_fathers.begin(), probability_individuals_become_fathers.begin() + previous_pop_size);
-	curandGenerateUniform(gen, rand_ptr, Total_Number_of_Neonates);
+
+	for (int i=0; i < rand.size(); i++)
+		{
+		rand[i] = gsl_rng_uniform(gen);
+		}
 
 	at.determine_key_offsets( Num_Demes, species->deme_sizes );	
 	at.adjust_randoms(rand.begin(), rand.end(), kids_deme.begin(), kids_deme.end());
 
-	at.draw(rand.begin(), rand.end(),father_index.begin());
+	at.draw(rand.begin(), rand.end(), father_index.begin());
 
 	//Reset parity to zeroes
 	thrust::fill(parity.begin(), parity.end(), 0);
@@ -133,63 +139,57 @@ void EggsNeonates::get_paternally_derived_genotype(thrust::device_vector<float> 
 	//Recombination for mgenotype
 	for (int i = 0 ; i < nloci ; i++) 
 		{
-		curandGenerateUniform(gen, rand_ptr, Total_Number_of_Neonates);
+		for (int j=0; j < rand.size(); j++)
+			{
+			rand[j] = gsl_rng_uniform(gen);
+			}
 		recombine(rand, father_index, parity, fgenotype, mgenotype, mgenotype[i], i);
 		}
 	}
 
-void EggsNeonates::mutate(thrust::device_vector<float> *&mgenotype, thrust::device_vector<float> *&fgenotype)
+void EggsNeonates::mutate(thrust::host_vector<float> *&mgenotype, thrust::host_vector<float> *&fgenotype)
 	{
 	/*
 	* Determine, for each offspring's locus, whether there will be a mutation at that locus, and if so what the magnitude of that mutation will be and how that changes the offspring's allelic value. The current behavior assumes mutations are gaussian about the parental allelic value, and that the mutation parameters (mutation rate and sd of gaussian) vary by deme. Possible expansions include allowing the mutation rate itself to be an individual-specific phenotype, or alternative mutational models (e.g., point mutations that have a categorical rather than quantitative effect.
 	*/
-	thrust::identity<int> identity;
+	thrust::host_vector<float> mutation_size(2*Total_Number_of_Neonates); 
 
-	// Note throughout we use 2*Total_Number_of_Neonates; this is for performance reasons. drawing gaussians can be expensive so we want to parallelize as much of this as we can.
-	thrust::device_vector<float> mutation_size(2*Total_Number_of_Neonates); 
+	thrust::copy(mutation_magnitude.begin(), mutation_magnitude.begin() + Total_Number_of_Neonates, mutation_size.begin());
+	thrust::copy(mutation_magnitude.begin(), mutation_magnitude.begin() + Total_Number_of_Neonates, mutation_size.begin() + Total_Number_of_Neonates);
 
-	thrust::device_vector<float> mutation_prob(2*Total_Number_of_Neonates);
+	thrust::host_vector<float> mutation(2*Total_Number_of_Neonates);
 
-	thrust::device_vector<int> mutation_event(2*Total_Number_of_Neonates);
-	thrust::fill(mutation_event.begin(), mutation_event.begin() + 2*Total_Number_of_Neonates, 0);
 	// no mutation at the original sex determining locus
-
-	for (int i = 0 ; i < nloci ; i++) 
+	for (int i = 1 ; i < nloci ; i++) 
 		{
-		// assign, for each offspring, the expected magnitude of the mutation (sd) and the expected mutation rate according to the their deme. At some point the performance of this regime needs to be profiled, because there are a lot of steps involved here.
-
 		thrust::gather(kids_deme.begin(), kids_deme.begin() + Total_Number_of_Neonates, species->demeParameters->GeneticArchitecture->get_mutation_magnitudes_ptr(i), mutation_magnitude.begin());
-
-		thrust::device_vector<float> mutation_size(2*Total_Number_of_Neonates); 
-
-		thrust::copy(mutation_magnitude.begin(), mutation_magnitude.begin() + Total_Number_of_Neonates, mutation_size.begin());
-		thrust::copy(mutation_magnitude.begin(), mutation_magnitude.begin() + Total_Number_of_Neonates, mutation_size.begin() + Total_Number_of_Neonates);
-
 		thrust::gather(kids_deme.begin(), kids_deme.begin() + Total_Number_of_Neonates, species->demeParameters->GeneticArchitecture->get_mutation_rates_ptr(i), mutation_rate.begin());
+		
+		for (int j=0; j < Total_Number_of_Neonates; j++)
+			{
+			int mutation_event = gsl_ran_bernoulli(gen, mutation_rate[j]); 
+			if (mutation_event == 1)
+				{
+				mgenotype[i][j] = mgenotype[i][j] + gsl_ran_gaussian(gen, mutation_magnitude[j]);
+				}
+		
+			mutation_event = gsl_ran_bernoulli(gen, mutation_magnitude[j]);
 
-		thrust::copy(mutation_rate.begin(), mutation_rate.begin() + Total_Number_of_Neonates, mutation_prob.begin());
-		thrust::copy(mutation_rate.begin(), mutation_rate.begin() + Total_Number_of_Neonates, mutation_prob.begin() + Total_Number_of_Neonates);
-
-		thrust::device_vector<float> mutation(2*Total_Number_of_Neonates);
-
-		// Determine whether mutations will occur
-		draw_bernoulli_different_parameters(2*Total_Number_of_Neonates, mutation_prob, mutation_event, gen);
-		// Assume the mutation is symmetric about the current allelic value:
-		draw_gaussian_different_parameters(2*Total_Number_of_Neonates, (float) 0.0, mutation_size, mutation, gen);
-	
-		// If there is a mutation, add it to the offspring's 
-		thrust::transform_if(mgenotype[i].begin() + previous_pop_size, mgenotype[i].begin()  + previous_pop_size + Total_Number_of_Neonates, mutation.begin(), mutation_event.begin(), mgenotype[i].begin() + previous_pop_size, thrust::plus<float>(), identity);
-		thrust::transform_if(fgenotype[i].begin() + previous_pop_size, fgenotype[i].begin()  + previous_pop_size + Total_Number_of_Neonates, mutation.begin() + Total_Number_of_Neonates, mutation_event.begin() + Total_Number_of_Neonates, fgenotype[i].begin()  + previous_pop_size, thrust::plus<float>(), identity);
+			if (mutation_event == 1)
+				{
+				fgenotype[i][j] = fgenotype[i][j] + gsl_ran_gaussian(gen, mutation_magnitude[j]);
+				}
+			}
 		}
 	}
 
 
-void EggsNeonates::recombine(thrust::device_vector<float> &rand,
-			     thrust::device_vector<int> &parent,
-			     thrust::device_vector<int> &parity,
-			     thrust::device_vector<float> *&parents_fgenotype,
-			     thrust::device_vector<float> *&parents_mgenotype,
-			     thrust::device_vector<float> &kids_genotype,
+void EggsNeonates::recombine(thrust::host_vector<float> &rand,
+			     thrust::host_vector<int> &parent,
+			     thrust::host_vector<int> &parity,
+			     thrust::host_vector<float> *&parents_fgenotype,
+			     thrust::host_vector<float> *&parents_mgenotype,
+			     thrust::host_vector<float> &kids_genotype,
 			     int locus_ID)
 	{
 /*
@@ -199,8 +199,8 @@ void EggsNeonates::recombine(thrust::device_vector<float> &rand,
 \endcode
 */
 	//Set up recombination functor.
-	float *fgenotype_ptr = raw_pointer_cast(&parents_fgenotype[locus_ID][0]);
-	float *mgenotype_ptr = raw_pointer_cast(&parents_mgenotype[locus_ID][0]);
+	float *fgenotype_ptr = &parents_fgenotype[locus_ID][0];
+	float *mgenotype_ptr = &parents_mgenotype[locus_ID][0];
 	recombination_functor rfunc(fgenotype_ptr, mgenotype_ptr, recomb_rate[locus_ID]);
 	
 	//Perform recombination with arbitrary transform.

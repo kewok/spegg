@@ -4,7 +4,6 @@
 #include <iostream>
 #include <thrust/copy.h>
 #include <thrust/count.h>
-#include <thrust/device_vector.h>
 #include <thrust/distance.h>
 #include <thrust/fill.h>
 #include <thrust/sequence.h>
@@ -14,11 +13,11 @@
 #include <thrust/host_vector.h>
 #include <thrust/functional.h>
 
-void one_dim_two_dim(thrust::device_vector<int> &vector1_values,
-	     thrust::device_vector<int> &vector2_values,
-	     thrust::device_vector<int> &new_vector,
-	     thrust::device_vector<int> &values_for_vector_1,
-	     thrust::device_vector<int> &values_for_vector_2);
+void one_dim_two_dim(thrust::host_vector<int> &vector1_values,
+	     thrust::host_vector<int> &vector2_values,
+	     thrust::host_vector<int> &new_vector,
+	     thrust::host_vector<int> &values_for_vector_1,
+	     thrust::host_vector<int> &values_for_vector_2);
 
 /* one_dim_two_dim can be tested in R via:
 A <- 0:19; B <- 0:29

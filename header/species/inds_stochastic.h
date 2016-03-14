@@ -8,7 +8,7 @@ class inds_stochastic : public inds
 	{
 	public:
 		inds_stochastic(int size_val, int maxsize_val, int seed_val, int ndemes, int species_ID_val);
-		curandGenerator_t gen;
+		gsl_rng *  gen;
 	
 		virtual void update(inds_stochastic **species) {};
 		virtual void update(inds_stochastic **species, environment *habitat) {};

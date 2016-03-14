@@ -1,5 +1,7 @@
 #include <util/one_dim_two_dim.h>
 
+
+
 struct one_dim_two_dim_functor
 	{
 /* 
@@ -48,11 +50,11 @@ Note that all of these are o(1) operations per variable element.
 		}
 	};
 
-void one_dim_two_dim(thrust::device_vector<int> &vector1_values,
-	     thrust::device_vector<int> &vector2_values,
-	     thrust::device_vector<int> &new_vector,
-	     thrust::device_vector<int> &values_for_vector_1,
-	     thrust::device_vector<int> &values_for_vector_2)
+void one_dim_two_dim(thrust::host_vector<int> &vector1_values,
+	     thrust::host_vector<int> &vector2_values,
+	     thrust::host_vector<int> &new_vector,
+	     thrust::host_vector<int> &values_for_vector_1,
+	     thrust::host_vector<int> &values_for_vector_2)
 	{
 
 	/* If you have a vector of int values
@@ -70,8 +72,8 @@ void one_dim_two_dim(thrust::device_vector<int> &vector1_values,
 	int length_new_vector = new_vector.size();
 	int length_vector_2 = vector2_values.size();
 
-	thrust::device_vector<int> indices_vector_1 ( length_new_vector );
-	thrust::device_vector<int> indices_vector_2 ( length_new_vector );
+	thrust::host_vector<int> indices_vector_1 ( length_new_vector );
+	thrust::host_vector<int> indices_vector_2 ( length_new_vector );
 
 	one_dim_two_dim_functor get_two_dim(length_vector_2);
 		

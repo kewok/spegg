@@ -5,8 +5,8 @@
 #include <thrust/unique.h>
 #include <thrust/host_vector.h>
 
-void remove_duplicate_pairs(thrust::device_vector<int> &vectorA, 
-			    thrust::device_vector<int> &vectorB )
+void remove_duplicate_pairs(thrust::host_vector<int> &vectorA, 
+			    thrust::host_vector<int> &vectorB )
 	{
 	/*
 	************************
@@ -34,8 +34,8 @@ void remove_duplicate_pairs(thrust::device_vector<int> &vectorA,
 
 	int total_vector_sizes_before_removing_duplicates = vectorA.size(); 
 	// Check for duplicates 
-	thrust::device_vector<int> copy_vectorA( total_vector_sizes_before_removing_duplicates );
-	thrust::device_vector<int> copy_vectorB( total_vector_sizes_before_removing_duplicates );
+	thrust::host_vector<int> copy_vectorA( total_vector_sizes_before_removing_duplicates );
+	thrust::host_vector<int> copy_vectorB( total_vector_sizes_before_removing_duplicates );
 	
 	thrust::copy(vectorA.begin(), vectorA.end(), copy_vectorA.begin());
 	thrust::copy(vectorB.begin(), vectorB.end(), copy_vectorB.begin()); 
@@ -47,7 +47,7 @@ void remove_duplicate_pairs(thrust::device_vector<int> &vectorA,
 
 	// Remove duplicates, based on contiguity in vectorB
 
-	typedef thrust::device_vector< int >                IntVector;
+	typedef thrust::host_vector< int >                IntVector;
 	typedef IntVector::iterator                         IntIterator;
 	typedef thrust::tuple< IntIterator, IntIterator >   IntIteratorTuple;
 	typedef thrust::zip_iterator< IntIteratorTuple >    ZipIterator;

@@ -7,7 +7,7 @@
 
 template <typename T>
 struct unary_plus
-	{
+{
 	T rhs;
 	unary_plus(const T &r) : rhs(r) {};
 	
@@ -15,11 +15,11 @@ struct unary_plus
 	T operator()(const T &lhs) {
 		return lhs + rhs;
 	}
-	};
+};
 
 template <typename T>
 struct unary_minus
-	{
+{
 	T rhs;
 	unary_minus(const T &r) : rhs(r) {};
 	
@@ -27,11 +27,11 @@ struct unary_minus
 	T operator()(const T &lhs) {
 		return lhs - rhs;
 	}
-	};
+};
 
 template <typename T>
 struct unary_modulus
-	{
+{
 	T rhs;
 	unary_modulus(const T &r) : rhs(r) {};
 	
@@ -39,11 +39,11 @@ struct unary_modulus
 	T operator()(const T &lhs) {
 		return lhs%rhs;
 	}
-	};
+};
 
 template <typename T>
 struct unary_less
-	{
+{
 	T rhs;
 	unary_less(const T &r) : rhs(r) {};
 	
@@ -51,11 +51,11 @@ struct unary_less
 	bool operator()(const T &lhs) {
 		return lhs < rhs;
 	}
-	};
+};
 
 template <typename T>
 struct unary_less_equal
-	{
+{
 	T rhs;
 	unary_less_equal(const T &r) : rhs(r) {};
 	
@@ -63,11 +63,11 @@ struct unary_less_equal
 	bool operator()(const T &lhs) {
 		return lhs <= rhs;
 	}
-	};
+};
 
 template <typename T>
 struct unary_greater
-	{
+{
 	T rhs;
 	unary_greater(const T &r) : rhs(r) {};
 	
@@ -75,11 +75,11 @@ struct unary_greater
 	bool operator()(const T &lhs) {
 		return lhs > rhs;
 	}
-	};
+};
 
 template <typename T>
 struct unary_not_equal
-	{
+{
 	T rhs;
 	unary_not_equal(const T &r) : rhs(r) {};
 	
@@ -87,11 +87,11 @@ struct unary_not_equal
 	bool operator()(const T &lhs) {
 		return lhs != rhs;
 	}
-	};
+};
 
 template <typename T>
 struct unary_greater_equal
-	{
+{
 	T rhs;
 	unary_greater_equal(const T &r) : rhs(r) {};
 	
@@ -99,7 +99,7 @@ struct unary_greater_equal
 	bool operator()(const T &lhs) {
 		return lhs >= rhs;
 	}
-	};
+};
 
 struct is_less_than_zero
   {
@@ -121,7 +121,7 @@ struct is_less_than_zero_f
   };
 
 struct pairwise_min
-	{
+{
 	/*
 	Elements in the tuple.
 	----------------------
@@ -137,14 +137,14 @@ struct pairwise_min
 	else
 		thrust::get<2>(t) = thrust::get<1>(t);
 	}
-	};
+};
 
 /* The functor reassign_functor takes a float and scales it to fall within a given integer interval */
 
 /* The functor reassign_functor takes a number and scales it to fall within a given interval */
 
 struct reassign_functor
-	{
+{
 	int *sampled_offset;
 	reassign_functor(int *d_offset) : sampled_offset(d_offset)
 	{};
@@ -183,10 +183,10 @@ struct reassign_functor
 	
 		}
 	}
-	};
+};
 
 struct reassign_functor_simplified
-	{
+{
         /*
 	Elements in the tuple.
 	----------------------
@@ -205,12 +205,12 @@ struct reassign_functor_simplified
 
 	thrust::get<3>(t) = (int) (thrust::get<0>(t) * ( thrust::get<2>(t) - thrust::get<1>(t) ));
 	}
-	};
+};
 
 
 // functor that changes floats to ints
 struct float_to_int
-	{
+{
 	/*
 		Elements in the tuple.
 		----------------------
@@ -222,11 +222,11 @@ struct float_to_int
 	void operator() ( tuple t ) {
 		thrust::get<1>(t) = floorf(thrust::get<0>(t) + 0.5);
 		}
-	};
+};
 
 
 struct int_to_float
-	{
+{
 /*
 * custom functor that changes floats to ints
 /
@@ -241,11 +241,11 @@ struct int_to_float
 	void operator() ( tuple t ) {
 		thrust::get<1>(t) = (float) thrust::get<0>(t);
 		}
-	};
+};
 
 // functor that returns absolute value of a float
 struct fabs_functor
-	{
+{
 	/*
 		Elements in the tuple.
 		----------------------
@@ -259,7 +259,7 @@ struct fabs_functor
 			thrust::get<0>(t) = -1*thrust::get<0>(t);
 			}
 		}
-	};
+};
 
 
 #endif

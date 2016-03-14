@@ -1,14 +1,11 @@
 #include <species/inds.h>
 #include <math/thrust_probabilities.h>
 
-#include <curand.h>
 #include <fstream>
-#include <sstream>
 #include <iostream>
 #include <thrust/count.h>
 #include <thrust/binary_search.h>
 #include <thrust/adjacent_difference.h>
-#include <thrust/device_vector.h>
 #include <thrust/functional.h>
 #include <thrust/host_vector.h>
 #include <thrust/remove.h>
@@ -16,9 +13,6 @@
 #include <thrust/transform.h>
 #include <thrust/sequence.h>
 #include <thrust/scatter.h>
-#include <thrust/device_malloc.h>
-#include <thrust/device_free.h>
-
 
 inds::inds(int size_val, int maxsize_val, int num_demes, int species_ID_val) : size(size_val), maxsize(maxsize_val), Num_Demes(num_demes), nextid(size_val), species_ID(species_ID_val)
 	{
@@ -29,21 +23,15 @@ inds::inds(int size_val, int maxsize_val, int num_demes, int species_ID_val) : s
 	if (size_val < 0 || maxsize_val < 0) {
 		std::cerr << "Population size must be non-negative!" << std::endl;
 		exit(1);
-	}
+		}
 	if (size_val > maxsize_val) {
 		std::cerr << "Maximum size must be greater or equal to initial population size!" << std::endl;
 		exit(1);
-	}
+		}
 	deme_sizes.resize(Num_Demes);
 	max_deme_sizes.resize(Num_Demes);
 
 	demeParameters = new DemeSettings("deme_config.txt", species_ID);
-
-	if (demeParameters->check_number_of_demes() < Num_Demes)
-		{
-		std::cout << "The number of demes specified in the simulation_conf file cannot exceed the number specified in your deme_config.txt file; Please fix this before proceeding. " << std::endl;
-		exit(1);
-		}
 
 	nloci = (int) demeParameters->GeneticArchitecture->Number_of_Loci;
 	nphen = (int) demeParameters->GeneticArchitecture->Number_of_Phenotypes;
@@ -61,28 +49,20 @@ inds::inds(int size_val, int maxsize_val, int num_demes, int species_ID_val) : s
 void inds::initialize_individuals(int nloci, int nphen)
 	{
 	//Allocate gene and phen data vectors.
-	fgenotype = new thrust::device_vector<float>[nloci];
-	mgenotype = new thrust::device_vector<float>[nloci];
-	phenotype = new thrust::device_vector<float>[nphen];
+	//Allocate gene and phen data vectors.
+	fgenotype = new thrust::host_vector<float>[nloci];
+	mgenotype = new thrust::host_vector<float>[nloci];
+	phenotype = new thrust::host_vector<float>[nphen];
 	}
 
 inds::~inds()
 	{
 	/*
-	* The destructor to clear GPU RAM; . Note only the thrust vectors of arrays are destroyed.
+	* The destructor to clear CPU RAM; . Note only the thrust vectors of arrays are destroyed.
 	*/
 	delete[] fgenotype;
 	delete[] mgenotype;
 	delete[] phenotype;
-	}
-
-void inds::exportCsv()
-	{
-	std::ostringstream stream;
-	stream << "species" << species_ID << ".csv";
-	std::string result = stream.str();
-	const char *mySpeciesTitle = result.c_str();
-	exportCsv(mySpeciesTitle);
 	}
 
 void inds::exportCsv(const char *filename)
@@ -101,17 +81,17 @@ void inds::exportCsv(const char *filename)
 	file << "Index,Id,Status,Sex,Age,Deme,";
 	for (int i = 0 ; i < nloci ; i++) {
 		file << "fgene" << i << ",";
-	}
+		}
 	for (int i = 0 ; i < nloci ; i++) {
 		file << "mgene" << i << ",";
-	}
+		}
 
 	for (int i = 0 ; i < nphen ; i++) {
 		if (i < nphen - 1)
 			file << "phen" << i << ",";
 		else
 			file << "phen" << i << std::endl;
-	}
+		}
 	
 	//Output n individuals
 	for (int i = 0 ; i < size ; i++) {
@@ -247,7 +227,7 @@ void inds::removeDead()
 	*
 	*/
 	//Keys to flag those to be removed.
-	thrust::device_vector<int> keys(size);
+	thrust::host_vector<int> keys(size);
 	
 	//Setup keys. 1 = to be removed. 0 = not removed.
 	thrust::transform(status.begin(), status.begin() + size, keys.begin(), thrust::logical_not<int>());
@@ -264,13 +244,14 @@ void inds::removeDead()
 	// Perform the sort based on deme with max_demes + 1 at the bottom
 	// Then perform gather
 	
-	thrust::device_vector<int> map(size);
+	thrust::host_vector<int> map(size);
 	thrust::copy(deme.begin(), deme.begin() + size, keys.begin());
 	thrust::sequence(map.begin(), map.begin() + size);
 	thrust::stable_sort_by_key(keys.begin(), keys.begin() + size, map.begin(), thrust::less<int>());
 
-	thrust::device_vector<int> new_vals(size);
-	thrust::device_vector<float> new_vals_float(size);
+
+	thrust::host_vector<int> new_vals(size);
+	thrust::host_vector<float> new_vals_float(size);
 
 	thrust::gather(map.begin(), map.begin() + size, id.begin(), new_vals.begin());
 	thrust::copy(new_vals.begin(), new_vals.begin() + size, id.begin());
@@ -294,17 +275,17 @@ void inds::removeDead()
 	thrust::gather(map.begin(), map.begin() + size, deme.begin(), new_vals.begin());
 	thrust::copy(new_vals.begin(), new_vals.begin() + size, deme.begin());
 
-	for (int i = 0 ; i < nloci ; i++) {
-		thrust::gather(map.begin(), map.begin() + size, fgenotype[i].begin(), new_vals_float.begin());
-		thrust::copy(new_vals_float.begin(), new_vals_float.begin() + size, fgenotype[i].begin());
-		thrust::gather(map.begin(), map.begin() + size, mgenotype[i].begin(), new_vals_float.begin());
-		thrust::copy(new_vals_float.begin(), new_vals_float.begin() + size, mgenotype[i].begin());
-		}
+		for (int i = 0 ; i < nloci ; i++) {
+			thrust::gather(map.begin(), map.begin() + size, fgenotype[i].begin(), new_vals_float.begin());
+			thrust::copy(new_vals_float.begin(), new_vals_float.begin() + size, fgenotype[i].begin());
+			thrust::gather(map.begin(), map.begin() + size, mgenotype[i].begin(), new_vals_float.begin());
+			thrust::copy(new_vals_float.begin(), new_vals_float.begin() + size, mgenotype[i].begin());
+	}
 
 	for (int i = 0 ; i < nphen ; i++) {
-		thrust::gather(map.begin(), map.begin() + size, phenotype[i].begin(), new_vals_float.begin());
-		thrust::copy(new_vals_float.begin(), new_vals_float.begin() + size, phenotype[i].begin());
-		}
+			thrust::gather(map.begin(), map.begin() + size, phenotype[i].begin(), new_vals_float.begin());
+			thrust::copy(new_vals_float.begin(), new_vals_float.begin() + size, phenotype[i].begin());
+			}
 
 	size = num_alive;
 	// Recalculate the number of individuals per deme
@@ -314,12 +295,12 @@ void inds::removeDead()
 void inds::setMaxSize(int n)
 	{
 	/*
-	* Allocate memory RAM on the GPU device to be used in your inds class during sPEGG simulation. 
+	* Allocate memory RAM to be used in your inds class during sPEGG simulation. 
 	*/
 	if (n < 0) {
 		std::cerr << "setMaxSize: size must be non-negative!" << std::endl;
 		return;
-	}
+		}
 	
 	id.resize(n);
 	status.resize(n);
@@ -356,7 +337,7 @@ the data points past number_of_individuals are garbage. Note that the vital stat
 	int num_alive = thrust::count(status.begin(), status.begin() + size, 1);
 
 	//Keys
-	thrust::device_vector<int> keys(num_alive);
+	thrust::host_vector<int> keys(num_alive);
 	
 	/*
 		For each vector,
@@ -365,15 +346,17 @@ the data points past number_of_individuals are garbage. Note that the vital stat
 	*/
 
 	// Relocate the values according to the map generated by sort
-	thrust::device_vector<int> map(num_alive);
+		
+	
+	thrust::host_vector<int> map(num_alive);
 	thrust::copy(deme.begin(), deme.begin() + num_alive, keys.begin());
 	thrust::sequence(map.begin(), map.begin() + num_alive);
 	thrust::stable_sort_by_key(keys.begin(), keys.begin() + num_alive, map.begin());
 
 	// Map now directs where individuals should go
 
-	thrust::device_vector<int> new_vals(size);
-	thrust::device_vector<float> new_vals_float(size);
+	thrust::host_vector<int> new_vals(size);
+	thrust::host_vector<float> new_vals_float(size);
 	
 	thrust::gather(map.begin(), map.begin() + num_alive, id.begin(), new_vals.begin());
 
@@ -411,13 +394,14 @@ the data points past number_of_individuals are garbage. Note that the vital stat
 		}
 	}
 
+
 void inds::demeCalculations()
 	{
 	/*
 	* Determine how many individuals are in each deme. The results are stored in vector deme_sizes, which is accessed via get_deme_sizes(thrust::device_vector<int> &deme_sizevals) where the vector deme_sizevals has already been declared and instantiated.
 	*/
 	thrust::counting_iterator<int> search_begin(0);
-	thrust::device_vector<int> temp_deme_sizes;
+	thrust::host_vector<int> temp_deme_sizes;
 
 	temp_deme_sizes.resize(Num_Demes);
 

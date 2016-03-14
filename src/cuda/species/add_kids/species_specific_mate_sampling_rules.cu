@@ -66,7 +66,7 @@ void SamplingInput_Mating::determine_number_of_individuals_to_be_sampled_poisson
 	number_of_other_individuals_sampled.resize(number_of_individuals_doing_the_sampling);
 
 	// For each individual, based on their deme, identify the expected number of other individuals they are likely to sample
-	thrust::device_vector<float> mean_numbers_of_others_sampled( number_of_individuals_doing_the_sampling );
+	thrust::host_vector<float> mean_numbers_of_others_sampled( number_of_individuals_doing_the_sampling );
 	
 	thrust::gather(deme_affiliation_of_sampling_individuals.begin(), 
 		       deme_affiliation_of_sampling_individuals.end(), 
@@ -81,7 +81,7 @@ void SamplingInput_Mating::determine_number_of_individuals_to_be_sampled_poisson
 
 	// Make sure you sample no more than there are individuals in the other species deme by:
 		// 1. Apply correction for small deme size: cannot sample more individuals than there are individuals in the deme.
-	thrust::device_vector<int> maximum_sampleable_individuals( number_of_individuals_doing_the_sampling  );
+	thrust::host_vector<int> maximum_sampleable_individuals( number_of_individuals_doing_the_sampling  );
 	thrust::gather(deme_affiliation_of_sampling_individuals.begin(),
 		       deme_affiliation_of_sampling_individuals.end(),
 		       sampleable_individuals_per_deme.begin(),
@@ -108,7 +108,7 @@ void SamplingInput_Mating::determine_number_of_individuals_to_be_sampled_fixed(P
 	
 
 	// Apply correction for small deme size: cannot sample more individuals than there are individuals in the deme.
-	thrust::device_vector<int> maximum_sampleable_individuals( number_of_individuals_doing_the_sampling  );
+	thrust::host_vector<int> maximum_sampleable_individuals( number_of_individuals_doing_the_sampling  );
 
 	thrust::gather(deme_affiliation_of_sampling_individuals.begin(),
 		       deme_affiliation_of_sampling_individuals.end(),

@@ -6,7 +6,7 @@ void Sample_With_Replacement::sample()
 	{
 	/*************
 	//
-	// 1. For each sampling event, generate a vector "individuals_sampling" that repeats each index i in (0,1,2,... , |x|) n_i times.
+	// 1. For each sampling event, generate a vector individuals_sampling that repeats each index i in (0,1,2,... , |x|) n_i times.
 	//
 	**************/
 
@@ -27,13 +27,13 @@ void Sample_With_Replacement::sample()
 	// The individuals subject to sampling have to fall within the ranges of the total number of individuals in the sampler's deme. Also make sure Num_Demes is initialized; if is set to zero you will get a memory error.
 
 
-	thrust::device_vector<int> cumulative_sampleable_individuals_by_deme( sampling_input->Num_Demes );
+	thrust::host_vector<int> cumulative_sampleable_individuals_by_deme( sampling_input->Num_Demes );
 
 	thrust::inclusive_scan( sampling_input->sampleable_individuals_per_deme.begin(), sampling_input-> sampleable_individuals_per_deme.end() , cumulative_sampleable_individuals_by_deme.begin() );	
 
-	int *cumulative_others_by_deme_ptr = raw_pointer_cast(&cumulative_sampleable_individuals_by_deme[0]);
+	int *cumulative_others_by_deme_ptr = &cumulative_sampleable_individuals_by_deme[0];
 
-	thrust::device_vector<int> deme_of_samplers;
+	thrust::host_vector<int> deme_of_samplers;
 
 	amplify(sampling_input->deme_affiliation_of_sampling_individuals, sampling_input->number_of_other_individuals_sampled, deme_of_samplers);
 
@@ -42,10 +42,12 @@ void Sample_With_Replacement::sample()
 		// 2.b. For each individual i that is doing the sampling, draw a random float z[i] between 0 and 1
 		//
 		***********/
+		thrust::host_vector<float> sampled_floats( sampling_individuals_indices.size() ); 
 
-	thrust::device_vector<float> sampled_floats( sampling_individuals_indices.size() ); 
-	float *curand_samples_ptr = raw_pointer_cast( &sampled_floats[0] );
-	curandGenerateUniform(gen, curand_samples_ptr, sampling_individuals_indices.size());
+		for (int i=0; i < sampling_individuals_indices.size(); i++)
+			{	
+			sampled_floats[i] = gsl_rng_uniform(gen);
+			}
 
 		/***********
 		//
@@ -54,7 +56,7 @@ void Sample_With_Replacement::sample()
 		***********/
 
 	// sample total_others_sampled other individuals at random
-	thrust::device_vector<int> individuals_sampled( sampling_individuals_indices.size() ); 
+	thrust::host_vector<int> individuals_sampled( sampling_individuals_indices.size() ); 
 
 	// Use the functor reassign to change the random integer to fall within the range of individuals in the deme
 	reassign_functor reassign(cumulative_others_by_deme_ptr);

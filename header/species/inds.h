@@ -2,7 +2,6 @@
 #define INDS_H
 
 #include <thrust/host_vector.h>
-#include <thrust/device_vector.h>
 
 #include <species/deme_specific_data_class.h>
 #include <environ/environment.h>
@@ -28,7 +27,6 @@ class inds
 		void setMaxSize(int n);
 		void sortByDeme();
 		void initialize_individuals(int nloci_val, int nphen_val);
-		void exportCsv();
 		void exportCsv(const char *filename);
 		void exportCsv(const char *filename, int timestep);
 		void exportCsv(const char *filename, int timestep1, int timestep2);
@@ -45,20 +43,20 @@ class inds
 		int Num_Demes;
 
 		int species_ID;
-
+	
 		//Data vectors
-		thrust::device_vector<int> id;
-		thrust::device_vector<int> status;
-		thrust::device_vector<int> sex;
-		thrust::device_vector<int> age;
-		thrust::device_vector<int> deme;
-		thrust::device_vector<float> *fgenotype;
-		thrust::device_vector<float> *mgenotype;
-		thrust::device_vector<float> *phenotype;
-		thrust::device_vector<int> maternal_id;
-		thrust::device_vector<int> paternal_id;
-		thrust::device_vector<int> deme_sizes;
-		thrust::device_vector<int> max_deme_sizes;
+		thrust::host_vector<int> id;
+		thrust::host_vector<int> status;
+		thrust::host_vector<int> sex;
+		thrust::host_vector<int> age;
+		thrust::host_vector<int> deme;
+		thrust::host_vector<float> *fgenotype;
+		thrust::host_vector<float> *mgenotype;
+		thrust::host_vector<float> *phenotype;
+		thrust::host_vector<int> maternal_id;
+		thrust::host_vector<int> paternal_id;
+		thrust::host_vector<int> deme_sizes;
+		thrust::host_vector<int> max_deme_sizes;
 
 		// Calculate the number of individuals in each deme
 		void demeCalculations();

@@ -1,9 +1,7 @@
 #ifndef ASSORTATIVE_MATING_NEONATES_H
 #define ASSORTATIVE_MATING_NEONATES_H
 
-#include <curand.h>
 #include <thrust/host_vector.h>
-#include <thrust/device_vector.h>
 #include <thrust/functional.h>
 #include <util/footimer2.h>
 #include <species/inds.h>
@@ -18,49 +16,49 @@
 #include <thrust/adjacent_difference.h>
 
 class Assortative_mating_neonates :  public EggsNeonates 
-	{
-	public:
-		Assortative_mating_neonates(thrust::device_vector<int> &pair_populations, DemeSettings *subpopParameters,
-				   thrust::device_vector<int> &everybodys_deme,
-				   thrust::device_vector<int> &kids_per_mom,
-				   thrust::device_vector<int> &current_deme_sizes,
-				   thrust::device_vector<int> &maximum_deme_sizes,
-				   int N_alive_inds,
-				   int num_loci,
-				   int nPhen);
+{
+public:
+	Assortative_mating_neonates(thrust::host_vector<int> &pair_populations, DemeSettings *subpopParameters,
+			   thrust::host_vector<int> &everybodys_deme,
+			   thrust::host_vector<int> &kids_per_mom,
+			   thrust::host_vector<int> &current_deme_sizes,
+			   thrust::host_vector<int> &maximum_deme_sizes,
+			   int N_alive_inds,
+			   int num_loci,
+			   int nPhen);
 
-		void inherit_genotypes_by_pair(thrust::device_vector<float> &probability_pair_becomes_parents,
-					thrust::device_vector<int> &fathers_list,
-					thrust::device_vector<int> &mothers_list,
-					thrust::device_vector<float> *&fgenotype,
-					thrust::device_vector<float> *&mgenotype,
-					curandGenerator_t generator);
+	void inherit_genotypes_by_pair(thrust::host_vector<float> &probability_pair_becomes_parents,
+				thrust::host_vector<int> &fathers_list,
+				thrust::host_vector<int> &mothers_list,
+				thrust::host_vector<float> *&fgenotype,
+				thrust::host_vector<float> *&mgenotype,
+				gsl_rng* generator);
 
-		void get_mating_pair(thrust::device_vector<float> &probability_pair_becomes_parents,
-				      thrust::device_vector<int> &fathers_list,
-				      thrust::device_vector<int> &mothers_list,
-				      curandGenerator_t generator);
+	void get_mating_pair(thrust::host_vector<float> &probability_pair_becomes_parents,
+			      thrust::host_vector<int> &fathers_list,
+			      thrust::host_vector<int> &mothers_list,
+			      gsl_rng* generator);
 
 
-		void record_parents(thrust::device_vector<int> &maternal_id, 
-				     thrust::device_vector<int> &paternal_id,
-				     thrust::device_vector<int> &ids);
+	void record_parents(thrust::host_vector<int> &maternal_id, 
+			     thrust::host_vector<int> &paternal_id,
+			     thrust::host_vector<int> &ids);
 
-	protected:
-		thrust::device_vector<int> mothers_chosen;
-		thrust::device_vector<int> fathers_chosen;
-	 
+protected:
+	thrust::host_vector<int> mothers_chosen;
+	thrust::host_vector<int> fathers_chosen;
+ 
 
-		void get_maternally_derived_genotype_deterministic(thrust::device_vector<int> &mother_index,
-						     thrust::device_vector<float> *&mgenotype,
-						     thrust::device_vector<float> *&fgenotype,
-						     curandGenerator_t generator);
+	void get_maternally_derived_genotype_deterministic(thrust::host_vector<int> &mother_index,
+					     thrust::host_vector<float> *&mgenotype,
+					     thrust::host_vector<float> *&fgenotype,
+					     gsl_rng* generator);
 
-		void get_paternally_derived_genotype_deterministic(thrust::device_vector<int> &father_index,
-						     thrust::device_vector<float> *&mgenotype,
-						     thrust::device_vector<float> *&fgenotype,
-						     curandGenerator_t generator);
+	void get_paternally_derived_genotype_deterministic(thrust::host_vector<int> &father_index,
+					     thrust::host_vector<float> *&mgenotype,
+					     thrust::host_vector<float> *&fgenotype,
+					     gsl_rng* generator);
 
-		thrust::device_vector<int> pairs_per_deme;
-	};
+	thrust::host_vector<int> pairs_per_deme;
+};
 #endif

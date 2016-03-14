@@ -21,7 +21,7 @@ void SamplingInput::determine_number_of_individuals_to_be_sampled_poisson()
 	int number_of_individuals_doing_the_sampling = list_of_individuals_potentially_conducting_sampling.size();
 
 	// For each individual, based on their deme, identify the expected number of other individuals they are likely to sample
-	thrust::device_vector<float> mean_numbers_of_others_sampled( number_of_individuals_doing_the_sampling );
+	thrust::host_vector<float> mean_numbers_of_others_sampled( number_of_individuals_doing_the_sampling );
 	
 	thrust::gather(population_affiliation_of_sampling_individuals.begin(), 
 		       population_affiliation_of_sampling_individuals.end(), 
@@ -36,9 +36,9 @@ void SamplingInput::determine_number_of_individuals_to_be_sampled_poisson()
 
 	// Make sure you sample no more than there are individuals in the other species deme by:
 		// 1. Figuring out the demes of individuals subject to being sampled
-	thrust::device_vector<int> maximum_sampleable_individuals( number_of_individuals_doing_the_sampling );
+	thrust::host_vector<int> maximum_sampleable_individuals( number_of_individuals_doing_the_sampling );
 
-	thrust::device_vector<int> target_species_deme_values( list_of_individuals_potentially_subject_to_sampling.size() );
+	thrust::host_vector<int> target_species_deme_values( list_of_individuals_potentially_subject_to_sampling.size() );
 
 	thrust::gather(list_of_individuals_potentially_subject_to_sampling.begin(),
 		       list_of_individuals_potentially_subject_to_sampling.end(),
@@ -46,7 +46,7 @@ void SamplingInput::determine_number_of_individuals_to_be_sampled_poisson()
 		       target_species_deme_values.begin());
 	
 		// 2. Count the number of times each deme is represented
-	thrust::device_vector<int> possible_deme_values( species[target_species_ID]->Num_Subpopulations );
+	thrust::host_vector<int> possible_deme_values( species[target_species_ID]->Num_Subpopulations );
 	thrust::sequence(possible_deme_values.begin(), possible_deme_values.end());
 
 	calculate_histogram(target_species_deme_values, sampleable_individuals_per_deme, species[target_species_ID]->Num_Subpopulations);
@@ -65,15 +65,15 @@ void SamplingInput::determine_number_of_individuals_to_be_sampled_poisson()
 void SamplingInput::determine_number_of_individuals_to_be_sampled_fixed() 
 	{
 	// Assume all individuals sample the same number of individuals in the other species.
-	thrust::device_vector<int> maximum_sampleable_individuals( number_of_individuals_in_sampling_species );
-	thrust::device_vector<int> target_species_deme_values( list_of_individuals_potentially_subject_to_sampling.size() );
+	thrust::host_vector<int> maximum_sampleable_individuals( number_of_individuals_in_sampling_species );
+	thrust::host_vector<int> target_species_deme_values( list_of_individuals_potentially_subject_to_sampling.size() );
 
 	thrust::gather(list_of_individuals_potentially_subject_to_sampling.begin(),
 		       list_of_individuals_potentially_subject_to_sampling.end(),
 		       species[target_species_ID]->pop.begin(),
 		       target_species_deme_values.begin());
 	
-	thrust::device_vector<int> possible_deme_values( species[target_species_ID]->Num_Subpopulations );
+	thrust::host_vector<int> possible_deme_values( species[target_species_ID]->Num_Subpopulations );
 	thrust::sequence(possible_deme_values.begin(), possible_deme_values.end());
 
 	calculate_histogram(target_species_deme_values, sampleable_individuals_per_deme, species[target_species_ID]->Num_Subpopulations);

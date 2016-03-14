@@ -52,7 +52,7 @@ void GenotypePhenotypeMapParameters::read_in_data(const char *filename, int spec
 
 		Number_of_Demes = parameter_values.getLength();
 
-		deme_specific_parameters = new thrust::device_vector<float>[Number_of_Parameters];
+		deme_specific_parameters = new thrust::host_vector<float>[Number_of_Parameters];
 
 		for (int i=0; i < Number_of_Parameters; i++)
 			deme_specific_parameters[i].resize(Number_of_Demes);
@@ -70,7 +70,7 @@ void GenotypePhenotypeMapParameters::read_in_data(const char *filename, int spec
 		}
 	}
 
-thrust::device_ptr<float> GenotypePhenotypeMapParameters::get_vector_ptr(const char *parameter_name)
+float *GenotypePhenotypeMapParameters::get_vector_ptr(const char *parameter_name)
 	{
 	return(&deme_specific_parameters[parameter_index[parameter_name]][0]);
 	}

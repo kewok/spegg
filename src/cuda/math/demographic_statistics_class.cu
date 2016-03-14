@@ -46,13 +46,13 @@ void DemographicStatistics::record_deme_sizes()
 void DemographicStatistics::calculate_sex_ratios(inds *species)
 	{
 	int ninds = species->size;
-	thrust::device_vector<int> total_males(ninds);
+	thrust::host_vector<int> total_males(ninds);
 
 	reduce_by_key_with_zeros(species->deme, species->sex, total_males, ninds, number_of_demes);
 
 	calculate_deme_sizes(species);
 
-	thrust::device_vector<float> deme_sizes(number_of_demes);
+	thrust::host_vector<float> deme_sizes(number_of_demes);
 
 	thrust::for_each(thrust::make_zip_iterator(thrust::make_tuple(deme_abundances.begin(), deme_sizes.begin())),
 		 thrust::make_zip_iterator(thrust::make_tuple(deme_abundances.begin()+number_of_demes, deme_sizes.begin()+number_of_demes)),
@@ -72,7 +72,7 @@ void DemographicStatistics::calculate_age_distribution(inds *species, int number
 	for (int i=0; i < number_of_demes; i++)
 		histogram_by_deme[i].resize(number_of_bins);
 
-	thrust::device_vector<float> ages_in_deme;
+	thrust::host_vector<float> ages_in_deme;
 
 	int cumulative_deme_sizes = 0;	
 

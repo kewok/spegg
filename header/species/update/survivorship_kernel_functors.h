@@ -5,7 +5,7 @@
 #include "math.h"
 #include <util/thrust_functors.h>
 
-#include <thrust/device_vector.h>
+#include <thrust/host_vector.h>
 #include <thrust/functional.h>
 
 
@@ -49,6 +49,6 @@ struct simulate_mortality
 			thrust::get<1>(t) = vital_state;
 			}
 		}	
-};
+	};
 
 #endif

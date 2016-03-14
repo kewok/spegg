@@ -1,10 +1,8 @@
 #ifndef SAMPLING_INPUT_H
 #define SAMPLING_INPUT_H
 
-#include <curand.h>
 #include <iostream>
 #include <stdio.h>
-#include <thrust/device_vector.h>
 #include <thrust/host_vector.h>
 #include <thrust/sequence.h>
 
@@ -25,11 +23,11 @@ class SamplingInput{
 */
 	public:	
 	// outputs
-		thrust::device_vector<int> list_of_individuals_potentially_conducting_sampling;
-		thrust::device_vector<int> list_of_individuals_potentially_subject_to_sampling;
-		thrust::device_vector<int> number_of_other_individuals_sampled;
-		thrust::device_vector<int> deme_affiliation_of_sampling_individuals;
-		thrust::device_vector<int> sampleable_individuals_per_deme;
+		thrust::host_vector<int> list_of_individuals_potentially_conducting_sampling;
+		thrust::host_vector<int> list_of_individuals_potentially_subject_to_sampling;
+		thrust::host_vector<int> number_of_other_individuals_sampled;
+		thrust::host_vector<int> deme_affiliation_of_sampling_individuals;
+		thrust::host_vector<int> sampleable_individuals_per_deme;
 		int focal_species_ID;
 		int target_species_ID;
 

@@ -1,12 +1,10 @@
 #ifndef HISTOGRAM_H
 #define HISTOGRAM_H
 
-#include <curand.h>
 #include <iostream>
 #include <stdio.h>
 #include <thrust/copy.h>
 #include <thrust/count.h>
-#include <thrust/device_vector.h>
 #include <thrust/distance.h>
 #include <thrust/fill.h>
 #include <thrust/functional.h>
@@ -24,22 +22,21 @@
 #include <thrust/remove.h>
 #include <thrust/unique.h>
 #include <thrust/set_operations.h>
-#include <thrust/extrema.h>
 
 #include <util/thrust_functors.h>
 #include <math/thrust_probabilities.h>
 
 
-void calculate_histogram(thrust::device_vector<int> &data, thrust::device_vector<int> &counts, 		 int counts_size);
+void calculate_histogram(thrust::host_vector<int> &data, thrust::host_vector<int> &counts, 		 int counts_size);
 
-void calculate_histogram(thrust::device_vector<float> &data, thrust::device_vector<int> &counts, 		 int counts_size);
+void calculate_histogram(thrust::host_vector<float> &data, thrust::host_vector<int> &counts, 		 int counts_size);
 
-void calculate_histogram_subset(thrust::device_vector<int> &data, thrust::device_vector<int> &counts, int counts_size, thrust::device_vector<int> &subset_indices);
+void calculate_histogram_subset(thrust::host_vector<int> &data, thrust::host_vector<int> &counts, int counts_size, thrust::host_vector<int> &subset_indices);
 
 
 // convert values to fall inside bin groups
 struct adjust_histogram_data_values
-	{
+{
 	/* 
 		Elements in the tuple.
 		----------------------
@@ -57,6 +54,6 @@ struct adjust_histogram_data_values
 		thrust::get<4>(t) *= (float) thrust::get<3>(t); 
 		}
 	
-	};
+};
 
 #endif

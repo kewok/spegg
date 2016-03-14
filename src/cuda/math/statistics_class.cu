@@ -1,5 +1,4 @@
 #include <math/statistics_class.h>
-#include <util/gather_values_by_deme.h>
 
 Statistics::Statistics(int num_demes)
 	{
@@ -9,10 +8,9 @@ Statistics::Statistics(int num_demes)
 	mean_genotypes.resize(number_of_demes);
 	max_phenotypes.resize(number_of_demes);
 	min_phenotypes.resize(number_of_demes);	
-	phenotypic_variance.resize(number_of_demes);
 
-	quantiles_by_deme = new thrust::device_vector<float>[number_of_demes];
-	histogram_by_deme = new thrust::device_vector<int>[number_of_demes];
+	quantiles_by_deme = new thrust::host_vector<float>[number_of_demes];
+	histogram_by_deme = new thrust::host_vector<int>[number_of_demes];
 	}
 
 
@@ -27,8 +25,8 @@ Statistics::Statistics(int num_demes, const char *output_file_summary_statistics
 	max_phenotypes.resize(number_of_demes);
 	min_phenotypes.resize(number_of_demes);	
 
-	quantiles_by_deme = new thrust::device_vector<float>[number_of_demes];
-	histogram_by_deme = new thrust::device_vector<int>[number_of_demes];
+	quantiles_by_deme = new thrust::host_vector<float>[number_of_demes];
+	histogram_by_deme = new thrust::host_vector<int>[number_of_demes];
 	}
 
 
@@ -42,8 +40,8 @@ Statistics::Statistics(int num_demes, const char *output_file_histograms)
 	max_phenotypes.resize(number_of_demes);
 	min_phenotypes.resize(number_of_demes);	
 
-	quantiles_by_deme = new thrust::device_vector<float>[number_of_demes];
-	histogram_by_deme = new thrust::device_vector<int>[number_of_demes];
+	quantiles_by_deme = new thrust::host_vector<float>[number_of_demes];
+	histogram_by_deme = new thrust::host_vector<int>[number_of_demes];
 	}
 
 
@@ -66,7 +64,7 @@ void Statistics::calculate_mean_phenotypes_by_deme(inds *individuals, int PHENOT
 
 	reduce_by_key_with_zeros(individuals->deme, individuals->phenotype[PHENOTYPE_TO_RECORD], mean_phenotypes, ninds, number_of_demes);
 
-	deme_sizes.resize(number_of_demes);
+	thrust::host_vector<float> deme_sizes(number_of_demes);
 
 	thrust::for_each(thrust::make_zip_iterator(thrust::make_tuple(individuals->deme_sizes.begin(), deme_sizes.begin())),
 		 thrust::make_zip_iterator(thrust::make_tuple(individuals->deme_sizes.begin()+number_of_demes, deme_sizes.begin()+number_of_demes)),
@@ -78,17 +76,17 @@ void Statistics::calculate_mean_phenotypes_by_deme(inds *individuals, int PHENOT
 void Statistics::calculate_mean_genotypes_by_deme(inds *individuals, int GENOTYPE_TO_RECORD)
 	{
 	int ninds = individuals->size;
-	thrust::device_vector<float> summed_genotype(ninds);
+	thrust::host_vector<float> summed_genotype(ninds);
 	
 	thrust::transform(individuals->fgenotype[GENOTYPE_TO_RECORD].begin(), individuals->fgenotype[GENOTYPE_TO_RECORD].begin() + ninds, individuals->mgenotype[GENOTYPE_TO_RECORD].begin(), summed_genotype.begin(), thrust::plus<float>()); 
-	thrust::device_vector<float> twos(ninds);
+	thrust::host_vector<float> twos(ninds);
 	thrust::fill(twos.begin(), twos.end(), 2.0);
 	thrust::transform(summed_genotype.begin(), summed_genotype.begin() + ninds, twos.begin(), summed_genotype.begin(),  thrust::divides<float>());
 
 
 	reduce_by_key_with_zeros(individuals->deme, summed_genotype, mean_genotypes, ninds, number_of_demes);
 
-	deme_sizes.resize(number_of_demes);
+	thrust::host_vector<float> deme_sizes(number_of_demes);
 
 	thrust::for_each(thrust::make_zip_iterator(thrust::make_tuple(individuals->deme_sizes.begin(), deme_sizes.begin())),
 		 thrust::make_zip_iterator(thrust::make_tuple(individuals->deme_sizes.begin()+number_of_demes, deme_sizes.begin()+number_of_demes)),
@@ -102,6 +100,7 @@ void Statistics::calculate_min_max_phenotypes_by_deme(inds *individuals, int PHE
 	int cumulative_deme_sizes = 0;
 	for (int i=0; i < number_of_demes; i++)
 		{
+		cumulative_deme_sizes += individuals->deme_sizes[i];
 		if (individuals->deme_sizes[i] > 0)
 			{
 			max_phenotypes[i] = *thrust::max_element(individuals->phenotype[PHENOTYPE_TO_RECORD].begin() + cumulative_deme_sizes, individuals->phenotype[PHENOTYPE_TO_RECORD].begin() + cumulative_deme_sizes + individuals->deme_sizes[i]);
@@ -121,21 +120,25 @@ void Statistics::calculate_phenotypic_variance_by_deme(inds *individuals, int PH
 
 	int ninds = individuals->size;
 
-	thrust::device_vector<float> squared_phenotype_values(ninds);
-	thrust::device_vector<float> individualized_mean_phenotypes(ninds);
-	thrust::device_vector<float> individualized_deme_sizes(ninds);
-	thrust::device_vector<int> individual_indices(ninds);
-	thrust::sequence(individual_indices.begin(), individual_indices.begin() + individuals->size, 0);
+	phenotypic_variance.resize(number_of_demes);
 
-	gather_values_by_deme(individual_indices, individuals->deme, mean_phenotypes, individualized_mean_phenotypes);
-	gather_values_by_deme(individual_indices, individuals->deme, deme_sizes, individualized_deme_sizes);
+	int deme_offset = 0;
+	float individualized_mean_phenotype = mean_phenotypes[deme_offset];
+	float individualized_deme_sizes = (float) individuals->deme_sizes[deme_offset];
 
-	thrust::for_each(thrust::make_zip_iterator(thrust::make_tuple(individuals->phenotype[PHENOTYPE_TO_RECORD].begin(), individualized_mean_phenotypes.begin(), individualized_deme_sizes.begin(), squared_phenotype_values.begin())),
-		 thrust::make_zip_iterator(thrust::make_tuple(individuals->phenotype[PHENOTYPE_TO_RECORD].begin() + ninds, individualized_deme_sizes.begin()+ninds, individualized_mean_phenotypes.begin()+ninds, squared_phenotype_values.begin() + ninds)),
-		 variance_elements_calculator());
+	for (int i=0; i < ninds; i++)
+		{
+		if (individuals->deme[i] != deme_offset)
+			{
+			deme_offset = individuals->deme[i];
+			individualized_mean_phenotype = mean_phenotypes[deme_offset];
+			individualized_deme_sizes = (float) individuals->deme_sizes[deme_offset];
+			}
 
-	reduce_by_key_with_zeros(individuals->deme, squared_phenotype_values, phenotypic_variance, ninds, number_of_demes);
+		phenotypic_variance[deme_offset] += powf(individuals->phenotype[PHENOTYPE_TO_RECORD][i]-individualized_mean_phenotype, 2.0)/individualized_deme_sizes;
+		}
 	}
+
 
 void Statistics::output_results()
 	{
@@ -174,7 +177,7 @@ void Statistics::calculate_quantiles(inds *individuals, int number_of_bins, int 
 	for (int i=0; i < number_of_demes; i++)
 		quantiles_by_deme[i].resize(number_of_bins);
 
-	thrust::device_vector<float> phenotypes_in_deme;
+	thrust::host_vector<float> phenotypes_in_deme;
 
 	int cumulative_deme_sizes = 0;	
 
@@ -183,7 +186,7 @@ void Statistics::calculate_quantiles(inds *individuals, int number_of_bins, int 
 		int inds_in_deme = individuals->deme_sizes[i];
 		phenotypes_in_deme.resize(inds_in_deme);
 
-		thrust::device_vector<int> draw_at(number_of_bins);
+		thrust::host_vector<int> draw_at(number_of_bins);
 
 		int interval = (int) inds_in_deme/number_of_bins;
 
@@ -212,7 +215,7 @@ void Statistics::create_sample_histograms(inds *individuals, int number_of_bins,
 	for (int i=0; i < number_of_demes; i++)
 		histogram_by_deme[i].resize(number_of_bins);
 
-	thrust::device_vector<float> phenotypes_in_deme;
+	thrust::host_vector<float> phenotypes_in_deme;
 
 	int cumulative_deme_sizes = 0;	
 

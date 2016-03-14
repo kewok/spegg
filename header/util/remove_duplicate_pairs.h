@@ -1,7 +1,6 @@
 #ifndef REMOVE_DUPLICATE_PAIRS_H
 #define REMOVE_DUPLICATE_PAIRS_H
 
-#include <thrust/device_vector.h>
 #include <thrust/host_vector.h>
 
 /*************************
@@ -20,6 +19,6 @@
 //
 *************************/
 
-void remove_duplicate_pairs(thrust::device_vector<int> &vectorA, 
-			    thrust::device_vector<int> &vectorB );
+void remove_duplicate_pairs(thrust::host_vector<int> &vectorA, 
+			    thrust::host_vector<int> &vectorB );
 #endif

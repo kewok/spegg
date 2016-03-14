@@ -7,7 +7,6 @@
 #include <stdio.h>
 #include <thrust/copy.h>
 #include <thrust/count.h>
-#include <thrust/device_vector.h>
 #include <thrust/fill.h>
 #include <thrust/sequence.h>
 #include <thrust/transform.h>
@@ -39,14 +38,14 @@ C = [X[D1], X[D2], ..., X[Dm]]
 
 
 */
-void gather_values_by_deme(thrust::device_vector<int> &indices, 
-			   thrust::device_vector<int> &demes, 
-			   thrust::device_vector<int> &deme_specific_value, 
-			   thrust::device_vector<int> &ans);
+void gather_values_by_deme(thrust::host_vector<int> &indices, 
+			   thrust::host_vector<int> &demes, 
+			   thrust::host_vector<int> &deme_specific_value, 
+			   thrust::host_vector<int> &ans);
 
-void gather_values_by_deme(thrust::device_vector<int> &indices, 
-			   thrust::device_vector<int> &demes, 
-			   thrust::device_vector<float> &deme_specific_value, 
-			   thrust::device_vector<float> &ans);
+void gather_values_by_deme(thrust::host_vector<int> &indices, 
+			   thrust::host_vector<int> &demes, 
+			   thrust::host_vector<float> &deme_specific_value, 
+			   thrust::host_vector<float> &ans);
 
 #endif

@@ -21,7 +21,7 @@ class GenotypePhenotypeMap
 		int index_case;
 		int num_kids;
 
-		curandGenerator_t gen;		
+		gsl_rng *gen;		
 	};
 
 #endif

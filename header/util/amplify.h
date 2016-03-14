@@ -5,7 +5,6 @@
 #include <iostream>
 #include <thrust/copy.h>
 #include <thrust/count.h>
-#include <thrust/device_vector.h>
 #include <thrust/distance.h>
 #include <thrust/fill.h>
 #include <thrust/sequence.h>
@@ -45,9 +44,9 @@ This function amplify takes two vectors, amplify_counts and values_to_amplify, a
 
 E.g., 
 
-thrust::device_vector<int> amplify_counts(5);
-thrust::device_vector<int> values_to_amplify(5);
-thrust::device_vector<int> amplified_values(1);
+thrust::host_vector<int> amplify_counts(5);
+thrust::host_vector<int> values_to_amplify(5);
+thrust::host_vector<int> amplified_values(1);
 
 for (int i=0; i < 5; i++)
 	{
@@ -63,18 +62,18 @@ amplify(amplify_counts, values_to_amplify, amplified_values);
 ********************************/
 
 
-void amplify(thrust::device_vector<int> &values_to_amplify,
-	     thrust::device_vector<int> &amplify_counts,
-	     thrust::device_vector<int> &amplified_values);
+void amplify(thrust::host_vector<int> &values_to_amplify,
+	     thrust::host_vector<int> &amplify_counts,
+	     thrust::host_vector<int> &amplified_values);
 
 
-void amplify_float(thrust::device_vector<float> &values_to_amplify,
-	     	   thrust::device_vector<int> &amplify_counts,
-	     	   thrust::device_vector<float> &amplified_values);
+void amplify_float(thrust::host_vector<int> &values_to_amplify,
+	     	   thrust::host_vector<int> &amplify_counts,
+	     	   thrust::host_vector<int> &amplified_values);
 
-void amplify_sequence(thrust::device_vector<int> &amplify_counts,
+void amplify_sequence(thrust::host_vector<int> &amplify_counts,
 	     int number_of_elements_in_sequence,
-	     thrust::device_vector<int> &amplified_values);
+	     thrust::host_vector<int> &amplified_values);
 
 
 #endif
