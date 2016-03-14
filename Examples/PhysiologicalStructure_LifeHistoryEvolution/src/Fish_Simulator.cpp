@@ -81,5 +81,5 @@ Fish_Simulator::~Fish_Simulator()
 
 	delete stats_fecundity;
 	delete stats_eggsize;
-	delete demographics
+	delete demographics;
 	}
