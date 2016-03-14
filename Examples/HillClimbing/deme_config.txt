@@ -1,0 +1,529 @@
+number_of_demes = 6 
+species_data = (
+	{#species0
+		number_of_parameters = 2 
+		number_of_species_specific_values = 2 
+		species_specific_values_names = ["FECUNDITY_PHENOTYPE_INDEX","MORTALITY_PHENOTYPE_INDEX"]
+
+		parameter_names = ["male_reproductive_skew","female_reproductive_skew"]
+
+		 FECUNDITY_PHENOTYPE_INDEX  =  0.000000 
+		 MORTALITY_PHENOTYPE_INDEX  =  1.000000 
+
+	demes_specifications = (
+		{#deme0
+		 male_reproductive_skew =  1.000000 
+		 female_reproductive_skew =  1.000000 
+		},
+
+		{#deme1
+		 male_reproductive_skew =  1.000000 
+		 female_reproductive_skew =  1.000000 
+		},
+
+		{#deme2
+		 male_reproductive_skew =  1.000000 
+		 female_reproductive_skew =  1.000000 
+		},
+
+		{#deme3
+		 male_reproductive_skew =  5.000000 
+		 female_reproductive_skew =  1.000000 
+		},
+
+		{#deme4
+		 male_reproductive_skew =  5.000000 
+		 female_reproductive_skew =  1.000000 
+		},
+
+		{#deme5
+		 male_reproductive_skew =  5.000000 
+		 female_reproductive_skew =  1.000000 
+		}
+	)
+	}
+
+	)
+
+
+
+###########################
+#
+#
+#Genetics stuff
+#
+#
+############################
+species_genetics = (
+	{#species0
+ 	number_of_loci = 10 
+ 	number_of_phenotypes = 2 
+  		phenotype_names = [ "FECUNDITY_PHENOTYPE", "MORTALITY_PHENOTYPE" ]
+
+  		recombination_rates = [ 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 ]
+
+  		loci_names = [ "locus1", "locus2", "locus3", "locus4", "locus5", "locus6", "locus7", "locus8", "locus9", "locus10" ]
+
+ locus_specifications = (
+ 	{#locus0
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme2
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme3
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme4
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme5
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	},
+ 	{#locus1
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme2
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme3
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme4
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme5
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	},
+ 	{#locus2
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme2
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme3
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme4
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme5
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	},
+ 	{#locus3
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme2
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme3
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme4
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme5
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	},
+ 	{#locus4
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme2
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme3
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme4
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme5
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	},
+ 	{#locus5
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme2
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme3
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme4
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme5
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	},
+ 	{#locus6
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme2
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme3
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme4
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme5
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	},
+ 	{#locus7
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme2
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme3
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme4
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme5
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	},
+ 	{#locus8
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme2
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme3
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme4
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme5
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	},
+ 	{#locus9
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme2
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme3
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme4
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme5
+		 MUTATION_RATE =  0.000100 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	}
+ 	)
+ 	phenotype_specifications = (
+ 		{#phenotype0
+ 		number_of_genotype_phenotype_map_parameters = 5 
+  
+		 		names_of_genotype_phenotype_map_parameters = [ 
+		 "GENPHEN_MAP_COEF0", 
+		 "GENPHEN_MAP_COEF1", 
+		 "GENPHEN_MAP_COEF2", 
+		 "GENPHEN_MAP_COEF3", 
+		 "GENPHEN_MAP_COEF4" 
+		 ]
+
+ 
+		 		genotype_phenotype_map_parameters=(
+ 		{#deme0
+		 GENPHEN_MAP_COEF0 =  1.000000 
+		 GENPHEN_MAP_COEF1 =  1.000000 
+		 GENPHEN_MAP_COEF2 =  1.000000 
+		 GENPHEN_MAP_COEF3 =  1.000000 
+		 GENPHEN_MAP_COEF4 =  1.000000 
+		},
+
+		{#deme1
+		 GENPHEN_MAP_COEF0 =  1.000000 
+		 GENPHEN_MAP_COEF1 =  1.000000 
+		 GENPHEN_MAP_COEF2 =  1.000000 
+		 GENPHEN_MAP_COEF3 =  1.000000 
+		 GENPHEN_MAP_COEF4 =  1.000000 
+		},
+
+		{#deme2
+		 GENPHEN_MAP_COEF0 =  1.000000 
+		 GENPHEN_MAP_COEF1 =  1.000000 
+		 GENPHEN_MAP_COEF2 =  1.000000 
+		 GENPHEN_MAP_COEF3 =  1.000000 
+		 GENPHEN_MAP_COEF4 =  1.000000 
+		},
+
+		{#deme3
+		 GENPHEN_MAP_COEF0 =  1.000000 
+		 GENPHEN_MAP_COEF1 =  1.000000 
+		 GENPHEN_MAP_COEF2 =  1.000000 
+		 GENPHEN_MAP_COEF3 =  1.000000 
+		 GENPHEN_MAP_COEF4 =  1.000000 
+		},
+
+		{#deme4
+		 GENPHEN_MAP_COEF0 =  1.000000 
+		 GENPHEN_MAP_COEF1 =  1.000000 
+		 GENPHEN_MAP_COEF2 =  1.000000 
+		 GENPHEN_MAP_COEF3 =  1.000000 
+		 GENPHEN_MAP_COEF4 =  1.000000 
+		},
+
+		{#deme5
+		 GENPHEN_MAP_COEF0 =  1.000000 
+		 GENPHEN_MAP_COEF1 =  1.000000 
+		 GENPHEN_MAP_COEF2 =  1.000000 
+		 GENPHEN_MAP_COEF3 =  1.000000 
+		 GENPHEN_MAP_COEF4 =  1.000000 
+		}
+ 		)
+
+ 		},
+ 		{#phenotype1
+ 		number_of_genotype_phenotype_map_parameters = 5 
+  
+		 		names_of_genotype_phenotype_map_parameters = [ 
+		 "GENPHEN_MAP_COEF0", 
+		 "GENPHEN_MAP_COEF1", 
+		 "GENPHEN_MAP_COEF2", 
+		 "GENPHEN_MAP_COEF3", 
+		 "GENPHEN_MAP_COEF4" 
+		 ]
+
+ 
+		 		genotype_phenotype_map_parameters=(
+ 		{#deme0
+		 GENPHEN_MAP_COEF0 =  1.000000 
+		 GENPHEN_MAP_COEF1 =  1.000000 
+		 GENPHEN_MAP_COEF2 =  1.000000 
+		 GENPHEN_MAP_COEF3 =  1.000000 
+		 GENPHEN_MAP_COEF4 =  1.000000 
+		},
+
+		{#deme1
+		 GENPHEN_MAP_COEF0 =  1.000000 
+		 GENPHEN_MAP_COEF1 =  1.000000 
+		 GENPHEN_MAP_COEF2 =  1.000000 
+		 GENPHEN_MAP_COEF3 =  1.000000 
+		 GENPHEN_MAP_COEF4 =  1.000000 
+		},
+
+		{#deme2
+		 GENPHEN_MAP_COEF0 =  1.000000 
+		 GENPHEN_MAP_COEF1 =  1.000000 
+		 GENPHEN_MAP_COEF2 =  1.000000 
+		 GENPHEN_MAP_COEF3 =  1.000000 
+		 GENPHEN_MAP_COEF4 =  1.000000 
+		},
+
+		{#deme3
+		 GENPHEN_MAP_COEF0 =  1.000000 
+		 GENPHEN_MAP_COEF1 =  1.000000 
+		 GENPHEN_MAP_COEF2 =  1.000000 
+		 GENPHEN_MAP_COEF3 =  1.000000 
+		 GENPHEN_MAP_COEF4 =  1.000000 
+		},
+
+		{#deme4
+		 GENPHEN_MAP_COEF0 =  1.000000 
+		 GENPHEN_MAP_COEF1 =  1.000000 
+		 GENPHEN_MAP_COEF2 =  1.000000 
+		 GENPHEN_MAP_COEF3 =  1.000000 
+		 GENPHEN_MAP_COEF4 =  1.000000 
+		},
+
+		{#deme5
+		 GENPHEN_MAP_COEF0 =  1.000000 
+		 GENPHEN_MAP_COEF1 =  1.000000 
+		 GENPHEN_MAP_COEF2 =  1.000000 
+		 GENPHEN_MAP_COEF3 =  1.000000 
+		 GENPHEN_MAP_COEF4 =  1.000000 
+		}
+ 		)
+
+ 		}
+ 		)
+ 	}
+
+ 	)
