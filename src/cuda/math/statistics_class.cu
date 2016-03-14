@@ -1,5 +1,5 @@
-#include "statistics_class.h"
-#include "gather_values_by_deme.h"
+#include <math/statistics_class.h>
+#include <util/gather_values_by_deme.h>
 
 Statistics::Statistics(int num_demes)
 	{

@@ -14,11 +14,13 @@
 
 Currently, **sPEGG** has only been tested on Linux (debian-based distributions to be specific). If you encounter platform-specific commands that need to be added while porting **sPEGG** to other operating systems, please [create an issue](https://github.com/kewok/spegg/issues) and I will update the documentation. Or, if you can get it to work reliably, consider becoming a [contributor](https://github.com/kewok/spegg/contributors)!
 
+<a name="prereqs">
 ## Pre-requisites
+</a>
 
   * Linux OS
 
-  * The latest [NVIDIA CUDA](https://developer.nvidia.com/cuda-downloads) for your distro; appropriate drivers and the required thrust should come with this.
+  * The latest [NVIDIA CUDA](https://developer.nvidia.com/cuda-downloads) for your distro; appropriate drivers and the required thrust library should come with this.
   
   * [gcc](https://gcc.gnu.org/)
   
@@ -31,7 +33,7 @@ Currently, **sPEGG** has only been tested on Linux (debian-based distributions t
 ### In addition, the CPU version requires
 
   * [GNU Scientific Library](http://www.gnu.org/software/gsl/)
-  
+</a>  
 Please see the bottom of this page for some [possible issues](#setup_issues) you may run into when setting up **sPEGG**.
 
 Once you have everything in place, you can run your first **sPEGG** simulation!
@@ -57,19 +59,31 @@ Enter the main code base for sPEGG
 ```sh
 $ cd spegg
 ```
-and checkout the branch via ```Genetic_Drift_Tutorial```
-
-```sh
-$ get checkout Genetic_Drift_Tutorial
-```
+in your terminal.
 
 Now, simply type 
 
 ```sh
 $ make
 ```
+in the terminal. Depending on your system, this might take awhile.
 
-in the terminal. If everything has been installed correctly, this will create an executable (a.out). 
+Now, navigate into the directory:
+
+```sh
+$ cd Examples/Tutorial_Simulation
+```
+and type
+
+```sh
+$ make
+```
+
+in the terminal. If everything has been installed correctly, this will create an executable (a.out). You can run it as:
+
+```sh
+$ ./a.out
+```
 
 However, the genetic drift simulator you downloaded is only configured to run for a single generation. Open the file Simulation.conf using a text editor (e.g., gedit) and change this line:
 
@@ -98,9 +112,9 @@ The average genotypes at locus 1 for the two demes are:
 
 The exact numbers may very well differ, however depending on your hardware.
 
-This just gives you a flavor for running a **sPEGG** simulation. If you are interested in simulating more biologically relevant models, have a look at the examples described  ([here](arXiv.org)). To configure and run those models, you'll want to modify the deme_config.txt and environment_config.txt files as well.
+This just gives you a flavor for running a **sPEGG** simulation. If you are interested in simulating more biologically relevant models, have a look at the other examples described  ([here](arXiv.org)). To configure and run those models, you'll want to modify the deme_config.txt and environment_config.txt files as well.
 
 For those of you who'd like to build your own **sPEGG** model, have a look at our more in-depth [Tutorial](https://github.com/kewok/spegg/Documentation/tutorial.md).
 
 ## License
-**sPEGG** is released under the terms of the GNU Public License v3.0. Please refer to the LICENSE file.
+**sPEGG** is released under the terms of the GNU Public License v3.0. Please refer to the LICENSE file. © Kenichi Okamoto, 2016.

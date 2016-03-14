@@ -1,7 +1,7 @@
-#include "sampling_input.h"
-#include "inds.h"
+#include <util/sampling_input.h>
+#include <species/inds.h>
 //#include "species_specific_sampling_input.h"
-#include "histogram.h"
+#include <math/histogram.h>
 
 // The operations in prepare_sampling_input() are also shared across species and contexts
 #if 0

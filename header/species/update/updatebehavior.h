@@ -1,9 +1,9 @@
 #ifndef UPDATE_BEHAVIOR_H
 #define UPDATE_BEHAVIOR_H
 
-#include "inds_stochastic.h"
-#include "survivorship_kernel_functors.h"
-#include "environment.h"
+#include <species/inds_stochastic.h>
+#include <species/update/survivorship_kernel_functors.h>
+#include <environ/environment.h>
 #include <thrust/sequence.h>
 
 //virtual interface; 

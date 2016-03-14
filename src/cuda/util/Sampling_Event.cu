@@ -1,6 +1,6 @@
-#include "sampling_event.h"
-#include "Sample_With_Replacement.h"
-#include "Sample_without_Replacement_1Pass.h"
+#include <util/sampling_event.h>
+#include <util/Sample_With_Replacement.h>
+#include <util/Sample_without_Replacement_1Pass.h>
 // #include "Sample_without_Replacement.h" // For now, this isn't quite ready yet
 
 // TODO: right now have no way of returning NULL if error?

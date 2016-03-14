@@ -1,16 +1,16 @@
 #ifndef REPRODUCTION_KERNEL_FUNCTORS_H
 #define REPRODUCTION_KERNEL_FUNCTORS_H
 
-#include "inds.h"
+#include <species/inds.h>
 #include "math.h"
-#include "thrust_functors.h"
+#include <util/thrust_functors.h>
 
 #include <thrust/device_vector.h>
 #include <thrust/functional.h>
 
 
 struct parental_eligibility_functor
-{
+	{
 	int parental_sex;
 
 	parental_eligibility_functor(int sex) : parental_sex(sex)
@@ -33,10 +33,10 @@ struct parental_eligibility_functor
 			thrust::get<0>(t) = 1;
 			}
 		}
-};
+	};
 
 struct female_fecundity_functor
-{
+	{
 	/* 
 		Elements in the tuple.
 
@@ -55,6 +55,6 @@ struct female_fecundity_functor
 			}
 
 		}
-};
+	};
 
 #endif

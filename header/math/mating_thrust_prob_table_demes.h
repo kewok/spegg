@@ -1,7 +1,7 @@
 #ifndef MATING_THRUST_PROB_TABLE_DEMES_H
 #define MATING_THRUST_PROB_TABLE_DEMES_H
 
-#include "thrust_prob_table.h"
+#include <math/thrust_prob_table.h>
 
 class mating_ThrustProbTable_demes : public ThrustProbTable
 	{

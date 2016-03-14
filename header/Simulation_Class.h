@@ -6,7 +6,7 @@
 #include <iostream>
 #include <stdio.h>
 
-#include "ConfigFile.h"
+#include <ConfigFile.h>
 
 class Simulation
 	{

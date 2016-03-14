@@ -1,5 +1,5 @@
-#include "amplify.h"
-#include "which_function.h"
+#include <util/amplify.h>
+#include <util/which_function.h>
 
 
 /* If you have a vector of values

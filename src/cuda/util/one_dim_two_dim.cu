@@ -1,9 +1,7 @@
-#include "one_dim_two_dim.h"
-
-
+#include <util/one_dim_two_dim.h>
 
 struct one_dim_two_dim_functor
-{
+	{
 /* 
 *For a one dimensional vector made by converting a two-dimensional * vector into a 1D vector, find the corresponding values from the original 2-D vector. 
 If you have a vector of int values
@@ -48,7 +46,7 @@ Note that all of these are o(1) operations per variable element.
 		thrust::get<1>(t) = floorf(one_dim_val/len_vec_2);
 		thrust::get<2>(t) = thrust::get<0>(t) - thrust::get<1>(t)*length_vector_2;
 		}
-};
+	};
 
 void one_dim_two_dim(thrust::device_vector<int> &vector1_values,
 	     thrust::device_vector<int> &vector2_values,

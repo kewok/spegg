@@ -1,9 +1,9 @@
 #ifndef MIGRATION_BEHAVIOR_H
 #define MIGRATION_BEHAVIOR_H
 
-#include "inds_stochastic_migratory.h"
-#include "thrust_prob_table_demes.h"
-#include "migration_kernel_functors.h"
+#include <species/inds_stochastic_migratory.h>
+#include <math/thrust_prob_table_demes.h>
+#include <species/movement/migration_kernel_functors.h>
 
 class MigrationBehavior
 	{

@@ -1,5 +1,5 @@
-#include "random_variables_functions.h"
-#include "thrust_probabilities.h"
+#include <math/random_variables_functions.h>
+#include <math/thrust_probabilities.h>
 
 #include <curand.h>
 #include <fstream>

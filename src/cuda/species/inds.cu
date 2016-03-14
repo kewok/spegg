@@ -1,5 +1,5 @@
-#include "inds.h"
-#include "thrust_probabilities.h"
+#include <species/inds.h>
+#include <math/thrust_probabilities.h>
 
 #include <curand.h>
 #include <fstream>

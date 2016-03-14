@@ -1,9 +1,9 @@
 #ifndef STOCHASTIC_INDS_MIGRATORY_H
 #define STOCHASTIC_INDS_MIGRATORY_H
 
-#include "inds_stochastic.h" 
-#include "random_variables_functions.h"
-#include "thrust_prob_table_demes.h"
+#include <species/inds_stochastic.h>
+#include <math/random_variables_functions.h>
+#include <math/thrust_prob_table_demes.h>
 
 class inds_stochastic_migratory : public inds_stochastic
 	{

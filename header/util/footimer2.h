@@ -8,17 +8,17 @@
 void memory_diagnostic();
 
 struct footimer2
-{
-public:
-	void start();
-	void stop();
-	void printTime();
-	void uprintTime();
+	{
+	public:
+		void start();
+		void stop();
+		void printTime();
+		void uprintTime();
 	
-	int getElapsed();
-private:
-	struct timeval start_time;
-	struct timeval stop_time;
-};
+		int getElapsed();
+	private:
+		struct timeval start_time;
+		struct timeval stop_time;
+	};
 
 #endif

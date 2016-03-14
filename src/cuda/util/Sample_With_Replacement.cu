@@ -1,6 +1,6 @@
-#include "Sample_With_Replacement.h"
-#include "amplify.h"
-#include "thrust_functors.h"
+#include <util/Sample_With_Replacement.h>
+#include <util/amplify.h>
+#include <util/thrust_functors.h>
 
 void Sample_With_Replacement::sample()
 	{

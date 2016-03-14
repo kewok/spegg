@@ -1,9 +1,9 @@
 #include <thrust/gather.h>
 
 //#include "species_specific_sampling_input.h"
-#include "random_variables_functions.h"
-#include "which_function.h"
-#include "sampling_input_mating.h"
+#include <math/random_variables_functions.h>
+#include <util/which_function.h>
+#include <species/add_kids/sampling_input_mating.h>
 
 /* Implementation of underlying methods for the different species */
 

@@ -1,9 +1,9 @@
 #ifndef SURVIVORSHIP_KERNEL_FUNCTORS_H
 #define SURVIVORSHIP_KERNEL_FUNCTORS_H
 
-#include "inds.h"
+#include <species/inds.h>
 #include "math.h"
-#include "thrust_functors.h"
+#include <util/thrust_functors.h>
 
 #include <thrust/device_vector.h>
 #include <thrust/functional.h>

@@ -1,4 +1,4 @@
-#include "inds_stochastic.h"
+#include <species/inds_stochastic.h>
 
 inds_stochastic::inds_stochastic(int size_val, int maxsize_val, int seed_val, int ndemes, int species_ID_val) : inds(size_val, maxsize_val, ndemes, species_ID_val)
 	{

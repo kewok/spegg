@@ -1,7 +1,7 @@
 #ifndef VALUES_BY_DEME
 #define VALUES_BY_DEME
 
-#include "thrust_functors.h"
+#include <util/thrust_functors.h>
 
 #include <iostream>
 #include <stdio.h>

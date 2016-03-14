@@ -1,5 +1,5 @@
-#include "inds_stochastic_migratory.h"
-#include "file_checker.h"
+#include <species/inds_stochastic_migratory.h>
+#include <util/file_checker.h>
 
 inds_stochastic_migratory::inds_stochastic_migratory(int size_val, int maxsize_val, int seed_val, int ndemes,  int species_ID_val) : inds_stochastic(size_val, maxsize_val, seed_val, ndemes, species_ID_val)
 	{

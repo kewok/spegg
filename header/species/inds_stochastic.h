@@ -1,8 +1,8 @@
 #ifndef STOCHASTIC_INDS_H
 #define STOCHASTIC_INDS_H
 
-#include "inds.h" 
-#include "random_variables_functions.h"
+#include <species/inds.h>
+#include <math/random_variables_functions.h>
 
 class inds_stochastic : public inds
 	{

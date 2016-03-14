@@ -1,4 +1,4 @@
-#include "thrust_prob_table.h"
+#include <math/thrust_prob_table.h>
 
 #include <thrust/binary_search.h>
 #include <thrust/device_vector.h>

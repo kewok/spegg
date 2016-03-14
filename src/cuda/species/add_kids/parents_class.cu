@@ -1,6 +1,6 @@
-#include "parents_class.h"
-#include "mating_kernel_functors.h"
-#include "footimer2.h"
+#include <species/add_kids/parents_class.h>
+#include <species/add_kids/mating_kernel_functors.h>
+#include <util/footimer2.h>
 
 // since we are ignoring genetics and using an external curand generator here, this is OK:
 

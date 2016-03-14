@@ -1,5 +1,5 @@
-#include "gather_values_by_deme.h"
-#include "amplify.h"
+#include <util/gather_values_by_deme.h>
+#include <util/amplify.h>
 
 /* 
 

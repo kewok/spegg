@@ -1,4 +1,4 @@
-#include "demographic_statistics_class.h"
+#include <math/demographic_statistics_class.h>
 
 DemographicStatistics::DemographicStatistics(int num_demes, const char *output_file_summary_statistics, const char *output_file_histograms) : Statistics(num_demes, output_file_summary_statistics, output_file_histograms)
 	{

@@ -1,4 +1,4 @@
-#include "genotype_phenotype_map_parameters.h"
+#include <species/add_kids/genotype_phenotype_map_parameters.h>
 
 // For simplicity, right now assume that phenotypes are arranged correctly in the deme_config.txt (this might in any event be the responsibility of the config file generating program, not something these classes should have to worry about. 
 

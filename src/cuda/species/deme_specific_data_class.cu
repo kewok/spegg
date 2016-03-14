@@ -1,4 +1,4 @@
-#include "deme_specific_data_class.h"
+#include <species/deme_specific_data_class.h>
 
 DemeSettings::DemeSettings(const char *filename, int species_ID)
 	{

@@ -4,7 +4,7 @@
 #include <curand.h>
 #include <thrust/host_vector.h>
 #include <thrust/device_vector.h>
-#include "thrust_functors.h"
+#include <util/thrust_functors.h>
 #include <map>
 
 #include <libconfig.h++>

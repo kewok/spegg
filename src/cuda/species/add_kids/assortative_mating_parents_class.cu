@@ -1,17 +1,18 @@
-#include "assortative_mating_parents_class.h"
+#include <species/inds.h>
+#include <species/deme_specific_data_class.h>
+#include <species/add_kids/parents_class.h>
+#include <species/add_kids/sampling_input_mating.h>
+#include <species/add_kids/assortative_mating_parents_class.h>
 
-#include "inds.h"
-#include "deme_specific_data_class.h"
-#include "reduce_by_key_with_zeroes.h"
-#include "thrust_functors.h"
-#include "mating_thrust_prob_table_demes.h"
-#include "parents_class.h"
-#include "amplify.h"
-#include "which_function.h"
-#include "gather_values_by_deme.h"
-#include "footimer2.h"
-#include "sampling_input_mating.h"
-#include "sampling_event.h"
+#include <util/reduce_by_key_with_zeroes.h>
+#include <util/thrust_functors.h>
+#include <util/amplify.h>
+#include <util/which_function.h>
+#include <util/gather_values_by_deme.h>
+#include <util/footimer2.h>
+#include <util/sampling_event.h>
+#include <math/mating_thrust_prob_table_demes.h>
+
 
 #define SAMPLING_PARENT_SEX 0 // Assume females do the sampling
 
@@ -76,7 +77,7 @@ void Assortative_mating_parents::determine_parent_pair_probability(thrust::devic
 
 
 void Assortative_mating_parents::Generate_Parents_List()
-{
+	{
 	SamplingInput_Mating *PotentialParents;
 	PotentialParents = new SamplingInput_Mating(this, SAMPLING_PARENT_SEX);
 	PotentialParents->determine_number_of_individuals_sampled(this);
@@ -94,8 +95,7 @@ void Assortative_mating_parents::Generate_Parents_List()
 
 	delete PotentialParents;
 	delete sampling_event;
-
-}
+	}
 
 /******* 
 *
@@ -106,7 +106,7 @@ These routines are for the brute-force, calculate all pairwise interaction routi
 *******/
 
 void Assortative_mating_parents::Generate_Females_List()
-{
+	{
 	/* flay out the list of females, in essence, this is the R operation rep(female_parents, each=reproductive_males_per_deme) */
 
 	thrust::device_vector<int> females_pop(total_reproductive_females);
@@ -117,10 +117,10 @@ void Assortative_mating_parents::Generate_Females_List()
 	thrust::gather(females_pop.begin(), females_pop.end(), reproductive_males_per_deme.begin(), females_repeat.begin());
 
 	amplify(female_parents, females_repeat,  females_list);
-}
+	}
 
 void Assortative_mating_parents::Generate_Males_List()
-{
+	{
 	/* now do males. In essence, this is the R operation rep(male_parents, reproductive_females_per_deme) */
 	thrust::device_vector<int> females_pop(females_list.size());
 	thrust::gather(females_list.begin(), females_list.end(), deme.begin(), females_pop.begin());
@@ -143,5 +143,5 @@ void Assortative_mating_parents::Generate_Males_List()
 			 male_vals);
 	
 	thrust::gather(males_list.begin(), males_list.end(), male_parents.begin(), males_list.begin());
-}
+	}
 

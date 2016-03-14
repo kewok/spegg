@@ -1,4 +1,4 @@
-#include "neonates_class.h"
+#include <species/add_kids/neonates_class.h>
 
 /* One problem with a separate neonates class is that all this stuff has to get copied back into example species. Performance cost seems minimal but more extensive profiling seems warranted. */
 

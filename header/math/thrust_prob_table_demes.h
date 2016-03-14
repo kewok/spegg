@@ -1,7 +1,7 @@
 #ifndef THRUST_PROB_TABLE_DEMES_H
 #define THRUST_PROB_TABLE_DEMES_H
 
-#include "thrust_prob_table.h"
+#include <math/thrust_prob_table.h>
 
 class ThrustProbTable_demes : public ThrustProbTable
 	{

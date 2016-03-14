@@ -5,8 +5,8 @@
 #include <stdio.h>
 #include <thrust/host_vector.h>
 #include <thrust/sequence.h>
-#include "sampling_input.h"
-#include "parents_class.h"
+#include <util/sampling_input.h>
+#include <species/add_kids/parents_class.h>
 
 class SamplingInput_Mating : public SamplingInput
 	{

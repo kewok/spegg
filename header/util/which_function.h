@@ -1,7 +1,7 @@
 #ifndef WHICH_FUNCTION_H
 #define WHICH_FUNCTION_H
 
-#include "thrust_functors.h"
+#include <util/thrust_functors.h>
 
 #include <iostream>
 #include <stdio.h>

@@ -1,8 +1,8 @@
-#include "Sample_without_Replacement_1Pass.h"
-#include "amplify.h"
-#include "thrust_functors.h"
-#include "Sample_With_Replacement.h"
-#include "remove_duplicate_pairs.h"
+#include <util/Sample_without_Replacement_1Pass.h>
+#include <util/amplify.h>
+#include <util/thrust_functors.h>
+#include <util/Sample_With_Replacement.h>
+#include <util/remove_duplicate_pairs.h>
 
 void Sample_without_Replacement_1Pass::sample()
 	{

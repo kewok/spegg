@@ -4,9 +4,9 @@
 #include <thrust/device_vector.h>
 #include <thrust/functional.h>
 #include <curand.h>
-#include "inds_stochastic.h"
-#include "reduce_by_key_with_zeroes.h"
-#include "thrust_functors.h"
+#include <species/inds_stochastic.h>
+#include <util/reduce_by_key_with_zeroes.h>
+#include <util/thrust_functors.h>
 
 
 class Parents

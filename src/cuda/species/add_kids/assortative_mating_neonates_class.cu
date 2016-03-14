@@ -1,4 +1,4 @@
-#include "assortative_mating_neonates_class.h"
+#include <species/add_kids/assortative_mating_neonates_class.h>
 
 /* One problem with a separate neonates class is that all this stuff has to get copied back into example species. It might just not be worth it depending on the performance cost. */
 

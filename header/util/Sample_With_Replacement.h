@@ -4,7 +4,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <thrust/host_vector.h>
-#include "sampling_event.h"
+#include <util/sampling_event.h>
 
 class Sample_With_Replacement : public SamplingEvent
 	{

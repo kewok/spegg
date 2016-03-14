@@ -1,4 +1,4 @@
-#include "remove_duplicate_pairs.h"
+#include <util/remove_duplicate_pairs.h>
 
 #include <thrust/copy.h>
 #include <thrust/sort.h>

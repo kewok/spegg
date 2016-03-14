@@ -1,4 +1,4 @@
-#include "genetic_deme_specific_data.h"
+#include <species/add_kids/genetic_deme_specific_data.h>
 
 DemeGeneticsSettings::DemeGeneticsSettings(const char *filename, int species_ID)
 	{

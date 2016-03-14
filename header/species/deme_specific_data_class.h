@@ -1,7 +1,7 @@
 #ifndef DEME_SPECIFIC_DATA_CLASS_H
 #define DEME_SPECIFIC_DATA_CLASS_H
 
-#include "genetic_deme_specific_data.h"
+#include <species/add_kids/genetic_deme_specific_data.h>
 
 // Requires libconfig++; after installing, add /usr/local/lib to path via LD_LIBRARY_PATH as well, followed by sudo ldconfig!
 

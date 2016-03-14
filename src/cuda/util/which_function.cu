@@ -1,4 +1,4 @@
-#include "which_function.h"
+#include <util/which_function.h>
 
 /* TODO: Right now, which_something are actually predicated on the approach of removing values for which something is false, e.g., which_equal_to(stencil, answer, value) returns indices in vector answer by testing which elements of stencil are not equal to "value". This is potentially confusing.
 

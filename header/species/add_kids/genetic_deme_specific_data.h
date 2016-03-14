@@ -10,7 +10,7 @@
 #include <thrust/device_vector.h>
 #include <thrust/functional.h>
 
-#include "genotype_phenotype_map_parameters.h"
+#include <species/add_kids/genotype_phenotype_map_parameters.h>
 
 using namespace libconfig;
 

@@ -4,8 +4,8 @@
 #include <thrust/host_vector.h>
 #include <thrust/device_vector.h>
 
-#include "deme_specific_data_class.h"
-#include "environment.h"
+#include <species/deme_specific_data_class.h>
+#include <environ/environment.h>
 
 class inds
 	{

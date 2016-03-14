@@ -4,7 +4,7 @@
 #include <curand.h>
 #include <thrust/host_vector.h>
 #include <thrust/device_vector.h>
-#include "thrust_functors.h"
+#include <util/thrust_functors.h>
 
 void prime_random_number_generator(curandGenerator_t gen, int seed);
 

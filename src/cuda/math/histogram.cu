@@ -23,9 +23,9 @@
 #include <thrust/set_operations.h>
 #include <thrust/extrema.h>
 
-#include "thrust_functors.h"
-#include "thrust_probabilities.h"
-#include "histogram.h"
+#include <util/thrust_functors.h>
+#include <math/thrust_probabilities.h>
+#include <math/histogram.h>
 /* 
 
 Stolen from:

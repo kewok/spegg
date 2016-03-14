@@ -1,4 +1,4 @@
-#include "reduce_by_key_with_zeroes.h"
+#include <util/reduce_by_key_with_zeroes.h>
 
 /* This function extends the output from thrust::reduce_by_key().
 

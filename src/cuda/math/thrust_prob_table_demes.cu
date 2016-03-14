@@ -1,5 +1,5 @@
-#include "thrust_prob_table_demes.h"
-#include "footimer2.h"
+#include <math/thrust_prob_table_demes.h>
+#include <util/footimer2.h>
 #include <thrust/binary_search.h>
 #include <thrust/device_vector.h>
 #include <thrust/distance.h>
