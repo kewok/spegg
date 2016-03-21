@@ -112,6 +112,7 @@ void Statistics::calculate_min_max_phenotypes_by_deme(inds *individuals, int PHE
 			max_phenotypes[i] = 0;
 			min_phenotypes[i] = 0;
 			}
+		cumulative_deme_sizes += individuals->deme_sizes[i];
 		}
 	}
 
