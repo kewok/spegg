@@ -100,7 +100,6 @@ void Statistics::calculate_min_max_phenotypes_by_deme(inds *individuals, int PHE
 	int cumulative_deme_sizes = 0;
 	for (int i=0; i < number_of_demes; i++)
 		{
-		cumulative_deme_sizes += individuals->deme_sizes[i];
 		if (individuals->deme_sizes[i] > 0)
 			{
 			max_phenotypes[i] = *thrust::max_element(individuals->phenotype[PHENOTYPE_TO_RECORD].begin() + cumulative_deme_sizes, individuals->phenotype[PHENOTYPE_TO_RECORD].begin() + cumulative_deme_sizes + individuals->deme_sizes[i]);
@@ -111,6 +110,7 @@ void Statistics::calculate_min_max_phenotypes_by_deme(inds *individuals, int PHE
 			max_phenotypes[i] = 0;
 			min_phenotypes[i] = 0;
 			}
+		cumulative_deme_sizes += individuals->deme_sizes[i];
 		}
 	}
 
