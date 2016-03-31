@@ -1,0 +1,88 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\astroncite{Carvajal-Rodr{\'{\i}}guez}{2010}]{carvajal10}
+{\sc Carvajal-Rodr{\'{\i}}guez, A.} 2010.
+\newblock {Simulation of Genes and Genomes Forward in Time}.
+\newblock {\em Current Genomics} 11:58--61.
+
+\bibitem[\protect\astroncite{DeAngelis and Mooij}{2005}]{deangelis05}
+{\sc DeAngelis, D. and Mooij, W.~M.} 2005.
+\newblock {Individual-based modeling of ecological and evolutionary processes}.
+\newblock {\em Annual Review of Ecology, Evolution and Systematics}
+  36:147--168.
+
+\bibitem[\protect\astroncite{Fuller and Millett}{2011}]{fuller11}
+{\sc Fuller, S.~H. and Millett, L.~I.} 2011.
+\newblock {Computing Performance: Game Over or Next Level?}
+\newblock {\em Computer} 44:31--38.
+
+\bibitem[\protect\astroncite{Futuyma}{2010}]{futuyma10}
+{\sc Futuyma, D.~J.} 2010.
+\newblock {Evolutionary constraint and ecological consequences}.
+\newblock {\em Evolution} 64:1865--1884.
+
+\bibitem[\protect\astroncite{Hartig et~al.}{2011}]{hartig11}
+{\sc Hartig, F., Calabrese, J.~M., Reineking, B., Wiegand, T., and Huth, A.}
+  2011.
+\newblock {Statistical inference for stochastic simulation models--theory and
+  application.}
+\newblock {\em Ecology Letters} 14:816--827.
+
+\bibitem[\protect\astroncite{Hendry}{2013}]{hendry13}
+{\sc Hendry, A.~P.} 2013.
+\newblock {Key questions in the genetics and genomics of eco-evolutionary
+  dynamics}.
+\newblock {\em Heredity} 111:456--466.
+
+\bibitem[\protect\astroncite{Hendry}{ress}]{hendry16}
+{\sc Hendry, A.~P.} In press.
+\newblock {Eco-evolutionary dynamics}.
+\newblock Princeton University Press, Princeton, NJ.
+
+\bibitem[\protect\astroncite{Hoban et~al.}{2012}]{hoban12}
+{\sc Hoban, S., Bertorelle, G., and Gaggiotti, O.~E.} 2012.
+\newblock {Computer simulations: tools for population and evolutionary
+  genetics}.
+\newblock {\em Nature Reviews Genetics} 13:110--122.
+
+\bibitem[\protect\astroncite{Pacala et~al.}{1996}]{pacala96}
+{\sc Pacala, S.~W., Canham, C.~D., Saponara, J., {Silander Jr}, J.~A., Kobe,
+  R.~K., and Ribbens, E.} 1996.
+\newblock {Forest models defined by field measurements: estimation, error
+  analysis and dynamics}.
+\newblock {\em Ecological Monographs} 66:1--43.
+
+\bibitem[\protect\astroncite{Persson et~al.}{1998}]{persson98}
+{\sc Persson, L., Leonardsson, K., de~Roos, a.~M., Gyllenberg, M., and
+  Christensen, B.} 1998.
+\newblock {Ontogenetic scaling of foraging rates and the dynamics of a
+  size-structured consumer-resource model.}
+\newblock {\em Theoretical population biology} 54:270--293.
+
+\bibitem[\protect\astroncite{Post and Palkovacs}{2009}]{post09}
+{\sc Post, D.~M. and Palkovacs, E.~P.} 2009.
+\newblock {Eco-evolutionary feedbacks in community and ecosystem ecology:
+  interactions between the ecological theatre and the evolutionary play}.
+\newblock {\em Philosophical Transactions of the Royal Society B: Biological
+  Sciences} 364:1629--1640.
+
+\bibitem[\protect\astroncite{Schoener}{2011}]{schoener11}
+{\sc Schoener, T.~W.} 2011.
+\newblock {The Newest Synthesis: Understanding the Interplay of Evolutionary
+  and Ecological Dynamics}.
+\newblock {\em Science} 331:426--429.
+
+\bibitem[\protect\astroncite{Stapley et~al.}{2010}]{stapley10}
+{\sc Stapley, J., Reger, J., Feulner, P. G.~D., Smadja, C., Galindo, J.,
+  Ekblom, R., Bennison, C., Ball, A.~D., Beckerman, A.~P., and Slate, J.} 2010.
+\newblock {Adaptation genomics: the next generation.}
+\newblock {\em Trends in Ecology and Evolution} 25:705--712.
+
+\bibitem[\protect\astroncite{Yoshida et~al.}{2003}]{yoshida03}
+{\sc Yoshida, T., Jones, L.~E., Ellner, S.~P., Fussmann, G.~F., and Hairston,
+  N.~G.} 2003.
+\newblock {Rapid evolution drives ecological dynamics in a predator-prey
+  system.}
+\newblock {\em Nature} 424:303--6.
+
+\end{thebibliography}

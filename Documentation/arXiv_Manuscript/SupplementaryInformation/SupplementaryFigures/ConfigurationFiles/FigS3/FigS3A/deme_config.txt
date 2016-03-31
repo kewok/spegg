@@ -1,0 +1,748 @@
+number_of_demes = 4
+species_data = (
+	{#species0
+		number_of_parameters=6
+		number_of_species_specific_values=4
+		species_specific_values_names=["CONSUMER_ATTACK_PHENOTYPE_INDEX","MORTALITY_PHENOTYPE_INDEX","FECUNDITY_PHENOTYPE_INDEX","reproduction_mode"]
+
+		parameter_names=["mean_number_of_others_sampled","Age_at_maturity","interaction_effects_on_fecundity","interaction_effects_on_survivorship","individual_migration_propensity","effect_of_interaction_phenotype_on_fecundity"]
+
+		CONSUMER_ATTACK_PHENOTYPE_INDEX=0.000000
+		MORTALITY_PHENOTYPE_INDEX=1.000000
+		FECUNDITY_PHENOTYPE_INDEX=2.000000
+		reproduction_mode=0.000000
+
+	 	interacting_species = (1)
+		interaction_phenotype_indices = (0)
+		 demes_specifications=(
+		{#deme0
+		mean_number_of_others_sampled=15.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme1
+		mean_number_of_others_sampled=15.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme2
+		mean_number_of_others_sampled=15.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.0
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme3
+		mean_number_of_others_sampled=15.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.0
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		}
+	)
+	}
+
+	,
+	{#species0
+		number_of_parameters=6
+		number_of_species_specific_values=5
+		species_specific_values_names=["FECUNDITY_PHENOTYPE_INDEX","MORTALITY_PHENOTYPE_INDEX","RESOURCE_DEFENSE_PHENOTYPE_INDEX","RESOURCE_COMPETITIVE_ABILITY_PHENOTYPE_INDEX","reproduction_mode"]
+
+		parameter_names=["mean_number_of_others_sampled","Age_at_maturity","interaction_effects_on_fecundity","interaction_effects_on_survivorship","individual_migration_propensity","effect_of_interaction_phenotype_on_fecundity"]
+
+		FECUNDITY_PHENOTYPE_INDEX=0.000000
+		MORTALITY_PHENOTYPE_INDEX=1.000000
+		RESOURCE_DEFENSE_PHENOTYPE_INDEX=2.000000
+		RESOURCE_COMPETITIVE_ABILITY_PHENOTYPE_INDEX=3.000000
+		reproduction_mode=1.000000
+
+	 	interacting_species = (0, 1)
+		interaction_phenotype_indices = (2, 3)
+		 demes_specifications=(
+		{#deme0
+		mean_number_of_others_sampled=5.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.250000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme1
+		mean_number_of_others_sampled=5.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.250000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme2
+		mean_number_of_others_sampled=5.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.250000,0.000000]
+		individual_migration_propensity=0.0
+		effect_of_interaction_phenotype_on_fecundity=0.25000
+		},
+
+		{#deme3
+		mean_number_of_others_sampled=5.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.250000,0.000000]
+		individual_migration_propensity=0.0
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		}
+	)
+	}
+
+	)
+
+species_genetics = (
+	{#species0
+	number_of_loci=5
+	number_of_phenotypes=3
+		phenotype_names=["CONSUMER_ATTACK_PHENOTYPE","MORTALITY_PHENOTYPE","FECUNDITY_PHENOTYPE"]
+
+		recombination_rates=[0.5,0.5,0.5,0.5,0.5]
+
+		loci_names=["locus1","locus2","locus3","locus4","locus5"]
+
+locus_specifications=(
+	{#locus0
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus1
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus2
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus3
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus4
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	}
+	)
+	phenotype_specifications=(
+		{#phenotype0
+		number_of_genotype_phenotype_map_parameters=3
+
+				names_of_genotype_phenotype_map_parameters=[
+		"GENPHEN_MAP_COEF0",
+		"GENPHEN_MAP_COEF1",
+		"GENPHEN_MAP_COEF2"
+		]
+
+
+				genotype_phenotype_map_parameters=(
+		{#deme0
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme1
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme2
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme3
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		}
+		)
+
+		},
+		{#phenotype1
+		number_of_genotype_phenotype_map_parameters=1
+		names_of_genotype_phenotype_map_parameters=[
+		"GENPHEN_MAP_CONSTANT"
+		]
+
+
+				genotype_phenotype_map_parameters=(
+		{#deme0
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme1
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme2
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme3
+		GENPHEN_MAP_CONSTANT=0.200000
+		}
+		)
+
+		},
+		{#phenotype2
+		number_of_genotype_phenotype_map_parameters=1
+		names_of_genotype_phenotype_map_parameters=[
+		"GENPHEN_MAP_CONSTANT"
+		]
+
+
+				genotype_phenotype_map_parameters=(
+		{#deme0
+		GENPHEN_MAP_CONSTANT=2.0000
+		},
+
+		{#deme1
+		GENPHEN_MAP_CONSTANT=2.00000
+		},
+
+		{#deme2
+		GENPHEN_MAP_CONSTANT=2.00000
+		},
+
+		{#deme3
+		GENPHEN_MAP_CONSTANT=2.00000
+		}
+		)
+
+		}
+		)
+	}
+
+	,
+	{#species0
+	number_of_loci=11
+	number_of_phenotypes=4
+		phenotype_names=["FECUNDITY_PHENOTYPE","MORTALITY_PHENOTYPE","RESOURCE_DEFENSE_PHENOTYPE","RESOURCE_COMPETITIVE_ABILITY_PHENOTYPE"]
+
+		recombination_rates=[0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5]
+
+		loci_names=["locus1","locus2","locus3","locus4","locus5","locus6","locus7","locus8","locus9","locus10","locus11"]
+
+locus_specifications=(
+	{#locus0
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus1
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus2
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus3
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus4
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus5
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus6
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus7
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus8
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus9
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus10
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	}
+	)
+	phenotype_specifications=(
+		{#phenotype0
+		number_of_genotype_phenotype_map_parameters=1
+		names_of_genotype_phenotype_map_parameters=[
+		"GENPHEN_MAP_CONSTANT"
+		]
+
+
+				genotype_phenotype_map_parameters=(
+		{#deme0
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme1
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme2
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme3
+		GENPHEN_MAP_CONSTANT=39.000000
+		}
+		)
+
+		},
+		{#phenotype1
+		number_of_genotype_phenotype_map_parameters=1
+		names_of_genotype_phenotype_map_parameters=[
+		"GENPHEN_MAP_CONSTANT"
+		]
+
+
+				genotype_phenotype_map_parameters=(
+		{#deme0
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme1
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme2
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme3
+		GENPHEN_MAP_CONSTANT=0.250000
+		}
+		)
+
+		},
+		{#phenotype2
+		number_of_genotype_phenotype_map_parameters=5
+
+				names_of_genotype_phenotype_map_parameters=[
+		"GENPHEN_MAP_COEF1",
+		"GENPHEN_MAP_COEF2",
+		"GENPHEN_MAP_COEF3",
+		"GENPHEN_MAP_COEF9",
+		"GENPHEN_MAP_COEF10"
+		]
+
+
+				genotype_phenotype_map_parameters=(
+		{#deme0
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme1
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme2
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme3
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		}
+		)
+
+		},
+		{#phenotype3
+		number_of_genotype_phenotype_map_parameters=5
+
+				names_of_genotype_phenotype_map_parameters=[
+		"GENPHEN_MAP_COEF1",
+		"GENPHEN_MAP_COEF2",
+		"GENPHEN_MAP_COEF3",
+		"GENPHEN_MAP_COEF8",
+		"GENPHEN_MAP_COEF10"
+		]
+
+
+				genotype_phenotype_map_parameters=(
+		{#deme0
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme1
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme2
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme3
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		}
+		)
+
+		}
+		)
+	}
+
+	)

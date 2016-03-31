@@ -1,0 +1,294 @@
+number_of_demes = 2 
+species_data = (
+	{#species0
+		number_of_parameters = 27 
+		number_of_species_specific_values = 8 
+		species_specific_values_names = ["mate_sampling_scheme","mating_scheme","FECUNDITY_PHENOTYPE","MORTALITY_PHENOTYPE","IRREVERSIBLE_MASS_PHENOTYPE","REVERSIBLE_MASS_PHENOTYPE","RESOURCE_LIMITATION_PHENOTYPE","EGGSIZE_PHENOTYPE"]
+
+		parameter_names = ["ontogenetic_niche_shift_constant","ontogenetic_niche_shift_coefficient","length_weight_conversion_coefficient","length_weight_conversion_exponent","handling_time","F_sizes_at_maturity","M_sizes_at_maturity","M_reproductive_advantage","F_reproductive_advantage","assortative_mating_value","conversion_efficiency","gamma_exponent","proportion_prey_variance","proportion_adult_resources_variance","satiation_noise","functional_response_numerator","alpha_g","beta_g","juvenile_maximum_condition","mature_maximum_condition","egg_survivorship","effect_of_starvation","size_dependent_mortality_constant","size_dependent_mortality_coefficient","cannibalism_constant","nest_ceiling","mean_number_of_others_sampled"]
+
+		 mate_sampling_scheme  =  1.000000 
+		 mating_scheme  =  0.000000 
+		 FECUNDITY_PHENOTYPE  =  0.000000 
+		 MORTALITY_PHENOTYPE  =  1.000000 
+		 IRREVERSIBLE_MASS_PHENOTYPE  =  2.000000 
+		 REVERSIBLE_MASS_PHENOTYPE  =  3.000000 
+		 RESOURCE_LIMITATION_PHENOTYPE  =  4.000000 
+		 EGGSIZE_PHENOTYPE  =  5.000000 
+
+	demes_specifications = (
+		{#deme0
+		 ontogenetic_niche_shift_constant =  -3.000000 
+		 ontogenetic_niche_shift_coefficient =  0.003000 
+		 length_weight_conversion_coefficient =  26.710000 
+		 length_weight_conversion_exponent =  0.310000 
+		 handling_time =  0.200000 
+		 F_sizes_at_maturity =  186.500000 
+		 M_sizes_at_maturity =  186.500000 
+		 M_reproductive_advantage =  1.000000 
+		 F_reproductive_advantage =  1.000000 
+		 assortative_mating_value =  5.000000 
+		 conversion_efficiency =  0.040000 
+		 gamma_exponent =  0.750000 
+		 proportion_prey_variance =  0.000000 
+		 proportion_adult_resources_variance =  0.000000 
+		 satiation_noise =  0.000000 
+		 functional_response_numerator =  1.200000 
+		 alpha_g =  0.009000 
+		 beta_g =  0.014000 
+		 juvenile_maximum_condition =  0.700000 
+		 mature_maximum_condition =  1.800000 
+		 egg_survivorship =  1.000000 
+		 effect_of_starvation =  7.000000 
+		 size_dependent_mortality_constant =  -1.000000 
+		 size_dependent_mortality_coefficient =  -3.000000 
+		 cannibalism_constant =  0.000000 
+		 nest_ceiling =  871.000000 
+		 mean_number_of_others_sampled =  10.000000 
+		},
+
+		{#deme1
+		 ontogenetic_niche_shift_constant =  -3.000000 
+		 ontogenetic_niche_shift_coefficient =  0.003000 
+		 length_weight_conversion_coefficient =  26.710000 
+		 length_weight_conversion_exponent =  0.310000 
+		 handling_time =  0.200000 
+		 F_sizes_at_maturity =  186.500000 
+		 M_sizes_at_maturity =  186.500000 
+		 M_reproductive_advantage =  1.000000 
+		 F_reproductive_advantage =  1.000000 
+		 assortative_mating_value =  5.000000 
+		 conversion_efficiency =  0.040000 
+		 gamma_exponent =  0.750000 
+		 proportion_prey_variance =  0.000000 
+		 proportion_adult_resources_variance =  0.000000 
+		 satiation_noise =  0.000000 
+		 functional_response_numerator =  1.200000 
+		 alpha_g =  0.009000 
+		 beta_g =  0.014000 
+		 juvenile_maximum_condition =  0.700000 
+		 mature_maximum_condition =  1.800000 
+		 egg_survivorship =  1.000000 
+		 effect_of_starvation =  7.000000 
+		 size_dependent_mortality_constant =  -1.000000 
+		 size_dependent_mortality_coefficient =  -3.000000 
+		 cannibalism_constant =  0.000000 
+		 nest_ceiling =  874.000000 
+		 mean_number_of_others_sampled =  10.000000 
+		}
+	)
+	}
+
+	)
+
+
+
+###########################
+#
+#
+#Genetics stuff
+#
+#
+############################
+species_genetics = (
+	{#species0
+ 	number_of_loci = 10 
+ 	number_of_phenotypes = 6 
+  		phenotype_names = [ "FECUNDITY_PHENOTYPE", "MORTALITY_PHENOTYPE", "IRREVERSIBLE_MASS_PHENOTYPE", "REVERSIBLE_MASS_PHENOTYPE", "RESOURCE_LIMITATION_PHENOTYPE", "EGGSIZE_PHENOTYPE" ]
+
+  		recombination_rates = [ 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 ]
+
+  		loci_names = [ "locus1", "locus2", "locus3", "locus4", "locus5", "locus6", "locus7", "locus8", "locus9", "locus10" ]
+
+ locus_specifications = (
+ 	{#locus0
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	},
+ 	{#locus1
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	},
+ 	{#locus2
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	},
+ 	{#locus3
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	},
+ 	{#locus4
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	},
+ 	{#locus5
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	},
+ 	{#locus6
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	},
+ 	{#locus7
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	},
+ 	{#locus8
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	},
+ 	{#locus9
+ 	mutation_parameters = (
+ 		{#deme0
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		},
+
+		{#deme1
+		 MUTATION_RATE =  0.000010 
+		 MUTATION_MAGNITUDE =  0.100000 
+		}
+ 		)
+ 	}
+ 	)
+ 	phenotype_specifications = (
+ 		{#phenotype0
+ 		number_of_genotype_phenotype_map_parameters = 0 
+ 		},
+ 		{#phenotype1
+ 		number_of_genotype_phenotype_map_parameters = 0 
+ 		},
+ 		{#phenotype2
+ 		number_of_genotype_phenotype_map_parameters = 8 
+  
+		 		names_of_genotype_phenotype_map_parameters = [ 
+		 "OFFSPRING_SIZE_CONSTANT", 
+		 "OFFSPRING_SIZE_GENPHEN_MAP_COEF0", 
+		 "OFFSPRING_SIZE_GENPHEN_MAP_COEF1", 
+		 "OFFSPRING_SIZE_GENPHEN_MAP_COEF2", 
+		 "OFFSPRING_SIZE_GENPHEN_MAP_COEF3", 
+		 "OFFSPRING_SIZE_GENPHEN_MAP_COEF4", 
+		 "OFFSPRING_SIZE_GENPHEN_MAP_COEF5", 
+		 "OFFSPRING_SIZE_GENPHEN_MAP_COEF6" 
+		 ]
+
+ 
+		 		genotype_phenotype_map_parameters=(
+ 		{#deme0
+		 OFFSPRING_SIZE_CONSTANT =  2.500000 
+		 OFFSPRING_SIZE_GENPHEN_MAP_COEF0 =  1.000000 
+		 OFFSPRING_SIZE_GENPHEN_MAP_COEF1 =  1.000000 
+		 OFFSPRING_SIZE_GENPHEN_MAP_COEF2 =  1.000000 
+		 OFFSPRING_SIZE_GENPHEN_MAP_COEF3 =  1.000000 
+		 OFFSPRING_SIZE_GENPHEN_MAP_COEF4 =  1.000000 
+		 OFFSPRING_SIZE_GENPHEN_MAP_COEF5 =  1.000000 
+		 OFFSPRING_SIZE_GENPHEN_MAP_COEF6 =  1.000000 
+		},
+
+		{#deme1
+		 OFFSPRING_SIZE_CONSTANT =  2.500000 
+		 OFFSPRING_SIZE_GENPHEN_MAP_COEF0 =  1.000000 
+		 OFFSPRING_SIZE_GENPHEN_MAP_COEF1 =  1.000000 
+		 OFFSPRING_SIZE_GENPHEN_MAP_COEF2 =  1.000000 
+		 OFFSPRING_SIZE_GENPHEN_MAP_COEF3 =  1.000000 
+		 OFFSPRING_SIZE_GENPHEN_MAP_COEF4 =  1.000000 
+		 OFFSPRING_SIZE_GENPHEN_MAP_COEF5 =  1.000000 
+		 OFFSPRING_SIZE_GENPHEN_MAP_COEF6 =  1.000000 
+		}
+ 		)
+
+ 		},
+ 		{#phenotype3
+ 		number_of_genotype_phenotype_map_parameters = 0 
+ 		},
+ 		{#phenotype4
+ 		number_of_genotype_phenotype_map_parameters = 0 
+ 		},
+ 		{#phenotype5
+ 		number_of_genotype_phenotype_map_parameters = 0 
+ 		}
+ 		)
+ 	}
+
+ 	)

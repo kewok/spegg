@@ -1,0 +1,449 @@
+number_of_demes = 2 
+
+
+# Stuff related to abiotic variables
+		abiotic_variable_names = ["external_forcing"]
+
+abiotic_variable_initialization = 
+	(
+		{#deme0
+		 external_forcing =  2371.820000 
+		},
+
+		{#deme1
+		 external_forcing =  1963.720000 
+		}
+	)
+
+
+# Stuff related to prey
+Number_of_Prey_Types = 2
+number_of_parameters = 5 
+parameter_names = ["prey_carrying_capacity","prey_unconstrained_growth_rates","prey_assimilation_efficiency","prey_growth_rate_noise_stddev","prey_maximum_abundance"]
+
+prey_initialization = 
+(# prey 0 
+	(
+		{#deme0
+		 prey_carrying_capacity =  5000000.000000 
+		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_assimilation_efficiency =  1.000000 
+		 prey_growth_rate_noise_stddev =  0.000000 
+		 prey_maximum_abundance =  5000000.000000 
+		},
+
+		{#deme1
+		 prey_carrying_capacity =  5000000.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
+		 prey_assimilation_efficiency =  1.000000 
+		 prey_growth_rate_noise_stddev =  0.000000 
+		 prey_maximum_abundance =  5000000.000000 
+		}
+	),
+# prey 1 
+	(
+		{#deme0
+		 prey_carrying_capacity =  500000.000000 
+		 prey_unconstrained_growth_rates =  5.000000 
+		 prey_assimilation_efficiency =  1.000000 
+		 prey_growth_rate_noise_stddev =  0.000000 
+		 prey_maximum_abundance =  500000.000000 
+		},
+
+		{#deme1
+		 prey_carrying_capacity =  500000.000000 
+		 prey_unconstrained_growth_rates =  5.000000 
+		 prey_assimilation_efficiency =  1.000000 
+		 prey_growth_rate_noise_stddev =  0.000000 
+		 prey_maximum_abundance =  500000.000000 
+		}
+	)
+)
+###########################
+#
+#
+#Temporal fluctuations
+#
+#
+############################
+number_of_time_steps = 90 
+time_step_names = ["Step1","Step2","Step3","Step4","Step5","Step6","Step7","Step8","Step9","Step10","Step11","Step12","Step13","Step14","Step15","Step16","Step17","Step18","Step19","Step20","Step21","Step22","Step23","Step24","Step25","Step26","Step27","Step28","Step29","Step30","Step31","Step32","Step33","Step34","Step35","Step36","Step37","Step38","Step39","Step40","Step41","Step42","Step43","Step44","Step45","Step46","Step47","Step48","Step49","Step50","Step51","Step52","Step53","Step54","Step55","Step56","Step57","Step58","Step59","Step60","Step61","Step62","Step63","Step64","Step65","Step66","Step67","Step68","Step69","Step70","Step71","Step72","Step73","Step74","Step75","Step76","Step77","Step78","Step79","Step80","Step81","Step82","Step83","Step84","Step85","Step86","Step87","Step88","Step89","Step90"]
+
+Temporal_Fluctuations = 
+(# prey 0 
+	(
+		{#deme0
+		 Step1 =  0.100000 
+		 Step2 =  0.100000 
+		 Step3 =  0.100000 
+		 Step4 =  0.100000 
+		 Step5 =  0.100000 
+		 Step6 =  0.100000 
+		 Step7 =  0.100000 
+		 Step8 =  0.100000 
+		 Step9 =  0.100000 
+		 Step10 =  0.100000 
+		 Step11 =  0.100000 
+		 Step12 =  0.100000 
+		 Step13 =  0.100000 
+		 Step14 =  0.100000 
+		 Step15 =  0.100000 
+		 Step16 =  0.100000 
+		 Step17 =  0.100000 
+		 Step18 =  0.100000 
+		 Step19 =  0.100000 
+		 Step20 =  0.100000 
+		 Step21 =  0.100000 
+		 Step22 =  0.100000 
+		 Step23 =  0.100000 
+		 Step24 =  0.100000 
+		 Step25 =  0.100000 
+		 Step26 =  0.100000 
+		 Step27 =  0.100000 
+		 Step28 =  0.100000 
+		 Step29 =  0.100000 
+		 Step30 =  0.100000 
+		 Step31 =  0.100000 
+		 Step32 =  0.100000 
+		 Step33 =  0.100000 
+		 Step34 =  0.100000 
+		 Step35 =  0.100000 
+		 Step36 =  0.100000 
+		 Step37 =  0.100000 
+		 Step38 =  0.100000 
+		 Step39 =  0.100000 
+		 Step40 =  0.100000 
+		 Step41 =  0.100000 
+		 Step42 =  0.100000 
+		 Step43 =  0.100000 
+		 Step44 =  0.100000 
+		 Step45 =  0.100000 
+		 Step46 =  0.100000 
+		 Step47 =  0.100000 
+		 Step48 =  0.100000 
+		 Step49 =  0.100000 
+		 Step50 =  0.100000 
+		 Step51 =  0.100000 
+		 Step52 =  0.100000 
+		 Step53 =  0.100000 
+		 Step54 =  0.100000 
+		 Step55 =  0.100000 
+		 Step56 =  0.100000 
+		 Step57 =  0.100000 
+		 Step58 =  0.100000 
+		 Step59 =  0.100000 
+		 Step60 =  0.100000 
+		 Step61 =  0.100000 
+		 Step62 =  0.100000 
+		 Step63 =  0.100000 
+		 Step64 =  0.100000 
+		 Step65 =  0.100000 
+		 Step66 =  0.100000 
+		 Step67 =  0.100000 
+		 Step68 =  0.100000 
+		 Step69 =  0.100000 
+		 Step70 =  0.100000 
+		 Step71 =  0.100000 
+		 Step72 =  0.100000 
+		 Step73 =  0.100000 
+		 Step74 =  0.100000 
+		 Step75 =  0.100000 
+		 Step76 =  0.100000 
+		 Step77 =  0.100000 
+		 Step78 =  0.100000 
+		 Step79 =  0.100000 
+		 Step80 =  0.100000 
+		 Step81 =  0.100000 
+		 Step82 =  0.100000 
+		 Step83 =  0.100000 
+		 Step84 =  0.100000 
+		 Step85 =  0.100000 
+		 Step86 =  0.100000 
+		 Step87 =  0.100000 
+		 Step88 =  0.100000 
+		 Step89 =  0.100000 
+		 Step90 =  0.100000 
+		},
+
+		{#deme1
+		 Step1 =  0.100000 
+		 Step2 =  0.100000 
+		 Step3 =  0.100000 
+		 Step4 =  0.100000 
+		 Step5 =  0.100000 
+		 Step6 =  0.100000 
+		 Step7 =  0.100000 
+		 Step8 =  0.100000 
+		 Step9 =  0.100000 
+		 Step10 =  0.100000 
+		 Step11 =  0.100000 
+		 Step12 =  0.100000 
+		 Step13 =  0.100000 
+		 Step14 =  0.100000 
+		 Step15 =  0.100000 
+		 Step16 =  0.100000 
+		 Step17 =  0.100000 
+		 Step18 =  0.100000 
+		 Step19 =  0.100000 
+		 Step20 =  0.100000 
+		 Step21 =  0.100000 
+		 Step22 =  0.100000 
+		 Step23 =  0.100000 
+		 Step24 =  0.100000 
+		 Step25 =  0.100000 
+		 Step26 =  0.100000 
+		 Step27 =  0.100000 
+		 Step28 =  0.100000 
+		 Step29 =  0.100000 
+		 Step30 =  0.100000 
+		 Step31 =  0.100000 
+		 Step32 =  0.100000 
+		 Step33 =  0.100000 
+		 Step34 =  0.100000 
+		 Step35 =  0.100000 
+		 Step36 =  0.100000 
+		 Step37 =  0.100000 
+		 Step38 =  0.100000 
+		 Step39 =  0.100000 
+		 Step40 =  0.100000 
+		 Step41 =  0.100000 
+		 Step42 =  0.100000 
+		 Step43 =  0.100000 
+		 Step44 =  0.100000 
+		 Step45 =  0.100000 
+		 Step46 =  0.100000 
+		 Step47 =  0.100000 
+		 Step48 =  0.100000 
+		 Step49 =  0.100000 
+		 Step50 =  0.100000 
+		 Step51 =  0.100000 
+		 Step52 =  0.100000 
+		 Step53 =  0.100000 
+		 Step54 =  0.100000 
+		 Step55 =  0.100000 
+		 Step56 =  0.100000 
+		 Step57 =  0.100000 
+		 Step58 =  0.100000 
+		 Step59 =  0.100000 
+		 Step60 =  0.100000 
+		 Step61 =  0.100000 
+		 Step62 =  0.100000 
+		 Step63 =  0.100000 
+		 Step64 =  0.100000 
+		 Step65 =  0.100000 
+		 Step66 =  0.100000 
+		 Step67 =  0.100000 
+		 Step68 =  0.100000 
+		 Step69 =  0.100000 
+		 Step70 =  0.100000 
+		 Step71 =  0.100000 
+		 Step72 =  0.100000 
+		 Step73 =  0.100000 
+		 Step74 =  0.100000 
+		 Step75 =  0.100000 
+		 Step76 =  0.100000 
+		 Step77 =  0.100000 
+		 Step78 =  0.100000 
+		 Step79 =  0.100000 
+		 Step80 =  0.100000 
+		 Step81 =  0.100000 
+		 Step82 =  0.100000 
+		 Step83 =  0.100000 
+		 Step84 =  0.100000 
+		 Step85 =  0.100000 
+		 Step86 =  0.100000 
+		 Step87 =  0.100000 
+		 Step88 =  0.100000 
+		 Step89 =  0.100000 
+		 Step90 =  0.100000 
+		}
+	),
+# prey 1 
+	(
+		{#deme0
+		 Step1 =  0.500000 
+		 Step2 =  0.500000 
+		 Step3 =  0.500000 
+		 Step4 =  0.500000 
+		 Step5 =  0.500000 
+		 Step6 =  0.500000 
+		 Step7 =  0.500000 
+		 Step8 =  0.500000 
+		 Step9 =  0.500000 
+		 Step10 =  0.500000 
+		 Step11 =  0.500000 
+		 Step12 =  0.500000 
+		 Step13 =  0.500000 
+		 Step14 =  0.500000 
+		 Step15 =  0.500000 
+		 Step16 =  0.500000 
+		 Step17 =  0.500000 
+		 Step18 =  0.500000 
+		 Step19 =  0.500000 
+		 Step20 =  0.500000 
+		 Step21 =  0.500000 
+		 Step22 =  0.500000 
+		 Step23 =  0.500000 
+		 Step24 =  0.500000 
+		 Step25 =  0.500000 
+		 Step26 =  0.500000 
+		 Step27 =  0.500000 
+		 Step28 =  0.500000 
+		 Step29 =  0.500000 
+		 Step30 =  0.500000 
+		 Step31 =  0.500000 
+		 Step32 =  0.500000 
+		 Step33 =  0.500000 
+		 Step34 =  0.500000 
+		 Step35 =  0.500000 
+		 Step36 =  0.500000 
+		 Step37 =  0.500000 
+		 Step38 =  0.500000 
+		 Step39 =  0.500000 
+		 Step40 =  0.500000 
+		 Step41 =  0.500000 
+		 Step42 =  0.500000 
+		 Step43 =  0.500000 
+		 Step44 =  0.500000 
+		 Step45 =  0.500000 
+		 Step46 =  0.500000 
+		 Step47 =  0.500000 
+		 Step48 =  0.500000 
+		 Step49 =  0.500000 
+		 Step50 =  0.500000 
+		 Step51 =  0.500000 
+		 Step52 =  0.500000 
+		 Step53 =  0.500000 
+		 Step54 =  0.500000 
+		 Step55 =  0.500000 
+		 Step56 =  0.500000 
+		 Step57 =  0.500000 
+		 Step58 =  0.500000 
+		 Step59 =  0.500000 
+		 Step60 =  0.500000 
+		 Step61 =  0.500000 
+		 Step62 =  0.500000 
+		 Step63 =  0.500000 
+		 Step64 =  0.500000 
+		 Step65 =  0.500000 
+		 Step66 =  0.500000 
+		 Step67 =  0.500000 
+		 Step68 =  0.500000 
+		 Step69 =  0.500000 
+		 Step70 =  0.500000 
+		 Step71 =  0.500000 
+		 Step72 =  0.500000 
+		 Step73 =  0.500000 
+		 Step74 =  0.500000 
+		 Step75 =  0.500000 
+		 Step76 =  0.500000 
+		 Step77 =  0.500000 
+		 Step78 =  0.500000 
+		 Step79 =  0.500000 
+		 Step80 =  0.500000 
+		 Step81 =  0.500000 
+		 Step82 =  0.500000 
+		 Step83 =  0.500000 
+		 Step84 =  0.500000 
+		 Step85 =  0.500000 
+		 Step86 =  0.500000 
+		 Step87 =  0.500000 
+		 Step88 =  0.500000 
+		 Step89 =  0.500000 
+		 Step90 =  0.500000 
+		},
+
+		{#deme1
+		 Step1 =  0.500000 
+		 Step2 =  0.500000 
+		 Step3 =  0.500000 
+		 Step4 =  0.500000 
+		 Step5 =  0.500000 
+		 Step6 =  0.500000 
+		 Step7 =  0.500000 
+		 Step8 =  0.500000 
+		 Step9 =  0.500000 
+		 Step10 =  0.500000 
+		 Step11 =  0.500000 
+		 Step12 =  0.500000 
+		 Step13 =  0.500000 
+		 Step14 =  0.500000 
+		 Step15 =  0.500000 
+		 Step16 =  0.500000 
+		 Step17 =  0.500000 
+		 Step18 =  0.500000 
+		 Step19 =  0.500000 
+		 Step20 =  0.500000 
+		 Step21 =  0.500000 
+		 Step22 =  0.500000 
+		 Step23 =  0.500000 
+		 Step24 =  0.500000 
+		 Step25 =  0.500000 
+		 Step26 =  0.500000 
+		 Step27 =  0.500000 
+		 Step28 =  0.500000 
+		 Step29 =  0.500000 
+		 Step30 =  0.500000 
+		 Step31 =  0.500000 
+		 Step32 =  0.500000 
+		 Step33 =  0.500000 
+		 Step34 =  0.500000 
+		 Step35 =  0.500000 
+		 Step36 =  0.500000 
+		 Step37 =  0.500000 
+		 Step38 =  0.500000 
+		 Step39 =  0.500000 
+		 Step40 =  0.500000 
+		 Step41 =  0.500000 
+		 Step42 =  0.500000 
+		 Step43 =  0.500000 
+		 Step44 =  0.500000 
+		 Step45 =  0.500000 
+		 Step46 =  0.500000 
+		 Step47 =  0.500000 
+		 Step48 =  0.500000 
+		 Step49 =  0.500000 
+		 Step50 =  0.500000 
+		 Step51 =  0.500000 
+		 Step52 =  0.500000 
+		 Step53 =  0.500000 
+		 Step54 =  0.500000 
+		 Step55 =  0.500000 
+		 Step56 =  0.500000 
+		 Step57 =  0.500000 
+		 Step58 =  0.500000 
+		 Step59 =  0.500000 
+		 Step60 =  0.500000 
+		 Step61 =  0.500000 
+		 Step62 =  0.500000 
+		 Step63 =  0.500000 
+		 Step64 =  0.500000 
+		 Step65 =  0.500000 
+		 Step66 =  0.500000 
+		 Step67 =  0.500000 
+		 Step68 =  0.500000 
+		 Step69 =  0.500000 
+		 Step70 =  0.500000 
+		 Step71 =  0.500000 
+		 Step72 =  0.500000 
+		 Step73 =  0.500000 
+		 Step74 =  0.500000 
+		 Step75 =  0.500000 
+		 Step76 =  0.500000 
+		 Step77 =  0.500000 
+		 Step78 =  0.500000 
+		 Step79 =  0.500000 
+		 Step80 =  0.500000 
+		 Step81 =  0.500000 
+		 Step82 =  0.500000 
+		 Step83 =  0.500000 
+		 Step84 =  0.500000 
+		 Step85 =  0.500000 
+		 Step86 =  0.500000 
+		 Step87 =  0.500000 
+		 Step88 =  0.500000 
+		 Step89 =  0.500000 
+		 Step90 =  0.500000 
+		}
+	)
+)

@@ -1,0 +1,9724 @@
+number_of_demes = 70
+species_data = (
+	{#species0
+		number_of_parameters=6
+		number_of_species_specific_values=4
+		species_specific_values_names=["CONSUMER_ATTACK_PHENOTYPE_INDEX","MORTALITY_PHENOTYPE_INDEX","FECUNDITY_PHENOTYPE_INDEX","reproduction_mode"]
+
+		parameter_names=["mean_number_of_others_sampled","Age_at_maturity","interaction_effects_on_fecundity","interaction_effects_on_survivorship","individual_migration_propensity","effect_of_interaction_phenotype_on_fecundity"]
+
+		CONSUMER_ATTACK_PHENOTYPE_INDEX=0.000000
+		MORTALITY_PHENOTYPE_INDEX=1.000000
+		FECUNDITY_PHENOTYPE_INDEX=2.000000
+		reproduction_mode=0.000000
+
+	 	interacting_species = (1)
+		interaction_phenotype_indices = (0)
+		 demes_specifications=(
+		{#deme0
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme1
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme2
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme3
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme4
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme5
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme6
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme7
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme8
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme9
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme10
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme11
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme12
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme13
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme14
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme15
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme16
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme17
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme18
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme19
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme20
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme21
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme22
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme23
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme24
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme25
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme26
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme27
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme28
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme29
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme30
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme31
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme32
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme33
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme34
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme35
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme36
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme37
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme38
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme39
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme40
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme41
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme42
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme43
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme44
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme45
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme46
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme47
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme48
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme49
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme50
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme51
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme52
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme53
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme54
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme55
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme56
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme57
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme58
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme59
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme60
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme61
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme62
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme63
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme64
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme65
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme66
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme67
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme68
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		},
+
+		{#deme69
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.250000]
+		interaction_effects_on_survivorship=[0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.010000
+		}
+	)
+	}
+
+	,
+	{#species0
+		number_of_parameters=6
+		number_of_species_specific_values=5
+		species_specific_values_names=["FECUNDITY_PHENOTYPE_INDEX","MORTALITY_PHENOTYPE_INDEX","RESOURCE_DEFENSE_PHENOTYPE_INDEX","RESOURCE_COMPETITIVE_ABILITY_PHENOTYPE_INDEX","reproduction_mode"]
+
+		parameter_names=["mean_number_of_others_sampled","Age_at_maturity","interaction_effects_on_fecundity","interaction_effects_on_survivorship","individual_migration_propensity","effect_of_interaction_phenotype_on_fecundity"]
+
+		FECUNDITY_PHENOTYPE_INDEX=0.000000
+		MORTALITY_PHENOTYPE_INDEX=1.000000
+		RESOURCE_DEFENSE_PHENOTYPE_INDEX=2.000000
+		RESOURCE_COMPETITIVE_ABILITY_PHENOTYPE_INDEX=3.000000
+		reproduction_mode=1.000000
+
+	 	interacting_species = (0, 1)
+		interaction_phenotype_indices = (2, 3)
+		 demes_specifications=(
+		{#deme0
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme1
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme2
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme3
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme4
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme5
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme6
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme7
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme8
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme9
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme10
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme11
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme12
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme13
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme14
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme15
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme16
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme17
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme18
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme19
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme20
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme21
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme22
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme23
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme24
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme25
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme26
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme27
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme28
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme29
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme30
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme31
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme32
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme33
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme34
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme35
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme36
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme37
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme38
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme39
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme40
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme41
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme42
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme43
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme44
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme45
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme46
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme47
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme48
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme49
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme50
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme51
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme52
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme53
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme54
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme55
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme56
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme57
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme58
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme59
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme60
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme61
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme62
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme63
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme64
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme65
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme66
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme67
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		},
+
+		{#deme68
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.250000
+		},
+
+		{#deme69
+		mean_number_of_others_sampled=25.000000
+		Age_at_maturity=1.000000
+		interaction_effects_on_fecundity=[0.000000,0.000000]
+		interaction_effects_on_survivorship=[-0.050000,0.000000]
+		individual_migration_propensity=0.025000
+		effect_of_interaction_phenotype_on_fecundity=0.100000
+		}
+	)
+	}
+
+	)
+
+species_genetics = (
+	{#species0
+	number_of_loci=5
+	number_of_phenotypes=3
+		phenotype_names=["CONSUMER_ATTACK_PHENOTYPE","MORTALITY_PHENOTYPE","FECUNDITY_PHENOTYPE"]
+
+		recombination_rates=[0.5,0.5,0.5,0.5,0.5]
+
+		loci_names=["locus1","locus2","locus3","locus4","locus5"]
+
+locus_specifications=(
+	{#locus0
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme4
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme5
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme6
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme7
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme8
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme9
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme10
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme11
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme12
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme13
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme14
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme15
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme16
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme17
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme18
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme19
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme20
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme21
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme22
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme23
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme24
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme25
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme26
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme27
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme28
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme29
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme30
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme31
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme32
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme33
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme34
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme35
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme36
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme37
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme38
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme39
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme40
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme41
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme42
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme43
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme44
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme45
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme46
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme47
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme48
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme49
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme50
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme51
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme52
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme53
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme54
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme55
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme56
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme57
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme58
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme59
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme60
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme61
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme62
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme63
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme64
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme65
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme66
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme67
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme68
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme69
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus1
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme4
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme5
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme6
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme7
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme8
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme9
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme10
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme11
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme12
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme13
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme14
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme15
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme16
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme17
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme18
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme19
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme20
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme21
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme22
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme23
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme24
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme25
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme26
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme27
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme28
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme29
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme30
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme31
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme32
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme33
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme34
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme35
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme36
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme37
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme38
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme39
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme40
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme41
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme42
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme43
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme44
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme45
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme46
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme47
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme48
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme49
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme50
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme51
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme52
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme53
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme54
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme55
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme56
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme57
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme58
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme59
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme60
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme61
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme62
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme63
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme64
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme65
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme66
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme67
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme68
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme69
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus2
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme4
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme5
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme6
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme7
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme8
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme9
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme10
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme11
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme12
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme13
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme14
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme15
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme16
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme17
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme18
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme19
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme20
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme21
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme22
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme23
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme24
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme25
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme26
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme27
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme28
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme29
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme30
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme31
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme32
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme33
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme34
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme35
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme36
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme37
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme38
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme39
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme40
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme41
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme42
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme43
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme44
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme45
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme46
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme47
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme48
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme49
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme50
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme51
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme52
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme53
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme54
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme55
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme56
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme57
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme58
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme59
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme60
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme61
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme62
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme63
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme64
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme65
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme66
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme67
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme68
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme69
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus3
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme4
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme5
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme6
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme7
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme8
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme9
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme10
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme11
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme12
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme13
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme14
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme15
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme16
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme17
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme18
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme19
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme20
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme21
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme22
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme23
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme24
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme25
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme26
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme27
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme28
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme29
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme30
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme31
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme32
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme33
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme34
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme35
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme36
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme37
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme38
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme39
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme40
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme41
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme42
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme43
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme44
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme45
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme46
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme47
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme48
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme49
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme50
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme51
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme52
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme53
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme54
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme55
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme56
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme57
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme58
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme59
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme60
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme61
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme62
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme63
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme64
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme65
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme66
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme67
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme68
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme69
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus4
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme4
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme5
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme6
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme7
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme8
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme9
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme10
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme11
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme12
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme13
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme14
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme15
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme16
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme17
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme18
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme19
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme20
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme21
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme22
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme23
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme24
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme25
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme26
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme27
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme28
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme29
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme30
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme31
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme32
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme33
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme34
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme35
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme36
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme37
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme38
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme39
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme40
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme41
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme42
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme43
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme44
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme45
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme46
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme47
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme48
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme49
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme50
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme51
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme52
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme53
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme54
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme55
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme56
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme57
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme58
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme59
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme60
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme61
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme62
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme63
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme64
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme65
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme66
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme67
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme68
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme69
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	}
+	)
+	phenotype_specifications=(
+		{#phenotype0
+		number_of_genotype_phenotype_map_parameters=3
+
+				names_of_genotype_phenotype_map_parameters=[
+		"GENPHEN_MAP_COEF0",
+		"GENPHEN_MAP_COEF1",
+		"GENPHEN_MAP_COEF2"
+		]
+
+
+				genotype_phenotype_map_parameters=(
+		{#deme0
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme1
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme2
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme3
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme4
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme5
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme6
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme7
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme8
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme9
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme10
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme11
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme12
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme13
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme14
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme15
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme16
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme17
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme18
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme19
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme20
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme21
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme22
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme23
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme24
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme25
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme26
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme27
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme28
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme29
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme30
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme31
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme32
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme33
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme34
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme35
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme36
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme37
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme38
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme39
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme40
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme41
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme42
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme43
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme44
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme45
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme46
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme47
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme48
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme49
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme50
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme51
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme52
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme53
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme54
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme55
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme56
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme57
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme58
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme59
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme60
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme61
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme62
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme63
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme64
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme65
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme66
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme67
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme68
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		},
+
+		{#deme69
+		GENPHEN_MAP_COEF0=1.000000
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		}
+		)
+
+		},
+		{#phenotype1
+		number_of_genotype_phenotype_map_parameters=1
+		names_of_genotype_phenotype_map_parameters=[
+		"GENPHEN_MAP_CONSTANT"
+		]
+
+
+				genotype_phenotype_map_parameters=(
+		{#deme0
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme1
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme2
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme3
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme4
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme5
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme6
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme7
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme8
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme9
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme10
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme11
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme12
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme13
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme14
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme15
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme16
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme17
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme18
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme19
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme20
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme21
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme22
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme23
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme24
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme25
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme26
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme27
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme28
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme29
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme30
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme31
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme32
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme33
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme34
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme35
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme36
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme37
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme38
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme39
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme40
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme41
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme42
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme43
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme44
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme45
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme46
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme47
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme48
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme49
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme50
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme51
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme52
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme53
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme54
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme55
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme56
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme57
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme58
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme59
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme60
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme61
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme62
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme63
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme64
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme65
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme66
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme67
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme68
+		GENPHEN_MAP_CONSTANT=0.200000
+		},
+
+		{#deme69
+		GENPHEN_MAP_CONSTANT=0.200000
+		}
+		)
+
+		},
+		{#phenotype2
+		number_of_genotype_phenotype_map_parameters=1
+		names_of_genotype_phenotype_map_parameters=[
+		"GENPHEN_MAP_CONSTANT"
+		]
+
+
+				genotype_phenotype_map_parameters=(
+		{#deme0
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme1
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme2
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme3
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme4
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme5
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme6
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme7
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme8
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme9
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme10
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme11
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme12
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme13
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme14
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme15
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme16
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme17
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme18
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme19
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme20
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme21
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme22
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme23
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme24
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme25
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme26
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme27
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme28
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme29
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme30
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme31
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme32
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme33
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme34
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme35
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme36
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme37
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme38
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme39
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme40
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme41
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme42
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme43
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme44
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme45
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme46
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme47
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme48
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme49
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme50
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme51
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme52
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme53
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme54
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme55
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme56
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme57
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme58
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme59
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme60
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme61
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme62
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme63
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme64
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme65
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme66
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme67
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme68
+		GENPHEN_MAP_CONSTANT=2.000000
+		},
+
+		{#deme69
+		GENPHEN_MAP_CONSTANT=2.000000
+		}
+		)
+
+		}
+		)
+	}
+
+	,
+	{#species0
+	number_of_loci=11
+	number_of_phenotypes=4
+		phenotype_names=["FECUNDITY_PHENOTYPE","MORTALITY_PHENOTYPE","RESOURCE_DEFENSE_PHENOTYPE","RESOURCE_COMPETITIVE_ABILITY_PHENOTYPE"]
+
+		recombination_rates=[0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5]
+
+		loci_names=["locus1","locus2","locus3","locus4","locus5","locus6","locus7","locus8","locus9","locus10","locus11"]
+
+locus_specifications=(
+	{#locus0
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme4
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme5
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme6
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme7
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme8
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme9
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme10
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme11
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme12
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme13
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme14
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme15
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme16
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme17
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme18
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme19
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme20
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme21
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme22
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme23
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme24
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme25
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme26
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme27
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme28
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme29
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme30
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme31
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme32
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme33
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme34
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme35
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme36
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme37
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme38
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme39
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme40
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme41
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme42
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme43
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme44
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme45
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme46
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme47
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme48
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme49
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme50
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme51
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme52
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme53
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme54
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme55
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme56
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme57
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme58
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme59
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme60
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme61
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme62
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme63
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme64
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme65
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme66
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme67
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme68
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme69
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus1
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme4
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme5
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme6
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme7
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme8
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme9
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme10
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme11
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme12
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme13
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme14
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme15
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme16
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme17
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme18
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme19
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme20
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme21
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme22
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme23
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme24
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme25
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme26
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme27
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme28
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme29
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme30
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme31
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme32
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme33
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme34
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme35
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme36
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme37
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme38
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme39
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme40
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme41
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme42
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme43
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme44
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme45
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme46
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme47
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme48
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme49
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme50
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme51
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme52
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme53
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme54
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme55
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme56
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme57
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme58
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme59
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme60
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme61
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme62
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme63
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme64
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme65
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme66
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme67
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme68
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme69
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus2
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme4
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme5
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme6
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme7
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme8
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme9
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme10
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme11
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme12
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme13
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme14
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme15
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme16
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme17
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme18
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme19
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme20
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme21
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme22
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme23
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme24
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme25
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme26
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme27
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme28
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme29
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme30
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme31
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme32
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme33
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme34
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme35
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme36
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme37
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme38
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme39
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme40
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme41
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme42
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme43
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme44
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme45
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme46
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme47
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme48
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme49
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme50
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme51
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme52
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme53
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme54
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme55
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme56
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme57
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme58
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme59
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme60
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme61
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme62
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme63
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme64
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme65
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme66
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme67
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme68
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme69
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus3
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme4
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme5
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme6
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme7
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme8
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme9
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme10
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme11
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme12
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme13
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme14
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme15
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme16
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme17
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme18
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme19
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme20
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme21
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme22
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme23
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme24
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme25
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme26
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme27
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme28
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme29
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme30
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme31
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme32
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme33
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme34
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme35
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme36
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme37
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme38
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme39
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme40
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme41
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme42
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme43
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme44
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme45
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme46
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme47
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme48
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme49
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme50
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme51
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme52
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme53
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme54
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme55
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme56
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme57
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme58
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme59
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme60
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme61
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme62
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme63
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme64
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme65
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme66
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme67
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme68
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme69
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus4
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme4
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme5
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme6
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme7
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme8
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme9
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme10
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme11
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme12
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme13
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme14
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme15
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme16
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme17
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme18
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme19
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme20
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme21
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme22
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme23
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme24
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme25
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme26
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme27
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme28
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme29
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme30
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme31
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme32
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme33
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme34
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme35
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme36
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme37
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme38
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme39
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme40
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme41
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme42
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme43
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme44
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme45
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme46
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme47
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme48
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme49
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme50
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme51
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme52
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme53
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme54
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme55
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme56
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme57
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme58
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme59
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme60
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme61
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme62
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme63
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme64
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme65
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme66
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme67
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme68
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme69
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus5
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme4
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme5
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme6
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme7
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme8
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme9
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme10
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme11
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme12
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme13
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme14
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme15
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme16
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme17
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme18
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme19
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme20
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme21
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme22
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme23
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme24
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme25
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme26
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme27
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme28
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme29
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme30
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme31
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme32
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme33
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme34
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme35
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme36
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme37
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme38
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme39
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme40
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme41
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme42
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme43
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme44
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme45
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme46
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme47
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme48
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme49
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme50
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme51
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme52
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme53
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme54
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme55
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme56
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme57
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme58
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme59
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme60
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme61
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme62
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme63
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme64
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme65
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme66
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme67
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme68
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme69
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus6
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme4
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme5
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme6
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme7
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme8
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme9
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme10
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme11
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme12
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme13
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme14
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme15
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme16
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme17
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme18
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme19
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme20
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme21
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme22
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme23
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme24
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme25
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme26
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme27
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme28
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme29
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme30
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme31
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme32
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme33
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme34
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme35
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme36
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme37
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme38
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme39
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme40
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme41
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme42
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme43
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme44
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme45
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme46
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme47
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme48
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme49
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme50
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme51
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme52
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme53
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme54
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme55
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme56
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme57
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme58
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme59
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme60
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme61
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme62
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme63
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme64
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme65
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme66
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme67
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme68
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme69
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus7
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme4
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme5
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme6
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme7
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme8
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme9
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme10
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme11
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme12
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme13
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme14
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme15
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme16
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme17
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme18
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme19
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme20
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme21
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme22
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme23
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme24
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme25
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme26
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme27
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme28
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme29
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme30
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme31
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme32
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme33
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme34
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme35
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme36
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme37
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme38
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme39
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme40
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme41
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme42
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme43
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme44
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme45
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme46
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme47
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme48
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme49
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme50
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme51
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme52
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme53
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme54
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme55
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme56
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme57
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme58
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme59
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme60
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme61
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme62
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme63
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme64
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme65
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme66
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme67
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme68
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme69
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus8
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme4
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme5
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme6
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme7
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme8
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme9
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme10
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme11
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme12
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme13
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme14
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme15
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme16
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme17
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme18
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme19
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme20
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme21
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme22
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme23
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme24
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme25
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme26
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme27
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme28
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme29
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme30
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme31
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme32
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme33
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme34
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme35
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme36
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme37
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme38
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme39
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme40
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme41
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme42
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme43
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme44
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme45
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme46
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme47
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme48
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme49
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme50
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme51
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme52
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme53
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme54
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme55
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme56
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme57
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme58
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme59
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme60
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme61
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme62
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme63
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme64
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme65
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme66
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme67
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme68
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme69
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus9
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme4
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme5
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme6
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme7
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme8
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme9
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme10
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme11
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme12
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme13
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme14
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme15
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme16
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme17
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme18
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme19
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme20
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme21
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme22
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme23
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme24
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme25
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme26
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme27
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme28
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme29
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme30
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme31
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme32
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme33
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme34
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme35
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme36
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme37
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme38
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme39
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme40
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme41
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme42
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme43
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme44
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme45
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme46
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme47
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme48
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme49
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme50
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme51
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme52
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme53
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme54
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme55
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme56
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme57
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme58
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme59
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme60
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme61
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme62
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme63
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme64
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme65
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme66
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme67
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme68
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme69
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	},
+	{#locus10
+	mutation_parameters=(
+		{#deme0
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme1
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme2
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme3
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme4
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme5
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme6
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme7
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme8
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme9
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme10
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme11
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme12
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme13
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme14
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme15
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme16
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme17
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme18
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme19
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme20
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme21
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme22
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme23
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme24
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme25
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme26
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme27
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme28
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme29
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme30
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme31
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme32
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme33
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme34
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme35
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme36
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme37
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme38
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme39
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme40
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme41
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme42
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme43
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme44
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme45
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme46
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme47
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme48
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme49
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme50
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme51
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme52
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme53
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme54
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme55
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme56
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme57
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme58
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme59
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme60
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme61
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme62
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme63
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme64
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme65
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme66
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme67
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme68
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		},
+
+		{#deme69
+		MUTATION_RATE=0.000010
+		MUTATION_MAGNITUDE=0.200000
+		}
+		)
+	}
+	)
+	phenotype_specifications=(
+		{#phenotype0
+		number_of_genotype_phenotype_map_parameters=1
+		names_of_genotype_phenotype_map_parameters=[
+		"GENPHEN_MAP_CONSTANT"
+		]
+
+
+				genotype_phenotype_map_parameters=(
+		{#deme0
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme1
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme2
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme3
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme4
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme5
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme6
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme7
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme8
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme9
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme10
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme11
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme12
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme13
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme14
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme15
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme16
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme17
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme18
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme19
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme20
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme21
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme22
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme23
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme24
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme25
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme26
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme27
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme28
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme29
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme30
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme31
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme32
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme33
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme34
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme35
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme36
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme37
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme38
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme39
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme40
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme41
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme42
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme43
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme44
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme45
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme46
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme47
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme48
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme49
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme50
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme51
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme52
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme53
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme54
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme55
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme56
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme57
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme58
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme59
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme60
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme61
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme62
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme63
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme64
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme65
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme66
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme67
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme68
+		GENPHEN_MAP_CONSTANT=39.000000
+		},
+
+		{#deme69
+		GENPHEN_MAP_CONSTANT=39.000000
+		}
+		)
+
+		},
+		{#phenotype1
+		number_of_genotype_phenotype_map_parameters=1
+		names_of_genotype_phenotype_map_parameters=[
+		"GENPHEN_MAP_CONSTANT"
+		]
+
+
+				genotype_phenotype_map_parameters=(
+		{#deme0
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme1
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme2
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme3
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme4
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme5
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme6
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme7
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme8
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme9
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme10
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme11
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme12
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme13
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme14
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme15
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme16
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme17
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme18
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme19
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme20
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme21
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme22
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme23
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme24
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme25
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme26
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme27
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme28
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme29
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme30
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme31
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme32
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme33
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme34
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme35
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme36
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme37
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme38
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme39
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme40
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme41
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme42
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme43
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme44
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme45
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme46
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme47
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme48
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme49
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme50
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme51
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme52
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme53
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme54
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme55
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme56
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme57
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme58
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme59
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme60
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme61
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme62
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme63
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme64
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme65
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme66
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme67
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme68
+		GENPHEN_MAP_CONSTANT=0.250000
+		},
+
+		{#deme69
+		GENPHEN_MAP_CONSTANT=0.250000
+		}
+		)
+
+		},
+		{#phenotype2
+		number_of_genotype_phenotype_map_parameters=5
+
+				names_of_genotype_phenotype_map_parameters=[
+		"GENPHEN_MAP_COEF1",
+		"GENPHEN_MAP_COEF2",
+		"GENPHEN_MAP_COEF3",
+		"GENPHEN_MAP_COEF9",
+		"GENPHEN_MAP_COEF10"
+		]
+
+
+				genotype_phenotype_map_parameters=(
+		{#deme0
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme1
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme2
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme3
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme4
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme5
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme6
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme7
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme8
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme9
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme10
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme11
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme12
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme13
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme14
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme15
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme16
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme17
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme18
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme19
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme20
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme21
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme22
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme23
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme24
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme25
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme26
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme27
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme28
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme29
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme30
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme31
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme32
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme33
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme34
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme35
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme36
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme37
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme38
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme39
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme40
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme41
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme42
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme43
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme44
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme45
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme46
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme47
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme48
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme49
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme50
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme51
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme52
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme53
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme54
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme55
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme56
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme57
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme58
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme59
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme60
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme61
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme62
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme63
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme64
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme65
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme66
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme67
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme68
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		},
+
+		{#deme69
+		GENPHEN_MAP_COEF1=1.000000
+		GENPHEN_MAP_COEF2=1.000000
+		GENPHEN_MAP_COEF3=1.000000
+		GENPHEN_MAP_COEF9=1.000000
+		GENPHEN_MAP_COEF10=1.000000
+		}
+		)
+
+		},
+		{#phenotype3
+		number_of_genotype_phenotype_map_parameters=5
+
+				names_of_genotype_phenotype_map_parameters=[
+		"GENPHEN_MAP_COEF1",
+		"GENPHEN_MAP_COEF2",
+		"GENPHEN_MAP_COEF3",
+		"GENPHEN_MAP_COEF8",
+		"GENPHEN_MAP_COEF10"
+		]
+
+
+				genotype_phenotype_map_parameters=(
+		{#deme0
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme1
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme2
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme3
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme4
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme5
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme6
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme7
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme8
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme9
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme10
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme11
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme12
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme13
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme14
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme15
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme16
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme17
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme18
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme19
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme20
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme21
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme22
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme23
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme24
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme25
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme26
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme27
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme28
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme29
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme30
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme31
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme32
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme33
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme34
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme35
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme36
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme37
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme38
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme39
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme40
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme41
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme42
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme43
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme44
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme45
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme46
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme47
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme48
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme49
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme50
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme51
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme52
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme53
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme54
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme55
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme56
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme57
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme58
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme59
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme60
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme61
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme62
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme63
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme64
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme65
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme66
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme67
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme68
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		},
+
+		{#deme69
+		GENPHEN_MAP_COEF1=-1.000000
+		GENPHEN_MAP_COEF2=-1.000000
+		GENPHEN_MAP_COEF3=-1.000000
+		GENPHEN_MAP_COEF8=-1.000000
+		GENPHEN_MAP_COEF10=-1.000000
+		}
+		)
+
+		}
+		)
+	}
+
+	)

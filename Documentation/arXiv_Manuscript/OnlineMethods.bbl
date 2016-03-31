@@ -1,0 +1,71 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\astroncite{Booch}{1982}]{booch82}
+{\sc Booch, G.} 1982.
+\newblock {Object-oriented design}.
+\newblock {\em ACM SIGAda Ada Letters} 1:64--76.
+
+\bibitem[\protect\astroncite{Galassi et~al.}{2007}]{gsl}
+{\sc Galassi, M., Davies, J., Theiler, J., Gough, B., Jungman, G., Alken, P.,
+  Booth, M., and Rossi, F.} 2007.
+\newblock {GNU Scientific Library Reference Manual, 3rd Ed.}
+\newblock Network Theory.
+
+\bibitem[\protect\astroncite{Harish and Narayanan}{2007}]{harish07}
+{\sc Harish, P. and Narayanan, P.~J.} 2007.
+\newblock {Accelerating large graph algorithms on the GPU using CUDA}.
+\newblock {\em High Performance Computing–HiPC 2007} 4873:197--208.
+
+\bibitem[\protect\astroncite{Hoberock and Bell}{2010}]{thrust}
+{\sc Hoberock, J. and Bell, N.} 2010.
+\newblock {Thrust: A Parallel Template Library}.
+
+\bibitem[\protect\astroncite{Hruska}{2012}]{hruska12}
+{\sc Hruska, J.} 2012.
+\newblock {The death of CPU scaling: From one core to many — and why we’re
+  still stuck}.
+\newblock {\em ExtremeTech} .
+
+\bibitem[\protect\astroncite{Martin}{2002}]{martin02}
+{\sc Martin, R.~C.} 2002.
+\newblock {Agile Software Development, Principles, Patterns, and Practices}.
+\newblock Alan Apt Series. Prentice Hall.
+
+\bibitem[\protect\astroncite{Nickolls et~al.}{2008}]{nickolls08}
+{\sc Nickolls, J., Buck, I., Garland, M., and Skadron, K.} 2008.
+\newblock {Scalable parallel programming with CUDA}.
+\newblock {\em Queue} 6:40--53.
+
+\bibitem[\protect\astroncite{Nyland et~al.}{2007}]{nyland07}
+{\sc Nyland, L., Harris, M., and Prins, J.} 2007.
+\newblock {Fast n-body simulation with {\{}CUDA{\}}}.
+\newblock {\em GPU gems} 3:677--695.
+
+\bibitem[\protect\astroncite{Owens et~al.}{2008}]{owens08}
+{\sc Owens, J.~D., Houston, M., Luebke, D., Green, S., Stone, J.~E., and
+  Phillips, J.~C.} 2008.
+\newblock {GPU Computing}.
+\newblock {\em Proceedings of the IEEE} 96:879--899.
+
+\bibitem[\protect\astroncite{Pelletier et~al.}{2009}]{pelletier09}
+{\sc Pelletier, F., Garant, D., and Hendry, A.} 2009.
+\newblock {Eco-evolutionary dynamics}.
+\newblock {\em Philosophical Transactions of the Royal Society B: Biological
+  Sciences} 364:1483--1489.
+
+\bibitem[\protect\astroncite{Rumbaugh et~al.}{1990}]{rumbaugh90}
+{\sc Rumbaugh, J.~R., Blaha, M.~R., Lorensen, W., Eddy, F., and Premerlani, W.}
+  1990.
+\newblock {Object-oriented modeling and design}.
+\newblock Prentice-Hall.
+
+\bibitem[\protect\astroncite{Stallman}{2007}]{gpl3}
+{\sc Stallman, R.} 2007.
+\newblock {GNU General Public License v3}.
+
+\bibitem[\protect\astroncite{Stepanov and Lee}{1994}]{stl}
+{\sc Stepanov, A. and Lee, M.} 1994.
+\newblock {The standard template library}.
+\newblock Technical report, WG21/N0482, ISO Programming Language C++ Project.
+
+\end{thebibliography}

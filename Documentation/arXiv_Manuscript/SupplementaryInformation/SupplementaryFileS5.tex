@@ -1,0 +1,59 @@
+\documentclass[11pt]{article}
+\pdfoutput=1
+\usepackage{graphicx}
+\usepackage[authoryear,round]{natbib}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[mathlines]{lineno}
+\usepackage{setspace}
+\usepackage{mathrsfs}
+\usepackage{rotating}
+\usepackage{url}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage[none]{hyphenat}
+\usepackage{algpseudocode}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\setlength{\topmargin}{-.5in}
+\setlength{\textheight}{9in}
+\setlength{\oddsidemargin}{.125in}
+\setlength{\textwidth}{6.25in}
+\doublespacing
+\pagestyle{empty}
+
+\begin{document}
+\begin{algorithmic}
+\Large{}
+\For{$1 \leq S\leq $Number of Replicates}
+\For{$1 \leq i\leq $Number of Individuals} 
+	\State $parameter \gets $ Parameter values for 
+	\State \hspace{1.75in} simulation $S$
+	\State trait value of individual $i \gets foo(parameter)$
+\EndFor
+\EndFor
+\end{algorithmic}
+\begin{center}
+\Large{(A)}
+\end{center}
+
+\begin{algorithmic}
+\Large{}
+\For{$1 \leq i\leq $ Number of individuals} 
+ in\\
+\hspace{1.5in} parallel
+\Large{}
+	\State $D \gets $ Replicate (patch) of individual $i$
+	\State $parameter \gets $ Parameter values from
+	\State \hspace{1.75in} deme $D$
+	\State trait value of individual $i \gets foo(parameter)$
+\EndFor
+\end{algorithmic}
+\begin{center}
+\Large{(B)}\\
+\end{center}
+
+\begin{singlespace}
+\noindent Supplementary Figure S5. Pseudo-code illustrating the primary difference between individual-based models following (A) a serial implementation and (B) a parallelized implementation using sPEGG. Each segment of pseudo-code represents calculations performed in Figure 1D of the main text to update the phenotypes of individuals using the user-supplied function \texttt{foo()} for each time step. In (A), when there are $n$ individuals and $p$ patches, then $np$ operations must be performed sequentially (one after another). By contrast, in (B), if there are $k$ parallel cores, then $k$ operations can be performed simultaneously, and under ideal conditions, evaluating the loop takes $np/k$ steps. In effect, the operations in (B) allow us to ``flatten'' the nested loop described in (A), enabling fine-grained parallelism of the individual-based model.
+\end{singlespace}
+\end{document}
+
