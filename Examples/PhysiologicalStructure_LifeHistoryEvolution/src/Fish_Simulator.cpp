@@ -1,5 +1,4 @@
 #include "Fish_Simulator.h"
-#include <util/footimer2.h>
 
 Fish_Simulator::Fish_Simulator() : Simulation()
 	{
@@ -18,7 +17,7 @@ void Fish_Simulator::initialize_classes()
 	int species_ID = 0;
 
 	array[0] = new Fish(initpop, maxpop, seed + 87, demes, species_ID);
-
+	/*
 	stats_eggsize = new Statistics(demes, "summary_statistics_eggsize.txt", "useless_histograms.txt");
 	stats_fecundity = new Statistics(demes, "summary_statistics_fecundity.txt", "useless_histograms2.txt");
 
@@ -27,23 +26,19 @@ void Fish_Simulator::initialize_classes()
 	demographics = new DemographicStatistics(demes, "demographic_statistics.txt", "age_distribution.txt");
 
 	preyfile.open("prey_sizes.txt");
+	*/
 	}
 
 void Fish_Simulator::run()
 	{
-	footimer2 timer, timerAll;
-	timerAll.start();
-
 	for (int t=0; t < nsteps; t++)
 		{
 		for (int i=0; i < nspecies; i++)
 			{
 			array[i]->addKids();
-			
-			array[i]->update(array, habitat);
-			
+			array[i]->update(array, habitat);			
 			array[i]->removeDead();
-			
+			/*
 			stats_eggsize->calculate_mean_phenotypes_by_deme(array[0], 5);
 			stats_eggsize->calculate_min_max_phenotypes_by_deme(array[0], 5);
 			stats_eggsize->calculate_phenotypic_variance_by_deme(array[0], 5);
@@ -56,18 +51,17 @@ void Fish_Simulator::run()
 
 			demographics->calculate_deme_sizes(array[i]);
 			demographics->record_deme_sizes();
+			*/
 			}
 		habitat->update();
-		
+		/*
 		for (int k=0; k < demes; k++)
 			{
 			preyfile << habitat->prey_array[0]->prey_abundance[k] << " " << habitat->prey_array[1]->prey_abundance[k] << " ";
 			}
 		preyfile << std::endl;
+		*/
 		}
-	timerAll.stop();
-	std::cout << "Total "; 
-	timerAll.printTime();
 	}
 
 Fish_Simulator::~Fish_Simulator()
@@ -81,8 +75,10 @@ Fish_Simulator::~Fish_Simulator()
 	delete[] array;
 	delete habitat;
 
+	/*
 	delete stats_fecundity;
 	delete stats_eggsize;
 	delete demographics;
+	*/
 	}
 
