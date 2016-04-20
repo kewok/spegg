@@ -34,14 +34,14 @@ Currently, **sPEGG** has only been tested on Linux (debian-based distributions t
 
   * [GNU Scientific Library](http://www.gnu.org/software/gsl/)
 </a>  
-Please see the bottom of this page for some [possible issues](#setup_issues) you may run into when setting up **sPEGG**.
+Please see here for some [possible issues](Tutorial.md#setup_issues) you may run into when setting up **sPEGG**.
 
 Once you have everything in place, you can run your first **sPEGG** simulation!
 
 ***
 ##  Quick-start example: Simulating genetic drift </h4> </center>
 
-We'll use the code for the simulation that is created from the [tutorial](https://github.com/kewok/spegg/Examples/Tutorial) to simulate genetic drift in two demes of 10000 individuals each across 100000 generations on the GPU.
+We'll use the code for the simulation that is created from the [tutorial](Tutorial.md) to simulate genetic drift in two demes of 10000 individuals each across 100000 generations on the GPU.
 
 Open a terminal (ctrl+Alt+T in recent ubuntu versions) and navigate to your project directory.
 
@@ -112,9 +112,10 @@ The average genotypes at locus 1 for the two demes are:
 
 The exact numbers may very well differ, however depending on your hardware.
 
-This just gives you a flavor for running a **sPEGG** simulation. If you are interested in simulating more biologically relevant models, have a look at the other examples described  ([here](arXiv.org)). To configure and run those models, you'll want to modify the deme_config.txt and environment_config.txt files as well.
+This just gives you a flavor for running a **sPEGG** simulation. If you are interested in simulating more biologically relevant models, have a look at the other examples described  ([here](1603.09255v1.pdf)). To configure and run those models, you'll want to modify the deme_config.txt and environment_config.txt files as well.
 
-For those of you who'd like to build your own **sPEGG** model, have a look at our more in-depth [Tutorial](https://github.com/kewok/spegg/Documentation/tutorial.md).
+For those of you who'd like to build your own **sPEGG** model, have a look at our more in-depth [Tutorial](Tutorial.md).
+
 
 ## License
 **sPEGG** is released under the terms of the GNU Public License v3.0. Please refer to the LICENSE file. © Kenichi Okamoto, 2016.
