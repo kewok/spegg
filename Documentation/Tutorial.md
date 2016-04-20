@@ -8,9 +8,9 @@ Were you able to get everything from the Quickstart to work? Great :thumbsup: On
 
 **sPEGG** makes extensive use of the **[thrust](https://github.com/thrust/thrust)** library to facilitate parallelization on the GPU. As such, we encourage users who are eager to try out **sPEGG** to become at least somewhat acquainted with how [thrust works](https://github.com/thrust/thrust/wiki/Quick-Start-Guide). Finally, some familiarity with object-oriented programming would help ([this](http://sepwww.stanford.edu/sep/jon/family/jos/oop/oop1.htm) is an excellent and very accessible introduction; it's written to introduce students to java, but don't worry - what it says is almost entirely applicable to C++ as well).
 
-The rest of this guide assumes you are looking to create a GPU simulation using forward-time population genetics for your eco-evolutionary model. The basic design is more or less identical for the CPU version; just be sure to checkout [the CPU version of the code](CPU_version) at the start, use ```host_vector``` throughout instead of ```device_vector```, and modify the random number generator as needed along the way. See the examples in [the CPU version] to get a feel for how to do that.
+The rest of this guide assumes you are looking to create a GPU simulation using forward-time population genetics for your eco-evolutionary model. The basic design is more or less identical for the CPU version; just be sure to checkout [the CPU version of the code](/tree/CPU_version) at the start, use ```host_vector``` throughout instead of ```device_vector```, and modify the random number generator as needed along the way. See the examples in [the CPU version] to get a feel for how to do that.
 
-Some of the tasks described here in the tutorial can be streamlined using a program like [NSight Eclipse](https://developer.nvidia.com/nsight-eclipse-edition). However, in what follows, I will assume all you are using is a basic text editor, a file browser, and the [prerequiste tools](README.md#prereqs).
+Some of the tasks described here in the tutorial can be streamlined using a program like [NSight Eclipse](https://developer.nvidia.com/nsight-eclipse-edition). However, in what follows, I will assume all you are using is a basic text editor, a file browser, and the [prerequiste tools](/README.md#prereqs).
 
 To get started, first obtain a copy of the source-code for sPEGG's GPU version into your working directory. If you have [git](http://git-scm.com/), go to your terminal and clone the git repository as we did in the Quickstart:
 
@@ -36,7 +36,7 @@ In general, we've found that when setting up a **sPEGG** project, creating a fol
 
 Now you're ready to begin building your simulation! For this tutorial, we'll just simulate a stochastic change in allele frequencies at two neutral loci in two demes (i.e., simulate drift). We'll assume the demes are unlinked by migration. Let's pretend these are penguin populations living on two distant islands unlinked by migration, and that the neutral loci determine the phenotypic value for crown color, which we assume governs neither survival nor reproduction.
 
-The first thing you'll want to know is that **sPEGG** organizes individuals in a species using the [inds](inds.h) object. [inds](inds.h) is very basic - it merely:
+The first thing you'll want to know is that **sPEGG** organizes individuals in a species using the [inds](/header/species/inds.h) object. [inds](/header/species/inds.h) is very basic - it merely:
 
 >    1. stores data on individuals, 
     
@@ -77,7 +77,7 @@ class Penguins : public inds_stochastic
 	};
 #endif
 ```
-Let's walk through some salient features that form the pre-requisites for our class. First, because the ```Penguins``` class is based on ```inds_stochastic```, we need to import the header file that defines the ```inds_stochastic``` class (```<species/inds_stochastic.h>```, which is stored in the main **sPEGG** directory). Second, when we simulate reproduction we need to be able to keep track of who the parents and offspring are. To do this, we will use a parents and neonates class, and so we import their header files. For this example, the parents class would be customized for penguins as we will describe below. By contrast, in this example, for the neonates class we will just use the [default base class for this](neonates_class.h) provided by **sPEGG**. The class definition for neonates can be found inside the ```species``` subfolder within the header folder in your main **sPEGG** directory.
+Let's walk through some salient features that form the pre-requisites for our class. First, because the ```Penguins``` class is based on ```inds_stochastic```, we need to import the header file that defines the ```inds_stochastic``` class (```<species/inds_stochastic.h>```, which is stored in the main **sPEGG** directory). Second, when we simulate reproduction we need to be able to keep track of who the parents and offspring are. To do this, we will use a parents and neonates class, and so we import their header files. For this example, the parents class would be customized for penguins as we will describe below. By contrast, in this example, for the neonates class we will just use the [default base class for this](/header/species/add_kids/neonates_class.h) provided by **sPEGG**. The class definition for neonates can be found inside the ```species``` subfolder within the header folder in your main **sPEGG** directory.
 
 We need to declare the methods used by our ```Penguins``` class. The first method is the constructor that creates our class. The second method ```addKids()``` is where we will specify the routines used in reproduction. The third method ```update(inds_stochastic **species)``` will handle how our phenotypes change between reproduction events. We also have to unhide the ```update``` function from ```ind_stochastic```. This is because the ```update``` method is actually defined in a couple of different ways inside the ```inds_stochastic``` class to allow some flexibility for the user. We'll get into this in greater detail below.
 
@@ -164,7 +164,7 @@ Below, we describe each of these steps.
 <a name="id_potential_parents">
 </a>
 ####  Determine who the potential parents are
-We will create a class to manage potential parents and perform basic operations on them (such as determining their reproductive potential). As hinted at [above](#header) we will use a derived version of the [Parents class](parents_class.h) to accomplish this.
+We will create a class to manage potential parents and perform basic operations on them (such as determining their reproductive potential). As hinted at [above](#header) we will use a derived version of the [Parents class](/header/species/add_kids/parents_class.h) to accomplish this.
 
 The header file for our parents class will look something like this:
 
@@ -291,7 +291,7 @@ One function that is needed both during initialization and in simulating reprodu
 
 Why would we do things this way? When multiple traits are involved (as they often are in models of eco-evolutionary dynamics), there are a lot of different potential genotype-phenotype maps. As a result, it might be helpful to create separate classes to manage these maps, rather than spell out the logic of each genotype-phenotype map for all traits inside ```Penguins```. This could facilitate modularity in our code, and also allow us to potentially reuse a genotype-phenotype map for another species or change some of the rules for updating phenotypes without having to change the code inside the Penguins class. This tries to apply the so-called [strategy pattern](http://r3dux.org/2011/07/an-example-implementation-of-the-strategy-design-pattern-in-c/) to our simulation. This isn't always necessary, but for illustrative purposes we show how this kind of approach could be implemented in case you're interested in trying it. We'll discuss a little about the scope associated with pre-written **sPEGG** code.
 
-We represent a genotype-phenotype map using the class GenotypePhenotypeMap. The class definition can be found in [/header/species/add_kids/genotype_phenotype_map.h](genotype_phenotype_map.h) The create_genotype_phenotype_map() function will initialize the particular genotype phenotype-map handler we want to create for phenotype *i*. We will then perform the actual calculations required to set the individual's phenotypes based on their genetic values. This class is defined as follows:
+We represent a genotype-phenotype map using the class GenotypePhenotypeMap. The class definition can be found in [/header/species/add_kids/genotype_phenotype_map.h](/header/species/add_kids/genotype_phenotype_map.h) The create_genotype_phenotype_map() function will initialize the particular genotype phenotype-map handler we want to create for phenotype *i*. We will then perform the actual calculations required to set the individual's phenotypes based on their genetic values. This class is defined as follows:
 
 ```c++
 class GenotypePhenotypeMap
@@ -721,7 +721,7 @@ void update_Penguins::update()
 
 You can conceivably add other functions to the ```update()``` method, e.g., something like ```grow()``` that simulates somatic growth. 
 
-The actual updating of the vital status takes place inside the method ```determine_mortality()```. Because the operations described by this method apply quite generally, this function is included as part of the [**SPEGG** code base](determine_mortality.cu) as a member of the class UpdateBehavior, rather than being specific to Penguins. The ```determine_mortality()``` method is also potentially complex. We describe it in some depth below. You can skip this for now if you just need a broad overview of things at this stage. 
+The actual updating of the vital status takes place inside the method ```determine_mortality()```. Because the operations described by this method apply quite generally, this function is included as part of the [**SPEGG** code base](/src/cuda/species/update/determine_mortality.cu) as a member of the class UpdateBehavior, rather than being specific to Penguins. The ```determine_mortality()``` method is also potentially complex. We describe it in some depth below. You can skip this for now if you just need a broad overview of things at this stage. 
 
 To implement the ```determine_mortality()``` operation, first we'll describe a functor simulate_mortality() that actually changes the vital states for a specific individual. Analogously to the example of the ```calculate_phenotype()``` method of [the GenotypePhenotypeMap class](#functor_genphenmap), our functor will map an individual's current vital state at time step t-1 to the vital state at time step t (i.e., our functor F() maps a vector of vital states ```x(t-1)=[x1(t-1),x2(t-1),x3(t-1),...,xn(t-1)]``` to a vector ```x(t) = [F(x1), F(x2), F(x3),...,F(xn)]```). Here's how our functor actually does this: it takes as its argument a vector of *n* uniformly distributed random variables ```[U1, U2, ..., Un]```. For each individual in i=[1,...,n] if their corresponding random number is less than their probability of survivorship, their vital state is set to 1 (i.e., they survive). Otherwise, the vital state is set to 0 (i.e., they die).
 
@@ -815,7 +815,7 @@ void UpdateBehavior::determine_mortaility()
     }
 ```
 
-It turns out for this particular problem, the performance gains for moving to the GPU are modest. But as we argue in our [accompanying manuscript](arXiv.org), once one works with something beyond relatively trivial models, the speed-up provided by modeling updating of the phenotype using CUDA can be considerable.
+It turns out for this particular problem, the performance gains for moving to the GPU are modest. But as we argue in our [accompanying manuscript](/Documentation/1603.09255v1.pdf), once one works with something beyond relatively trivial models, the speed-up provided by modeling updating of the phenotype using CUDA can be considerable.
 
 <a name="update_color">
 </a>
@@ -1372,7 +1372,7 @@ abiotic_variable_initialization =
     )
 ```
 
-If there is sufficient interest, a later tutorial module might go into some detail about how the environmental components that aren't modeled on an individual level would be simulated. In the mean time, to get a feel for what the environment_config.txt for a model with resource dynamics (where the resource - e.g., prey - is not tracked at the individual level) might look like, see [this example](Examples/PhysiologicalStructure_LifeHistoryEvolution/environment_config.txt).
+If there is sufficient interest, a later tutorial module might go into some detail about how the environmental components that aren't modeled on an individual level would be simulated. In the mean time, to get a feel for what the environment_config.txt for a model with resource dynamics (where the resource - e.g., prey - is not tracked at the individual level) might look like, see [this example](/Examples/PhysiologicalStructure_LifeHistoryEvolution/environment_config.txt).
 
 ### Using demes to represent replicates
 It's worth reiterating at this stage that different demes can also represent different replicate simulations. In such cases, their settings as specified in these configuration files would be identical. You can also vary demes across a gradient of a parameter value, and have replicate demes for each level of the parameter's gradient. In **sPEGG**, "demes" thus represent a versatile concept that could differentially represent real subpopulations in a metapopulation, as well as a convenient way of organizing your simulated replicates and treatment units.
@@ -1411,7 +1411,7 @@ That pretty much covers the basics of what you need to build your own **sPEGG** 
 >nvcc -O3 -lcurand -lrt -lcuda -lconfig++ $(OBJDIR)/My_New_Source_File.o
 >```
 
-A Makefile for this tutorial can be found [here](Tutorial_Simulation/Makefile).
+A Makefile for this tutorial can be found [here](/Examples/Tutorial_Simulation/Makefile).
 
 When your Makefile is complete, type ```make``` in the terminal, and you can run your simulation via:
 
@@ -1419,7 +1419,7 @@ When your Makefile is complete, type ```make``` in the terminal, and you can run
 ./a.out
 ```
 
-And you are now good to go! You can get the full source-code used in this tutorial [here](Examples/Tutorial_Simulation).
+And you are now good to go! You can get the full source-code used in this tutorial [here](/Examples/Tutorial_Simulation).
 
 Of course, how you organize the **sPEGG** project is entirely up to you, and not all of the solutions we identified would be ideal for your model. The approach here only describes the workflow I've found works for me as I tried to simulate a range of different problems :grin:.
 
@@ -1490,7 +1490,7 @@ The function ```get_vector_ptr()``` in the demeParameters class returns a pointe
 
 However, we're not done yet - we still need to add a for_each() instruction. We'll leave this part as an exercise for the reader.
 
-2. Study the code in [Examples/CoevolvingSpecies](Examples/CoevolvingSpecies), particularly lines 15-32 of migrate_coevolvingSpecies.h, migrate_CoevolvingSpecies.cu, MigrationBehavior.cu and line 36 of coevolution_Simulator.cpp. Now see if you can implement a version of the tutorial WITH migration, to see what happens to the trajectory of alleles in the two populations. Hint: write a routine to change the individual's demes at random to simulate panmixia.
+2. Study the code in [Examples/CoevolvingSpecies](/Examples/CoevolvingSpecies), particularly lines 15-32 of migrate_coevolvingSpecies.h, migrate_CoevolvingSpecies.cu, MigrationBehavior.cu and line 36 of coevolution_Simulator.cpp. Now see if you can implement a version of the tutorial WITH migration, to see what happens to the trajectory of alleles in the two populations. Hint: write a routine to change the individual's demes at random to simulate panmixia.
 
 
 <a name="setup_issues">
