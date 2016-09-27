@@ -1,0 +1,66 @@
+number_of_demes=4
+species_data=(
+	{#species0
+	number_of_parameters=0
+	number_of_species_specific_values=0
+	demes_specifications=()
+	}
+	)
+species_genetics=(
+	{#species0
+	number_of_loci=2
+	number_of_phenotypes=2
+	phenotype_names=["phen1","phen2"]
+	recombination_rates=[0.0,0.0]
+	loci_names=["locus0","locus1"]
+	locus_specifications=(
+		{#locus0
+		mutation_parameters=(
+			{#deme0
+			MUTATION_RATE = 0
+			MUTATION_MAGNITUDE = 0
+			},
+			{#deme1
+			MUTATION_RATE = 0
+			MUTATION_MAGNITUDE = 0
+			},
+			{#deme2
+			MUTATION_RATE = 0
+			MUTATION_MAGNITUDE = 0
+			},
+			{#deme3
+			MUTATION_RATE = 0
+			MUTATION_MAGNITUDE = 0
+			}
+			)
+		},
+		{#locus1
+		mutation_parameters=(
+			{#deme0
+			MUTATION_RATE = 0
+			MUTATION_MAGNITUDE = 0
+			},
+			{#deme1
+			MUTATION_RATE = 0
+			MUTATION_MAGNITUDE = 0
+			},
+			{#deme2
+			MUTATION_RATE = 0
+			MUTATION_MAGNITUDE = 0
+			},
+			{#deme3
+			MUTATION_RATE = 0
+			MUTATION_MAGNITUDE = 0
+			}
+			)
+		}
+	)
+	phenotype_specifications=(
+		{
+		number_of_genotype_phenotype_map_parameters = 0
+		},
+		{
+		number_of_genotype_phenotype_map_parameters = 0		
+		})
+	}
+	)

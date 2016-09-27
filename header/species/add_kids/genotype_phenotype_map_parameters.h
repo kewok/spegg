@@ -9,6 +9,7 @@
 #include <map>
 #include <thrust/device_vector.h>
 #include <thrust/functional.h>
+#include <algorithm>
 
 using namespace libconfig;
 
