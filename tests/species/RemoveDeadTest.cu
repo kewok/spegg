@@ -74,12 +74,12 @@ TEST_F(Test_Inds_Remove_Dead, remove_dead)
 	thrust::host_vector<int> expected_answer_maternal_id(max_popsize);
 	thrust::host_vector<int> expected_answer_paternal_id(max_popsize);
 	thrust::host_vector<int> expected_answer_deme(max_popsize);
-	thrust::host_vector<int> expected_answer_phenotype0(max_popsize);
-	thrust::host_vector<int> expected_answer_phenotype1(max_popsize);
-	thrust::host_vector<int> expected_answer_mgenotype0(max_popsize);
-	thrust::host_vector<int> expected_answer_mgenotype1(max_popsize);
-	thrust::host_vector<int> expected_answer_fgenotype0(max_popsize);
-	thrust::host_vector<int> expected_answer_fgenotype1(max_popsize);
+	thrust::host_vector<float> expected_answer_phenotype0(max_popsize);
+	thrust::host_vector<float> expected_answer_phenotype1(max_popsize);
+	thrust::host_vector<float> expected_answer_mgenotype0(max_popsize);
+	thrust::host_vector<float> expected_answer_mgenotype1(max_popsize);
+	thrust::host_vector<float> expected_answer_fgenotype0(max_popsize);
+	thrust::host_vector<float> expected_answer_fgenotype1(max_popsize);
 
 	// Note the logic underneath remove_dead works by: (i) relabel the dead's deme as ndeme, (ii) sort the living from the dead so the living come first, (iii) among the living, sort each value by their deme.
 	expected_answer_deme[0] = 1; expected_answer_deme[1] = 1; expected_answer_deme[2] = 1; 
@@ -161,12 +161,12 @@ TEST_F(Test_Inds_Remove_Dead, remove_dead)
 	thrust::host_vector<int> host_answer_sex = test_inds.sex;
 	thrust::host_vector<int> host_answer_paternal_id = test_inds.paternal_id;
 	thrust::host_vector<int> host_answer_maternal_id = test_inds.maternal_id;
-	thrust::host_vector<int> host_answer_phenotype0 = test_inds.phenotype[0];
-	thrust::host_vector<int> host_answer_phenotype1 = test_inds.phenotype[1];
-	thrust::host_vector<int> host_answer_mgenotype0 = test_inds.mgenotype[0];
-	thrust::host_vector<int> host_answer_mgenotype1 = test_inds.mgenotype[1];
-	thrust::host_vector<int> host_answer_fgenotype0 = test_inds.fgenotype[0];
-	thrust::host_vector<int> host_answer_fgenotype1 = test_inds.fgenotype[1];
+	thrust::host_vector<float> host_answer_phenotype0 = test_inds.phenotype[0];
+	thrust::host_vector<float> host_answer_phenotype1 = test_inds.phenotype[1];
+	thrust::host_vector<float> host_answer_mgenotype0 = test_inds.mgenotype[0];
+	thrust::host_vector<float> host_answer_mgenotype1 = test_inds.mgenotype[1];
+	thrust::host_vector<float> host_answer_fgenotype0 = test_inds.fgenotype[0];
+	thrust::host_vector<float> host_answer_fgenotype1 = test_inds.fgenotype[1];
 
 
 	EXPECT_THAT(host_answer_status, ::testing::ContainerEq(expected_answer_status));
