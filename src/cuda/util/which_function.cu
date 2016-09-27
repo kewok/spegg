@@ -18,6 +18,19 @@ void which_equal_to(thrust::device_vector<int> &stencil,
 	answer.erase(thrust::remove_copy_if(indices_all.begin(), indices_all.end(), stencil.begin() , answer.begin(),  unary_not_equal<int> (value)), answer.end() );
 	}
 
+void which_equal_to(thrust::device_vector<float> &stencil,
+	   thrust::device_vector<int> &answer,
+	   float value)
+	{
+	answer.resize( stencil.size() );
+
+	thrust::device_vector<int> indices_all( stencil.size() );
+	
+	thrust::sequence(indices_all.begin(), indices_all.end());
+	
+	answer.erase(thrust::remove_copy_if(indices_all.begin(), indices_all.end(), stencil.begin() , answer.begin(),  unary_not_equal<float> (value)), answer.end() );
+	}
+
 void which_equal_to(thrust::device_vector<int> &stencil,
 	   thrust::device_vector<int> &answer,
 	   int value,
