@@ -139,6 +139,7 @@ offspring_size_calculator(float *intercept_ptr, float *fgen_ptr1,float *fgen_ptr
 		1: random noise
 		2: phenotype
 		3: individuals deme
+		4: maternal index
 	*/ 
 	// Assume epistatic effects between genes 4,5,6 and dominance effect of gene 7
 	template <typename tuple>
@@ -153,13 +154,16 @@ offspring_size_calculator(float *intercept_ptr, float *fgen_ptr1,float *fgen_ptr
 				allelic_effect5[ind_deme]*0.5*(fgen5[thrust::get<0>(t)] + mgen5[thrust::get<0>(t)]) + 
 				allelic_effect6[ind_deme]*0.5*(fgen6[thrust::get<0>(t)] + mgen6[thrust::get<0>(t)]) +
 				epistatic_effect[ind_deme]*0.5*(fgen4[thrust::get<0>(t)]*fgen5[thrust::get<0>(t)]*fgen6[thrust::get<0>(t)] + mgen4[thrust::get<0>(t)]*mgen5[thrust::get<0>(t)]*mgen6[thrust::get<0>(t)]) +
-				allelic_effect7[ind_deme]*0.5*(fgen7[thrust::get<0>(t)] * mgen7[thrust::get<0>(t)]) + 		thrust::get<1>(t);
-
-		/* transform to be no larger than maternal sizes at maturity */
-		if (thrust::get<2>(t) >  maternal_effects[ind_deme])
+				allelic_effect7[ind_deme]*0.5*(fgen7[thrust::get<0>(t)] * mgen7[thrust::get<0>(t)]) + thrust::get<1>(t);
+		/* transform to be no larger than maternal irreversible mass */
+		if (thrust::get<4>(t) > 0)
 			{
-			thrust::get<2>(t) = maternal_effects[ind_deme];
+			if (thrust::get<2>(t) > maternal_effects[thrust::get<4>(t)])
+				{
+				thrust::get<2>(t) = maternal_effects[thrust::get<4>(t)];
+				}
 			}
+
 
 		/* transform to be no smaller than 0.001 g */
 		if (thrust::get<2>(t) < 0.001)
