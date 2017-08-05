@@ -2,7 +2,8 @@
 # -I/.header/species/my_species
 HEADERS = -I./../../header/ -I./header 
 
-CFLAGS = -O3 
+CFLAGS = -Xcompiler
+CFLAGS += -O3
 CFLAGS += -arch=sm_30
 
 SRC = ./src
@@ -15,7 +16,7 @@ all: $(OBJDIR) a.out
 export LD_LIBRARY_PATH=/usr/local/lib /usr/local/cuda/lib
 
 a.out : $(OBJDIR_SPEGG)/*.o $(OBJDIR)/main.o $(OBJDIR)/genotype_phenotype_map.o $(OBJDIR)/UpdateBehavior.o $(OBJDIR)/Fish_Habitat.o $(OBJDIR)/Fish_genotype_phenotype_maps.o $(OBJDIR)/Fish_Simulator.o $(OBJDIR)/Fish.o $(OBJDIR)/prey_class.o $(OBJDIR)/prey_deme_specific_data.o $(OBJDIR)/update_Fish.o $(OBJDIR)/Fish_Parents.o
-	nvcc -O3 -lcurand -lrt -lcuda -lconfig++ $(OBJDIR_SPEGG)/*.o $(OBJDIR)/main.o $(OBJDIR)/genotype_phenotype_map.o $(OBJDIR)/UpdateBehavior.o $(OBJDIR)/Fish_Habitat.o $(OBJDIR)/Fish_genotype_phenotype_maps.o $(OBJDIR)/Fish_Simulator.o $(OBJDIR)/Fish.o $(OBJDIR)/prey_class.o $(OBJDIR)/prey_deme_specific_data.o $(OBJDIR)/update_Fish.o $(OBJDIR)/Fish_Parents.o
+	nvcc -Xcompiler -O3 -lcurand -lrt -lcuda -lconfig++ $(OBJDIR_SPEGG)/*.o $(OBJDIR)/main.o $(OBJDIR)/genotype_phenotype_map.o $(OBJDIR)/UpdateBehavior.o $(OBJDIR)/Fish_Habitat.o $(OBJDIR)/Fish_genotype_phenotype_maps.o $(OBJDIR)/Fish_Simulator.o $(OBJDIR)/Fish.o $(OBJDIR)/prey_class.o $(OBJDIR)/prey_deme_specific_data.o $(OBJDIR)/update_Fish.o $(OBJDIR)/Fish_Parents.o
 
 $(OBJDIR):
 	mkdir $(OBJDIR)

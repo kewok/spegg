@@ -1,6 +1,7 @@
 HEADERS = -I./../../header -I./header
 
-CFLAGS  = -O3
+CFLAGS = -Xcompiler
+CFLAGS += -O3
 CFLAGS += -arch=sm_30
 
 SRC = ./src
@@ -15,7 +16,7 @@ all: $(OBJDIR_SPEGG) $(OBJDIR) a.out
 export LD_LIBRARY_PATH=/usr/local/lib /usr/local/cuda/lib
 
 a.out : $(OBJDIR_SPEGG)/*.o $(OBJDIR)/main.o $(OBJDIR)/genotype_phenotype_map.o $(OBJDIR)/UpdateBehavior.o $(OBJDIR)/Penguins.o $(OBJDIR)/update_Penguins.o $(OBJDIR)/Penguins_genotype_phenotype_maps.o $(OBJDIR)/Penguin_Parents.o $(OBJDIR)/Penguin_Drift_Simulator.o
-	nvcc -O3 -lcurand -lrt -lcuda -lconfig++ $(OBJDIR_SPEGG)/*.o $(OBJDIR)/main.o $(OBJDIR)/genotype_phenotype_map.o $(OBJDIR)/UpdateBehavior.o $(OBJDIR)/Penguins.o $(OBJDIR)/update_Penguins.o $(OBJDIR)/Penguins_genotype_phenotype_maps.o $(OBJDIR)/Penguin_Parents.o $(OBJDIR)/Penguin_Drift_Simulator.o
+	nvcc -Xcompiler -O3 -lcurand -lrt -lcuda -lconfig++ $(OBJDIR_SPEGG)/*.o $(OBJDIR)/main.o $(OBJDIR)/genotype_phenotype_map.o $(OBJDIR)/UpdateBehavior.o $(OBJDIR)/Penguins.o $(OBJDIR)/update_Penguins.o $(OBJDIR)/Penguins_genotype_phenotype_maps.o $(OBJDIR)/Penguin_Parents.o $(OBJDIR)/Penguin_Drift_Simulator.o
 
 $(OBJDIR):
 	mkdir $(OBJDIR)
