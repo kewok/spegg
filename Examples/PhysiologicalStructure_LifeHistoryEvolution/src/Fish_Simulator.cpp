@@ -3,7 +3,7 @@
 
 Fish_Simulator::Fish_Simulator() : Simulation()
 	{
-	initpop = 5000*demes;
+	initpop = 50000*demes;
 	maxpop = 50000*demes;
 	
 	nspecies = 1;

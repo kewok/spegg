@@ -284,7 +284,7 @@ struct calculate_mortality
 				thrust::get<2>(t) = 1;
 				}
 
-			thrust::get<2>(t) = thrust::get<2>(t) * 0.9995; // Impose a maximum background survivorship -> leads to mean life span of ~25 yrs = 1/(25*90)
+			thrust::get<2>(t) = thrust::get<2>(t) * 0.9997; // Impose a maximum background survivorship -> leads to mean life span of ~40 yrs = 1/(40*90)
 			
 			if (thrust::get<2>(t) < 0)	
 				{
