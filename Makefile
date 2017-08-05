@@ -1,6 +1,7 @@
 HEADERS = -I./header
 
-CFLAGS  = -O3
+CFLAGS = -Xcompiler
+CFLAGS += -O3
 CFLAGS += -arch=sm_30
 
 SRC = ./src

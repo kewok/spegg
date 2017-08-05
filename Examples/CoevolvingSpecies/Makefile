@@ -1,6 +1,7 @@
 HEADERS = -I./../../header/ -I./header
 
-CFLAGS  = -O3
+CFLAGS = -Xcompiler
+CFLAGS += -O3
 CFLAGS += -arch=sm_30
 
 SRC = ./src
@@ -13,7 +14,7 @@ all: $(OBJDIR_SPEGG) $(OBJDIR) a.out
 export LD_LIBRARY_PATH=/usr/local/lib /usr/local/cuda/lib
 
 a.out : $(OBJDIR_SPEGG)/*.o $(OBJDIR)/main.o $(OBJDIR)/genotype_phenotype_map.o $(OBJDIR)/UpdateBehavior.o $(OBJDIR)/coevolvingSpecie.o $(OBJDIR)/coevolvingSpeciesParents.o $(OBJDIR)/update_coevolvingSpecies.o $(OBJDIR)/MigrationBehavior.o $(OBJDIR)/migrate_coevolvingSpecies.o $(OBJDIR)/coevolutionSimulator.o $(OBJDIR)/myResource.o $(OBJDIR)/myConsumer.o  $(OBJDIR)/myConsumer_genotype_phenotype_maps.o $(OBJDIR)/myResource_genotype_phenotype_maps.o $(OBJDIR)/deme_specific_data_class_coevolvingSpecies.o 
-	nvcc -O3 -lcurand -lrt -lcuda -lconfig++ $(OBJDIR_SPEGG)/*.o $(OBJDIR)/main.o $(OBJDIR)/genotype_phenotype_map.o $(OBJDIR)/UpdateBehavior.o $(OBJDIR)/coevolvingSpecie.o $(OBJDIR)/coevolvingSpeciesParents.o $(OBJDIR)/update_coevolvingSpecies.o $(OBJDIR)/MigrationBehavior.o $(OBJDIR)/migrate_coevolvingSpecies.o $(OBJDIR)/coevolutionSimulator.o $(OBJDIR)/myResource.o $(OBJDIR)/myConsumer.o $(OBJDIR)/myConsumer_genotype_phenotype_maps.o $(OBJDIR)/myResource_genotype_phenotype_maps.o $(OBJDIR)/deme_specific_data_class_coevolvingSpecies.o
+	nvcc -Xcompiler -O3 -lcurand -lrt -lcuda -lconfig++ $(OBJDIR_SPEGG)/*.o $(OBJDIR)/main.o $(OBJDIR)/genotype_phenotype_map.o $(OBJDIR)/UpdateBehavior.o $(OBJDIR)/coevolvingSpecie.o $(OBJDIR)/coevolvingSpeciesParents.o $(OBJDIR)/update_coevolvingSpecies.o $(OBJDIR)/MigrationBehavior.o $(OBJDIR)/migrate_coevolvingSpecies.o $(OBJDIR)/coevolutionSimulator.o $(OBJDIR)/myResource.o $(OBJDIR)/myConsumer.o $(OBJDIR)/myConsumer_genotype_phenotype_maps.o $(OBJDIR)/myResource_genotype_phenotype_maps.o $(OBJDIR)/deme_specific_data_class_coevolvingSpecies.o
 $(OBJDIR):
 	mkdir $(OBJDIR)
 
