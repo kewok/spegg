@@ -91,49 +91,4 @@ struct female_fecundity_functor
 		}
 };
 
-struct determine_female_nesting_success_functor
-{
-	float *number_of_available_nests;
-	float *number_of_reproductive_females; 
-	int *number_of_reproductive_males;
-	
-	determine_female_nesting_success_functor(float *number_of_available_nests_ptr, float *number_of_reproductive_females_ptr, int* number_of_reproductive_males_ptr) : number_of_available_nests(number_of_available_nests_ptr), number_of_reproductive_females(number_of_reproductive_females_ptr), number_of_reproductive_males(number_of_reproductive_males_ptr)
-	{};
-
-	/* 
-		Elements in the tuple.
-pop_begin, will_reproduce_begin, probability_female_nests.begin(), rand.begin()
-
-		----------------------
-		0: whether the individual will reproduce
-		1: the individual's subpopulation
-		2: the individual's random number
-	*/ 
-
-	template <typename tuple>
-	__host__ __device__
-	void operator()(tuple t) {
-		if (thrust::get<0>(t) == 1) /* if the individual is indeed a reproducing female */
-			{
-			int individuals_subpopulation = thrust::get<1>(t);
-		
-			float nesting_probability = number_of_available_nests[individuals_subpopulation]/(1+number_of_reproductive_females[individuals_subpopulation]); // The 1+x is needed to prevent cases when there are no reproductive females
-
-			if (thrust::get<2>(t) <= nesting_probability)
-				{
-				thrust::get<0>(t) = 1;
-				}
-			else
-				{
-				thrust::get<0>(t) = 0;
-				}
-
-			if (number_of_reproductive_males[individuals_subpopulation] == 0)
-				{
-				thrust::get<0>(t) = 0;
-				}
-
-			}
-		}
-};
 #endif
