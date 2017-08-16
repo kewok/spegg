@@ -3,8 +3,6 @@
 
 #include <iostream>
 #include <stdio.h>
-#include <thrust/host_vector.h>
-
 #include <util/sampling_input.h>
 
 
