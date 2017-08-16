@@ -64,9 +64,9 @@ void mating_ThrustProbTable_demes::determine_key_offsets(int number_of_key_types
 	thrust::device_vector<int> temp_offsets( number_of_key_types ); 
 	thrust::inclusive_scan(key_histogram_vector.begin(), key_histogram_vector.end(), temp_offsets.begin());
 
-	// Need to subtract one from the offsets (as offsets are based on counts, but we need to match index)
+	// Need to subtract one from the offsets (as offsets are based on counts, but we need to match index which starts at zero)
 	key_offsets.resize( number_of_key_types );	
-	thrust::transform(temp_offsets.begin(), temp_offsets.begin() + number_of_key_types, key_offsets.begin(), unary_minus<unsigned int>(1));
+	thrust::transform_if(temp_offsets.begin(), temp_offsets.begin() + number_of_key_types, key_offsets.begin(), unary_minus<unsigned int>(1), unary_greater<unsigned int>(0));
 	}
 
 void mating_ThrustProbTable_demes::adjust_randoms(thrust::device_vector<float>::iterator uniform_begin, thrust::device_vector<float>::iterator uniform_end,
