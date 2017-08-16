@@ -148,7 +148,7 @@ void inds::exportCsv(const char *filename, int timestep)
 	//Output headers
 	if ((timestep==0))
 		{
-		file << "Time_step, Index,Id,Status,Sex,Age,Deme,maternal_ID,paternal_ID";
+		file << "Time_step, Index,Id,Status,Sex,Age,Deme,maternal_ID,paternal_ID,";
 		for (int i = 0 ; i < nloci ; i++) {
 			file << "fgene" << i << ",";
 		}
@@ -166,7 +166,7 @@ void inds::exportCsv(const char *filename, int timestep)
 	
 	//Output n individuals
 	for (int i = 0 ; i < size ; i++) {
-		file << timestep << "," << timestep << "," << i << "," << id[i] << "," << status[i] << "," << sex[i] << "," << age[i] << "," << deme[i] << "," << maternal_id[i] << "," << paternal_id[i] << ",";
+		file << timestep << "," << i << "," << id[i] << "," << status[i] << "," << sex[i] << "," << age[i] << "," << deme[i] << "," << maternal_id[i] << "," << paternal_id[i] << ",";
 		for (int j = 0 ; j < nloci ; j++) {
 			file << fgenotype[j][i] << ",";
 		}
