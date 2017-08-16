@@ -51,7 +51,7 @@ struct adjust_histogram_data_values
 	void operator()(tuple t) {
 		thrust::get<4>(t) = thrust::get<0>(t) - thrust::get<1>(t);
 		thrust::get<4>(t) = thrust::get<4>(t)/(thrust::get<2>(t) - thrust::get<1>(t));
-		thrust::get<4>(t) *= (float) thrust::get<3>(t); 
+		thrust::get<4>(t) *= (float) (thrust::get<3>(t) - 1);
 		}
 	
 };
