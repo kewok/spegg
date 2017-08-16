@@ -29,7 +29,10 @@ void DemeSettings::read_in_parameters(const char *filename, int species_ID)
 		{
 		std::cerr << "No deme config file." << std::endl;
 		}
-	
+	catch(const ParseException &pex)
+		{
+		std::cerr << "Your " << pex.getFile() << " file is incorrectly specified. Make sure you check on or about line: " << pex.getLine() << " - " << pex.getError() << std::endl;
+		}
 	try
 		{
 		Number_of_Demes = cfg.lookup("number_of_demes");
