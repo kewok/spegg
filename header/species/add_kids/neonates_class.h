@@ -117,7 +117,7 @@ struct recombination_functor
 			}
 		if (thrust::get<2>(t) == 0)
 			thrust::get<3>(t) = fgenotype[parent_index];
-		else
+		if (thrust::get<2>(t) == 1)
 			thrust::get<3>(t) = mgenotype[parent_index];
 
 		float answer = thrust::get<3>(t);
