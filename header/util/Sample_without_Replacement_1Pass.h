@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <stdio.h>
-#include <thrust/host_vector.h>
 #include <util/sampling_event.h>
 
 class Sample_without_Replacement_1Pass : public SamplingEvent
