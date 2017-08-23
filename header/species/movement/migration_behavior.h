@@ -2,7 +2,6 @@
 #define MIGRATION_BEHAVIOR_H
 
 #include <species/inds_stochastic_migratory.h>
-#include <math/thrust_prob_table_demes.h>
 #include <species/movement/migration_kernel_functors.h>
 
 class MigrationBehavior
