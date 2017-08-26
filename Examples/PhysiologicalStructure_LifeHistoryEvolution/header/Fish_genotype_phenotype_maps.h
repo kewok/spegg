@@ -156,7 +156,7 @@ offspring_size_calculator(float *intercept_ptr, float *fgen_ptr1,float *fgen_ptr
 				epistatic_effect[ind_deme]*0.5*(fgen4[thrust::get<0>(t)]*fgen5[thrust::get<0>(t)]*fgen6[thrust::get<0>(t)] + mgen4[thrust::get<0>(t)]*mgen5[thrust::get<0>(t)]*mgen6[thrust::get<0>(t)]) +
 				allelic_effect7[ind_deme]*0.5*(fgen7[thrust::get<0>(t)] * mgen7[thrust::get<0>(t)]) + thrust::get<1>(t);
 		/* transform to be no larger than maternal irreversible mass */
-		if (thrust::get<4>(t) > 0)
+		if (thrust::get<4>(t) >= 0)
 			{
 			if (thrust::get<2>(t) > maternal_effects[thrust::get<4>(t)])
 				{
