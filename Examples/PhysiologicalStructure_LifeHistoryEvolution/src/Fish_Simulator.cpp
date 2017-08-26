@@ -57,6 +57,7 @@ void Fish_Simulator::run()
 			demographics->record_deme_sizes();
 			*/
 			}
+		habitat->update();
 		/*
 		for (int k=0; k < demes; k++)
 			{
