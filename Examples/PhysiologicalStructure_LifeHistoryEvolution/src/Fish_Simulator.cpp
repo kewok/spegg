@@ -57,6 +57,7 @@ void Fish_Simulator::run()
 			demographics->calculate_deme_sizes(array[i]);
 			demographics->record_deme_sizes();
 			}
+		habitat->update();
 		for (int k=0; k < demes; k++)
 			{
 			preyfile << habitat->prey_array[0]->prey_abundance[k] << " " << habitat->prey_array[1]->prey_abundance[k] << " ";

@@ -618,7 +618,7 @@ prey_initialization =
 	(
 		{#deme0
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -634,7 +634,7 @@ prey_initialization =
 
 		{#deme2
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -650,7 +650,7 @@ prey_initialization =
 
 		{#deme4
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -666,7 +666,7 @@ prey_initialization =
 
 		{#deme6
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -682,7 +682,7 @@ prey_initialization =
 
 		{#deme8
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -698,7 +698,7 @@ prey_initialization =
 
 		{#deme10
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -714,7 +714,7 @@ prey_initialization =
 
 		{#deme12
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -730,7 +730,7 @@ prey_initialization =
 
 		{#deme14
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -746,7 +746,7 @@ prey_initialization =
 
 		{#deme16
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -762,7 +762,7 @@ prey_initialization =
 
 		{#deme18
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -778,7 +778,7 @@ prey_initialization =
 
 		{#deme20
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -794,7 +794,7 @@ prey_initialization =
 
 		{#deme22
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -810,7 +810,7 @@ prey_initialization =
 
 		{#deme24
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -826,7 +826,7 @@ prey_initialization =
 
 		{#deme26
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -842,7 +842,7 @@ prey_initialization =
 
 		{#deme28
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -858,7 +858,7 @@ prey_initialization =
 
 		{#deme30
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -874,7 +874,7 @@ prey_initialization =
 
 		{#deme32
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -890,7 +890,7 @@ prey_initialization =
 
 		{#deme34
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -906,7 +906,7 @@ prey_initialization =
 
 		{#deme36
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -922,7 +922,7 @@ prey_initialization =
 
 		{#deme38
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -938,7 +938,7 @@ prey_initialization =
 
 		{#deme40
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -954,7 +954,7 @@ prey_initialization =
 
 		{#deme42
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -970,7 +970,7 @@ prey_initialization =
 
 		{#deme44
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -986,7 +986,7 @@ prey_initialization =
 
 		{#deme46
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -1002,7 +1002,7 @@ prey_initialization =
 
 		{#deme48
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -1018,7 +1018,7 @@ prey_initialization =
 
 		{#deme50
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -1034,7 +1034,7 @@ prey_initialization =
 
 		{#deme52
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -1050,7 +1050,7 @@ prey_initialization =
 
 		{#deme54
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -1066,7 +1066,7 @@ prey_initialization =
 
 		{#deme56
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -1082,7 +1082,7 @@ prey_initialization =
 
 		{#deme58
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -1098,7 +1098,7 @@ prey_initialization =
 
 		{#deme60
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -1114,7 +1114,7 @@ prey_initialization =
 
 		{#deme62
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -1130,7 +1130,7 @@ prey_initialization =
 
 		{#deme64
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -1146,7 +1146,7 @@ prey_initialization =
 
 		{#deme66
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -1162,7 +1162,7 @@ prey_initialization =
 
 		{#deme68
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -1178,7 +1178,7 @@ prey_initialization =
 
 		{#deme70
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -1194,7 +1194,7 @@ prey_initialization =
 
 		{#deme72
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
@@ -1210,7 +1210,7 @@ prey_initialization =
 
 		{#deme74
 		 prey_carrying_capacity =  5000000.000000 
-		 prey_unconstrained_growth_rates =  3.000000 
+		 prey_unconstrained_growth_rates =  6.000000 
 		 prey_assimilation_efficiency =  1.000000 
 		 prey_growth_rate_noise_stddev =  0.000000 
 		 prey_maximum_abundance =  5000000.000000 
