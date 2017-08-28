@@ -16,6 +16,8 @@ void mortality_phenotype::calculate_phenotype(inds *species)
 
 void irreversible_mass_at_birth::calculate_phenotype(inds *species)
 	{
+	int irreversible_mass_phenotype_index = species->demeParameters->species_specific_values["IRREVERSIBLE_MASS_PHENOTYPE"];
+
 	// For multiple loci, use:	for (int i=0; i < Parameters-> get_Number_of_Loci(); i++)
 	// wrap the genotypes:
 	float *fgen1 = (&species->fgenotype[1][0]);
@@ -42,12 +44,11 @@ void irreversible_mass_at_birth::calculate_phenotype(inds *species)
 	float *locus_effect5 = (&Parameters->get_vector_ptr("OFFSPRING_SIZE_GENPHEN_MAP_COEF4")[0]);
 	float *locus_effect6 = (&Parameters->get_vector_ptr("OFFSPRING_SIZE_GENPHEN_MAP_COEF5")[0]);
 	float *locus_effect7 = (&Parameters->get_vector_ptr("OFFSPRING_SIZE_GENPHEN_MAP_COEF6")[0]);
-
+	float *epistatic_effect = (&Parameters->get_vector_ptr("OFFSPRING_SIZE_GENPHEN_MAP_COEF7")[0]);
 	float *intercept_ptr = (&Parameters->get_vector_ptr("OFFSPRING_SIZE_CONSTANT")[0]);
+	float *maternal_effects_ptr = (&species->phenotype[irreversible_mass_phenotype_index][0]);
 
-	float *maternal_effects_ptr = species->demeParameters->get_vector_ptr("F_sizes_at_maturity");
-
-	offspring_size_calculator offspring_size_functor(intercept_ptr, fgen1, fgen2, fgen3, fgen4, fgen5, fgen6, fgen7, mgen1, mgen2, mgen3, mgen4, mgen5, mgen6, mgen7, locus_effect1, locus_effect2, locus_effect3, locus_effect4, locus_effect5, locus_effect6, locus_effect7, maternal_effects_ptr);
+	offspring_size_calculator offspring_size_functor(intercept_ptr, fgen1, fgen2, fgen3, fgen4, fgen5, fgen6, fgen7, mgen1, mgen2, mgen3, mgen4, mgen5, mgen6, mgen7, locus_effect1, locus_effect2, locus_effect3, locus_effect4, locus_effect5, locus_effect6, locus_effect7, epistatic_effect, maternal_effects_ptr);
 
 	// draw the gaussian for phenotype deviation and create list of individuals
 	thrust::host_vector<float> deviation(num_kids);
@@ -60,11 +61,9 @@ void irreversible_mass_at_birth::calculate_phenotype(inds *species)
 	thrust::host_vector<int> individuals(index_case + num_kids);
 	thrust::sequence(individuals.begin(), individuals.begin() + index_case + num_kids, 0);
 
-	thrust::for_each(thrust::make_zip_iterator(thrust::make_tuple(individuals.begin() + index_case, deviation.begin(), species->phenotype[phenotype_index].begin() + index_case, species->deme.begin() + index_case)),
-	                 thrust::make_zip_iterator(thrust::make_tuple(individuals.begin() + index_case + num_kids, deviation.begin() + num_kids, species->phenotype[phenotype_index].begin() + index_case + num_kids, species->deme.begin() + index_case + num_kids)),
+	thrust::for_each(thrust::make_zip_iterator(thrust::make_tuple(individuals.begin() + index_case, deviation.begin(), species->phenotype[phenotype_index].begin() + index_case, species->deme.begin() + index_case, species->maternal_id.begin() + index_case)),
+	                 thrust::make_zip_iterator(thrust::make_tuple(individuals.begin() + index_case + num_kids, deviation.begin() + num_kids, species->phenotype[phenotype_index].begin() + index_case + num_kids, species->deme.begin() + index_case + num_kids, species->maternal_id.begin() + index_case + num_kids)),
 	                 offspring_size_functor);
-
-	int irreversible_mass_phenotype_index = species->demeParameters->species_specific_values["IRREVERSIBLE_MASS_PHENOTYPE"];
 
 	thrust::copy(species->phenotype[phenotype_index].begin() + index_case, species->phenotype[phenotype_index].begin() + index_case + num_kids, species->phenotype[irreversible_mass_phenotype_index].begin() + index_case);
 	}

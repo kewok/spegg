@@ -2,8 +2,8 @@
 
 Coevolution_Simulator::Coevolution_Simulator() : Simulation()
 	{
-	initpop = 25000*demes;
-	maxpop = 100000*demes;
+	initpop = 50000*demes;
+	maxpop = 50000*demes;
 	
 	nspecies = 2;
 	initialize_classes();
@@ -16,13 +16,13 @@ void Coevolution_Simulator::initialize_classes()
 		{
 		array[i] = initialize_species(initpop, maxpop, seed, demes, i);
 		}
-	
+
 	stats_prey_competitive_ability = new Statistics(demes, "summary_statistics_resource_competitive_ability.txt", "histograms_competitive_ability_frequency.txt");
 	stats_predator_attack_ability = new Statistics(demes, "summary_statistics_consumer_attack_ability.txt", "histograms_consumer_attack_frequency.txt");
 	stats_prey_defense_ability = new Statistics(demes, "summary_statistics_resource_defense.txt", "histograms_resource_defense_frequency.txt");;
 	demographics_predator = new DemographicStatistics(demes, "demographic_statistics_consumer.txt");	
 	demographics_prey = new DemographicStatistics(demes, "demographic_statistics_resource.txt");
-	
+
 	}
 
 void Coevolution_Simulator::run()
