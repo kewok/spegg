@@ -36,8 +36,8 @@ $(OBJDIR)/HillClimberParents.o : ${SRC}/HillClimberParents.cu
 $(OBJDIR)/update_HillClimbers.o : ${SRC}/update_HillClimbers.cu
 	nvcc  -c $(CFLAGS) ${HEADERS}  ${SRC}/update_HillClimbers.cu -o $(OBJDIR)/update_HillClimbers.o
 
-$(OBJDIR)/HillClimbers_Simulator.o : ${SRC}/HillClimbers_Simulator.cpp
-	nvcc  -c $(CFLAGS) ${HEADERS}  ${SRC}/HillClimbers_Simulator.cpp -o $(OBJDIR)/HillClimbers_Simulator.o
+$(OBJDIR)/HillClimbers_Simulator.o : ${SRC}/HillClimbers_Simulator.cu
+	nvcc  -c $(CFLAGS) ${HEADERS}  ${SRC}/HillClimbers_Simulator.cu -o $(OBJDIR)/HillClimbers_Simulator.o
 
 $(OBJDIR)/HillClimbers_genotype_phenotype_maps.o : ${SRC}/HillClimbers_genotype_phenotype_maps.cu
 	nvcc -c $(CFLAGS) ${HEADERS} ${SRC}/HillClimbers_genotype_phenotype_maps.cu -o $(OBJDIR)/HillClimbers_genotype_phenotype_maps.o

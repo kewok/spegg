@@ -42,8 +42,8 @@ $(OBJDIR)/update_Penguins.o : ${SRC}/update_Penguins.cu
 $(OBJDIR)/Penguins_genotype_phenotype_maps.o : ${SRC}/Penguins_genotype_phenotype_maps.cu
 	nvcc -c $(CFLAGS) ${HEADERS} ${SRC}/Penguins_genotype_phenotype_maps.cu -o $(OBJDIR)/Penguins_genotype_phenotype_maps.o
 
-$(OBJDIR)/Penguin_Drift_Simulator.o : ${SRC}/Penguin_Drift_Simulator.cpp
-	nvcc -c $(CFLAGS) ${HEADERS} ${SRC}/Penguin_Drift_Simulator.cpp -o $(OBJDIR)/Penguin_Drift_Simulator.o
+$(OBJDIR)/Penguin_Drift_Simulator.o : ${SRC}/Penguin_Drift_Simulator.cu
+	nvcc -c $(CFLAGS) ${HEADERS} ${SRC}/Penguin_Drift_Simulator.cu -o $(OBJDIR)/Penguin_Drift_Simulator.o
 
 .PHONY : all clean
 clean :

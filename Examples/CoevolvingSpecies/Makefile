@@ -42,8 +42,8 @@ $(OBJDIR)/update_coevolvingSpecies.o : ${SRC}/update_coevolvingSpecies.cu
 $(OBJDIR)/migrate_coevolvingSpecies.o : ${SRC}/migrate_coevolvingSpecies.cu
 	nvcc  -c $(CFLAGS) ${HEADERS}  ${SRC}/migrate_coevolvingSpecies.cu -o $(OBJDIR)/migrate_coevolvingSpecies.o
 
-$(OBJDIR)/coevolutionSimulator.o : ${SRC}/coevolutionSimulator.cpp
-	nvcc  -c $(CFLAGS) ${HEADERS}  ${SRC}/coevolutionSimulator.cpp -o $(OBJDIR)/coevolutionSimulator.o
+$(OBJDIR)/coevolutionSimulator.o : ${SRC}/coevolutionSimulator.cu
+	nvcc  -c $(CFLAGS) ${HEADERS}  ${SRC}/coevolutionSimulator.cu -o $(OBJDIR)/coevolutionSimulator.o
 
 $(OBJDIR)/myResource.o : ${SRC}/myResource.cu
 	nvcc  -c $(CFLAGS) ${HEADERS}  ${SRC}/myResource.cu -o $(OBJDIR)/myResource.o

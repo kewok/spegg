@@ -53,8 +53,8 @@ $(OBJDIR)/update_Fish.o : ${SRC}/update_Fish.cu
 $(OBJDIR)/Fish_Parents.o : ${SRC}/Fish_Parents.cu
 	nvcc -c $(CFLAGS) ${HEADERS} ${SRC}/Fish_Parents.cu -o $(OBJDIR)/Fish_Parents.o
 
-$(OBJDIR)/Fish_Simulator.o : ${SRC}/Fish_Simulator.cpp
-	nvcc -c $(CFLAGS) ${HEADERS} ${SRC}/Fish_Simulator.cpp -o $(OBJDIR)/Fish_Simulator.o
+$(OBJDIR)/Fish_Simulator.o : ${SRC}/Fish_Simulator.cu
+	nvcc -c $(CFLAGS) ${HEADERS} ${SRC}/Fish_Simulator.cu -o $(OBJDIR)/Fish_Simulator.o
 
 # Code related to the clean command.
 .PHONY : all clean
