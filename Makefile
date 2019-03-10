@@ -28,8 +28,8 @@ $(OBJDIR):
 $(OBJDIR)/ConfigFile.o : ${SRC}/ConfigFile.cpp
 	nvcc -c $(CFLAGS) ${HEADERS} ${SRC}/ConfigFile.cpp -o $(OBJDIR)/ConfigFile.o
 
-$(OBJDIR)/Simulation_Class.o : ${SRC}/Simulation_Class.cpp
-	nvcc -c $(CFLAGS) ${HEADERS} ${SRC}/Simulation_Class.cpp -o $(OBJDIR)/Simulation_Class.o
+$(OBJDIR)/Simulation_Class.o : ${SRC}/Simulation_Class.cu
+	nvcc -c $(CFLAGS) ${HEADERS} ${SRC}/Simulation_Class.cu -o $(OBJDIR)/Simulation_Class.o
 		
 $(OBJDIR)/inds.o : ${SPECIES}/inds.cu
 	nvcc -c $(CFLAGS) ${HEADERS}  ${SPECIES}/inds.cu -o $(OBJDIR)/inds.o
