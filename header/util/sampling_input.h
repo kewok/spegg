@@ -7,6 +7,7 @@
 #include <thrust/device_vector.h>
 #include <thrust/host_vector.h>
 #include <thrust/sequence.h>
+#include <thrust/remove.h>
 
 /* The class sampling input calculates and provides:
 	an int vector of individuals potentially doing the sampling. 
@@ -33,7 +34,10 @@ class SamplingInput{
 		int focal_species_ID;
 		int target_species_ID;
 
-		int sampling_scheme;
+		void setup_sampling_individuals_demes(int Num_Demes, thrust::device_vector<int> &sampling_individuals_demes);
+		void setup_sampleable_individuals_per_deme(thrust::device_vector<int> &num_sampleable_individuals_in_demes);
+
+		std::string sampling_scheme;
 
 		int Num_Demes;
 	};

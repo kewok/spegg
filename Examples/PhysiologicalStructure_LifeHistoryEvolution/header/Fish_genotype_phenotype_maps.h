@@ -4,13 +4,9 @@
 class fecundity_phenotype : public GenotypePhenotypeMap
 	{
 	public:
-		fecundity_phenotype(inds *species, int index_case, int num_kids)
+		fecundity_phenotype(inds *species, int phenotype_index, int index_case, int num_kids) : GenotypePhenotypeMap(species, phenotype_index, index_case, num_kids)
 			{
 			gen = (static_cast<inds_stochastic*> (species))->gen;
-			this->phenotype_index = species->demeParameters->species_specific_values["FECUNDITY_PHENOTYPE"];
-			this->Parameters = species->demeParameters->GeneticArchitecture->phen_gen_map_parm[phenotype_index];
-			this->index_case = index_case;
-			this->num_kids = num_kids;
 			}
 	
 		void calculate_phenotype(inds *species);
@@ -19,13 +15,9 @@ class fecundity_phenotype : public GenotypePhenotypeMap
 class mortality_phenotype : public GenotypePhenotypeMap
 	{
 	public:
-		mortality_phenotype(inds *species, int index_case, int num_kids)
+		mortality_phenotype(inds *species, int phenotype_index, int index_case, int num_kids) : GenotypePhenotypeMap(species, phenotype_index, index_case, num_kids)
 			{
 			gen = (static_cast<inds_stochastic*> (species))->gen;
-			this->phenotype_index = species->demeParameters->species_specific_values["MORTALITY_PHENOTYPE"];
-			this->Parameters = species->demeParameters->GeneticArchitecture -> phen_gen_map_parm[phenotype_index];
-			this->index_case = index_case;
-			this->num_kids = num_kids;
 			}
 	
 		void calculate_phenotype(inds *species);
@@ -34,13 +26,9 @@ class mortality_phenotype : public GenotypePhenotypeMap
 class irreversible_mass_at_birth : public GenotypePhenotypeMap
 	{
 	public:
-		irreversible_mass_at_birth(inds *species, int index_case, int num_kids)
+		irreversible_mass_at_birth(inds *species, int phenotype_index, int index_case, int num_kids) : GenotypePhenotypeMap(species, phenotype_index, index_case, num_kids)
 			{
 			gen = (static_cast<inds_stochastic*> (species))->gen;
-			this->phenotype_index = species->demeParameters->species_specific_values["IRREVERSIBLE_MASS_PHENOTYPE"];
-			this->Parameters = species->demeParameters->GeneticArchitecture -> phen_gen_map_parm[phenotype_index];
-			this->index_case = index_case;
-			this->num_kids = num_kids;
 			}
 	
 		void calculate_phenotype(inds *species);
@@ -50,13 +38,9 @@ class irreversible_mass_at_birth : public GenotypePhenotypeMap
 class reversible_mass_at_birth : public GenotypePhenotypeMap
 	{
 	public:
-		reversible_mass_at_birth(inds *species, int index_case, int num_kids)
+		reversible_mass_at_birth(inds *species, int phenotype_index, int index_case, int num_kids) : GenotypePhenotypeMap(species, phenotype_index, index_case, num_kids)
 			{
 			gen = (static_cast<inds_stochastic*> (species))->gen;
-			this->phenotype_index = species->demeParameters->species_specific_values["REVERSIBLE_MASS_PHENOTYPE"];
-			this->Parameters = species->demeParameters->GeneticArchitecture -> phen_gen_map_parm[phenotype_index];
-			this->index_case = index_case;
-			this->num_kids = num_kids;
 			}
 	
 		void calculate_phenotype(inds *species);
@@ -66,13 +50,9 @@ class reversible_mass_at_birth : public GenotypePhenotypeMap
 class satiation_at_birth : public GenotypePhenotypeMap
 	{
 	public:
-		satiation_at_birth(inds *species, int index_case, int num_kids)
+		satiation_at_birth(inds *species, int phenotype_index, int index_case, int num_kids) : GenotypePhenotypeMap(species, phenotype_index, index_case, num_kids)
 			{
 			gen = (static_cast<inds_stochastic*> (species))->gen;
-			this->phenotype_index = species->demeParameters->species_specific_values["RESOURCE_LIMITATION_PHENOTYPE"];
-			this->Parameters = species->demeParameters->GeneticArchitecture -> phen_gen_map_parm[phenotype_index];
-			this->index_case = index_case;
-			this->num_kids = num_kids;
 			}
 	
 		void calculate_phenotype(inds *species);
@@ -82,13 +62,9 @@ class satiation_at_birth : public GenotypePhenotypeMap
 class eggsize_at_birth : public GenotypePhenotypeMap
 	{
 	public:
-		eggsize_at_birth(inds *species, int index_case, int num_kids)
+		eggsize_at_birth(inds *species, int phenotype_index, int index_case, int num_kids) : GenotypePhenotypeMap(species, phenotype_index, index_case, num_kids)
 			{
 			gen = (static_cast<inds_stochastic*> (species))->gen;
-			this->phenotype_index = species->demeParameters->species_specific_values["EGGSIZE_PHENOTYPE"];
-			this->Parameters = species->demeParameters->GeneticArchitecture -> phen_gen_map_parm[phenotype_index];
-			this->index_case = index_case;
-			this->num_kids = num_kids;
 			}
 	
 		void calculate_phenotype(inds *species);

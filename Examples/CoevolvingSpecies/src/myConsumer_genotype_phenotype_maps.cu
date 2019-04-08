@@ -5,7 +5,7 @@
 
 void consumer_fecundity_phenotype::calculate_phenotype(inds *species)
 	{
-	thrust::gather(species->deme.begin() + index_case, species->deme.begin() + index_case + num_kids, Parameters->get_vector_ptr("GENPHEN_MAP_CONSTANT"), species->phenotype[FECUNDITY_PHENOTYPE_INDEX].begin() + index_case);
+	thrust::gather(species->deme.begin() + index_case, species->deme.begin() + index_case + num_kids, Parameters->get_vector_ptr("GENPHEN_MAP_CONSTANT"), species->phenotype[phenotype_index].begin() + index_case);
 	}
 
 void consumer_attack_phenotype::calculate_phenotype(inds *species)
@@ -41,5 +41,5 @@ void consumer_attack_phenotype::calculate_phenotype(inds *species)
 
 void consumer_mortality_phenotype::calculate_phenotype(inds *species)
 	{
-	thrust::gather(species->deme.begin() + index_case, species->deme.begin() + index_case + num_kids, Parameters->get_vector_ptr("GENPHEN_MAP_CONSTANT"), species->phenotype[MORTALITY_PHENOTYPE_INDEX].begin() + index_case);
+	thrust::gather(species->deme.begin() + index_case, species->deme.begin() + index_case + num_kids, Parameters->get_vector_ptr("GENPHEN_MAP_CONSTANT"), species->phenotype[phenotype_index].begin() + index_case);
 	}

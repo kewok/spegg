@@ -224,7 +224,6 @@ struct float_to_int
 		}
 	};
 
-
 struct int_to_float
 	{
 /*
@@ -240,6 +239,24 @@ struct int_to_float
 	__host__ __device__ 
 	void operator() ( tuple t ) {
 		thrust::get<1>(t) = (float) thrust::get<0>(t);
+		}
+	};
+
+struct int_to_double
+	{
+/*
+* custom functor that changes floats to ints
+/
+	/*
+		Elements in the tuple.
+		----------------------
+		0: int input
+		1: double output
+	*/
+	template <typename tuple>
+	__host__ __device__ 
+	void operator() ( tuple t ) {
+		thrust::get<1>(t) = (double) thrust::get<0>(t);
 		}
 	};
 

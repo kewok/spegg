@@ -7,7 +7,7 @@
 void Sample_without_Replacement_1Pass::sample()
 	{
 	// Reset sampling_input to allow sampling with replacement for one round:
-	sampling_input->sampling_scheme = 1;
+	sampling_input->sampling_scheme = "SAMPLE_WITH_REPLACEMENT";
 
 	class SamplingEvent *sample_others;
 	sample_others = sample_others->create_SamplingEvent(sampling_input, gen);

@@ -102,7 +102,6 @@ void DemeSettings::read_in_parameters(const char *filename, int species_ID)
 		{
 		float val = 0;
 		species_specification[species_ID].lookupValue(species_specific_values_names[i], val);
-		species_specification[species_ID].lookupValue(species_specific_values_names[i], val);
 		species_specific_values[species_specific_values_names[i]] = val;
 		}
 

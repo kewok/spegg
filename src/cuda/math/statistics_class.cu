@@ -164,7 +164,9 @@ void Statistics::output_histogram(int number_of_bins)
 	for (int i=0; i < number_of_demes; i++)
 		{
 		for (int j=0; j < number_of_bins; j++)
+			{
 			histogram_file << histogram_by_deme[i][j] << " ";
+			}
 		}
 	histogram_file << std::endl;
 	}

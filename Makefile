@@ -20,7 +20,7 @@ all: $(OBJDIR) a.out
 
 export LD_LIBRARY_PATH=/usr/local/lib /usr/local/cuda/lib
 
-a.out : $(OBJDIR)/inds.o $(OBJDIR)/inds_stochastic.o $(OBJDIR)/inds_stochastic_migratory.o $(OBJDIR)/thrust_prob_table.o $(OBJDIR)/ConfigFile.o $(OBJDIR)/thrust_prob_table_demes.o $(OBJDIR)/mating_thrust_prob_table_demes.o $(OBJDIR)/environment.o $(OBJDIR)/amplify.o $(OBJDIR)/random_variables_functions.o $(OBJDIR)/reduce_by_key_with_zeroes.o $(OBJDIR)/statistics_class.o $(OBJDIR)/deme_specific_data_class.o $(OBJDIR)/parents_class.o $(OBJDIR)/neonates_class.o $(OBJDIR)/genetic_deme_specific_data.o $(OBJDIR)/determine_mortality.o $(OBJDIR)/MigrationFunctions.o $(OBJDIR)/one_dim_two_dim.o $(OBJDIR)/remove_duplicate_pairs.o $(OBJDIR)/which_function.o $(OBJDIR)/gather_values_by_deme.o $(OBJDIR)/histogram.o $(OBJDIR)/footimer2.o $(OBJDIR)/Sampling_Input.o $(OBJDIR)/species_specific_mate_sampling_rules.o $(OBJDIR)/Sampling_Event.o $(OBJDIR)/Sample_without_Replacement_1Pass.o $(OBJDIR)/Sample_With_Replacement.o $(OBJDIR)/genotype_phenotype_map_parameters.o  $(OBJDIR)/demographic_statistics_class.o $(OBJDIR)/Simulation_Class.o 
+a.out : $(OBJDIR)/inds.o $(OBJDIR)/inds_stochastic.o $(OBJDIR)/inds_stochastic_migratory.o $(OBJDIR)/thrust_prob_table.o $(OBJDIR)/ConfigFile.o $(OBJDIR)/thrust_prob_table_demes.o $(OBJDIR)/mating_thrust_prob_table_demes.o $(OBJDIR)/environment.o $(OBJDIR)/amplify.o $(OBJDIR)/random_variables_functions.o $(OBJDIR)/reduce_by_key_with_zeroes.o $(OBJDIR)/statistics_class.o $(OBJDIR)/deme_specific_data_class.o $(OBJDIR)/parents_class.o $(OBJDIR)/neonates_class.o $(OBJDIR)/genetic_deme_specific_data.o $(OBJDIR)/determine_mortality.o $(OBJDIR)/MigrationFunctions.o $(OBJDIR)/one_dim_two_dim.o $(OBJDIR)/remove_duplicate_pairs.o $(OBJDIR)/which_function.o $(OBJDIR)/gather_values_by_deme.o $(OBJDIR)/histogram.o $(OBJDIR)/footimer2.o $(OBJDIR)/Sampling_Input.o $(OBJDIR)/species_specific_mate_sampling_rules.o $(OBJDIR)/Sampling_Event.o $(OBJDIR)/Sample_without_Replacement_1Pass.o $(OBJDIR)/Sample_without_Replacement_Test.o  $(OBJDIR)/Sample_without_Replacement_byDeme.o $(OBJDIR)/Sample_With_Replacement.o $(OBJDIR)/genotype_phenotype_map_parameters.o  $(OBJDIR)/demographic_statistics_class.o $(OBJDIR)/Simulation_Class.o 
 
 $(OBJDIR):
 	mkdir $(OBJDIR)
@@ -63,6 +63,9 @@ $(OBJDIR)/amplify.o : ${UTIL}/amplify.cu
 
 $(OBJDIR)/reduce_by_key_with_zeroes.o : ${UTIL}/reduce_by_key_with_zeroes.cu
 	nvcc -c $(CFLAGS) ${HEADERS}  ${UTIL}/reduce_by_key_with_zeroes.cu -o $(OBJDIR)/reduce_by_key_with_zeroes.o
+
+$(OBJDIR)/Shuffle_by_Key.o : ${UTIL}/Shuffle_by_Key.cu
+	nvcc -c $(CFLAGS) ${HEADERS}  ${UTIL}/Shuffle_by_Key.cu -o $(OBJDIR)/Shuffle_by_Key.o
 
 $(OBJDIR)/random_variables_functions.o : ${MATH}/random_variables_functions.cu
 	nvcc -c $(CFLAGS) ${HEADERS}  ${MATH}/random_variables_functions.cu -o $(OBJDIR)/random_variables_functions.o
@@ -127,8 +130,14 @@ $(OBJDIR)/Sampling_Event.o : ${UTIL}/Sampling_Event.cu
 $(OBJDIR)/Sample_without_Replacement_1Pass.o : ${UTIL}/Sample_without_Replacement_1Pass.cu
 	nvcc -c $(CFLAGS) ${HEADERS} ${UTIL}/Sample_without_Replacement_1Pass.cu -o $(OBJDIR)/Sample_without_Replacement_1Pass.o
 
+$(OBJDIR)/Sample_without_Replacement_byDeme.o : ${UTIL}/Sample_without_Replacement_byDeme.cu
+	nvcc -c $(CFLAGS) ${HEADERS} ${UTIL}/Sample_without_Replacement_byDeme.cu -o $(OBJDIR)/Sample_without_Replacement_byDeme.o
+
 $(OBJDIR)/Sample_With_Replacement.o : ${UTIL}/Sample_With_Replacement.cu
 	nvcc -c $(CFLAGS) ${HEADERS} ${UTIL}/Sample_With_Replacement.cu -o $(OBJDIR)/Sample_With_Replacement.o
+
+$(OBJDIR)/Sample_without_Replacement_Test.o : ${UTIL}/Sample_without_Replacement_Test.cu
+	nvcc -c $(CFLAGS) ${HEADERS} ${UTIL}/Sample_without_Replacement_Test.cu -o $(OBJDIR)/Sample_without_Replacement_Test.o
 
 $(OBJDIR)/species_specific_mate_sampling_rules.o : ${ADD_KIDS}/species_specific_mate_sampling_rules.cu
 	nvcc -c $(CFLAGS) ${HEADERS} ${ADD_KIDS}/species_specific_mate_sampling_rules.cu -o $(OBJDIR)/species_specific_mate_sampling_rules.o

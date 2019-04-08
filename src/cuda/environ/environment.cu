@@ -36,7 +36,7 @@ environment::environment(int seed_val, int num_biotic_variables, int num_abiotic
 
 	// Allocate abiotic data vectors
 	abiotic_variables = new thrust::device_vector<float>[nabiotic_vars];
-	
+
 	for (int i=0; i < nabiotic_vars; i++)
 		{
 		abiotic_variables[i].resize(ndemes);

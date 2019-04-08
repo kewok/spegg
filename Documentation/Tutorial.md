@@ -298,6 +298,14 @@ class GenotypePhenotypeMap
 	{
 	public:
 		static GenotypePhenotypeMap *create_genotype_phenotype_map(inds *species, int phenotype_index, int index_case, int num_kids);
+
+		 GenotypePhenotypeMap(inds *species, int phenotype_index, int index_case, int num_kids)
+                        {
+                        this->phenotype_index = phenotype_index;
+                        this->Parameters = species->demeParameters->GeneticArchitecture->phen_gen_map_parm[phenotype_index];
+                        this->index_case = index_case;
+                        this->num_kids = num_kids;
+                        }
 	
 		virtual void calculate_phenotype(inds *species)=0;
 
@@ -340,19 +348,19 @@ The method ```create_genotype_phenotype_map``` can be created following a templa
 GenotypePhenotypeMap *GenotypePhenotypeMap::create_genotype_phenotype_map(inds *species, int phenotype_index, int index_case, int num_kids)
     {
     if (phenotype_index == species->demeParameters->species_specific_values["FECUNDITY_PHENOTYPE_INDEX"]) 
-	   	{       
-	   	return new fecundity_phenotype(species, index_case, num_kids);
-	   	}
+	   {       
+	   return new fecundity_phenotype(species, phenotype_index, index_case, num_kids);
+	   }
 
     if (phenotype_index == species->demeParameters->species_specific_values["MORTALITY_PHENOTYPE_INDEX"])
 	   {        
-	   return new mortality_phenotype(species, index_case, num_kids);
+	   return new mortality_phenotype(species, phenotype_index, index_case, num_kids);
 	   }
 
    if (phenotype_index == species->demeParameters->species_specific_values["CROWN_COLOR_INDEX"])
-	    {
-        return new crown_color_phenotype(species, index_case, num_kids);
-	    }
+	   {
+           return new crown_color_phenotype(species, phenotype_index, index_case, num_kids);
+	   }
     }
 ```
 What this does is create instances of genotype-phenotype map objects, which we define below, that are in charge of managing the translation of genetic data into phenotypic values in our model. 
@@ -379,19 +387,14 @@ Now we're ready to define our genotype-phenotype maps. Lets start by defining th
 class fecundity_phenotype : public GenotypePhenotypeMap
 	{
 	public:
-		fecundity_phenotype(inds *species, int index_case, int num_kids)
-			{
-			this->phenotype_index = species->demeParameters->species_specific_values["FECUNDITY_PHENOTYPE_INDEX"];
-			this->Parameters = species->demeParameters->GeneticArchitecture->phen_gen_map_parm[phenotype_index];
-			this->index_case = index_case;
-			this->num_kids = num_kids;
-			}
+		fecundity_phenotype(inds *species, int phenotype_index, int index_case, int num_kids) : GenotypePhenotypeMap(species, phenotype_index, index_case, num_kids)
+			{};
 	
 		void calculate_phenotype(inds *species);
 	};
 ```
 
-The class inherits from GenotypePhenotypeMap, and implements the ```calculate_phenotype()``` method according to the genotype-phenotype map for the fecundity phenotype. The arguments from the constructor to GenotypePhenotypeMap will be able to provide all the other specifications we need. All we have to do is tell the fecundity_phenotype class where to look inside our Penguins object.
+The class inherits from GenotypePhenotypeMap, and implements the ```calculate_phenotype()``` method according to the genotype-phenotype map for the fecundity phenotype. The arguments from the constructor to GenotypePhenotypeMap will be used to querry the parameters involved in determining the genotype-phenotype map and set up other variables of the GenotypePhenotypeMap, including the index that represents the first offspring in the arrays of the Inds class and the total number of offspring. 
 
 <a name="functor_genphenmap">
 
@@ -442,7 +445,7 @@ void operator()(tuple t) {
 ```
 instead.
 
-We highlight that the thrust functor can also work with data that get passed into the functor as arguments instead of as tuples. In our example functor ```fecundity_calculator()```, these are represented as floating point arrays. This is not ideal, but is often necessary in the current version of Thrust. Indeed, currently Thrust only allows one to have up to 10 vectors "glued" together using tuples. The limitation is problematic. Suppose our gentoype-phenotype map needed to reference 12 genes rather than two. If we're interested in both maternally and paternally inherited allelic values, this would entail at least 24 vectors storing the individual's genotypes (one vector for each gene), and we would be unable to use tuples. In contrast to tuples, you can pass as many vectors as you need to the functor itself as arguments, and reference the elements of the vectors separately. There is some (potentially nontrivial) performance penalty, and there are also more elaborate solutions like having tuples of tuples one could try in the interim. Until thrust can handle more than 10 vectors in a tuple, there isn't a single obvious way around this problem.
+We highlight that the thrust functor can also work with data that get passed into the functor as arguments instead of as tuples. In our example functor ```fecundity_calculator()```, these are represented as floating point arrays. This is not ideal, but is often necessary in the current version of Thrust. Indeed, currently Thrust only allows one to have up to 10 vectors "glued" together using tuples. The limitation is problematic. Suppose our gentoype-phenotype map needed to reference 12 genes rather than two. If we're interested in both maternally and paternally inherited allelic values, this would entail at least 24 vectors storing the individual's genotypes (one vector for each gene), and we would be unable to use tuples. In contrast to tuples, you can pass as many vectors as you need to the functor itself as arguments, and reference the elements of the vectors separately. There is some (potentially nontrivial) performance penalty, and there are also more elaborate solutions like having tuples of tuples one could try in the interim. [Thrust will eventually handle more than 10 vectors in a tuple] (https://github.com/thrust/thrust/issues/524). Until then, there isn't a single obvious way around this problem.
 </a>
 In any event, we'll call this functor from the method ```calculate_phenotype()``` defined for our ```fecundity_phenotype``` class. We can store the code inside a .cu file, ```Penguins_genotype_phenotype_maps.cu```, inside ```src```. Inside calculate_phenotype(), the functor fecundity_calculator (which remember is a structure) will then get instantiated. We will then "glue" the appropriate vectors together using two thrust operations: ```make_tuple``` and ```make_zip_iterator```. They are described further in the thrust documentation [here](#https://thrust.github.io/doc/group__tuple.html#ga48cf9f1740f033f22386c8c0310c0510) and [here](https://thrust.github.io/doc/group__fancyiterator.html#ga338d4f994660c4dc89e2bb3cf0a6a60f). For now, just know that these are calls to thrust that are necessary to build your tuples. 
 
@@ -472,13 +475,8 @@ The advantages of having used the strategy pattern become more apparent when we 
 class mortality_phenotype : public GenotypePhenotypeMap
 	{
 	public:
-		mortality_phenotype(inds *species, int index_case, int num_kids )
-			{
-			this->phenotype_index = species->demeParameters->species_specific_values["MORTALITY_PHENOTYPE_INDEX"];
-			this->Parameters = species->demeParameters->GeneticArchitecture -> phen_gen_map_parm[phenotype_index];
-			this->index_case = index_case;
-			this->num_kids = num_kids;
-			}
+		mortality_phenotype(inds *species, int phenotype_index, int index_case, int num_kids) : GenotypePhenotypeMap(species, phenotype_index, index_case, num_kids)
+			{};
 
 		void calculate_phenotype(inds *species);
 	};
@@ -537,15 +535,13 @@ The final genotype-phenotype map will calculate crown color at birth. The corres
 class crown_color_phenotype : public GenotypePhenotypeMap
 	{
 	public:
-		crown_color_phenotype(inds *species, int index_case, int num_kids )
-			{
-			this->CROWN_COLOR_INDEX = species->demeParameters->species_specific_values["CROWN_COLOR_INDEX"];
-			this->Parameters = species->demeParameters->GeneticArchitecture -> phen_gen_map_parm[CROWN_COLOR_INDEX];
-			this->index_case = index_case;
-			this->num_kids = num_kids;
-			}
-
 		int CROWN_COLOR_INDEX;
+
+		crown_color_phenotype(inds *species, int phenotype_index, int index_case, int num_kids) : GenotypePhenotypeMap(species, phenotype_index, index_case, num_kids)
+			{
+			CROWN_COLOR_INDEX = phenotype_index;
+			};
+
 		void calculate_phenotype(inds *species);
 	};
 

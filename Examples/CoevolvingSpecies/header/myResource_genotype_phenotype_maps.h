@@ -6,60 +6,52 @@
 class resource_mortality_phenotype : public GenotypePhenotypeMap
 	{
 	public:
-		resource_mortality_phenotype(inds *species, int index_case, int num_kids)
-			{
-			this->MORTALITY_PHENOTYPE_INDEX = species->demeParameters->species_specific_values["MORTALITY_PHENOTYPE_INDEX"];
-			this->Parameters = species->demeParameters->GeneticArchitecture->phen_gen_map_parm[MORTALITY_PHENOTYPE_INDEX];
-			this->index_case = index_case;
-			this->num_kids = num_kids;
-			}
-	
 		int MORTALITY_PHENOTYPE_INDEX;
+
+		resource_mortality_phenotype(inds *species, int phenotype_index, int index_case, int num_kids) : GenotypePhenotypeMap(species, phenotype_index, index_case, num_kids)
+			{
+			MORTALITY_PHENOTYPE_INDEX = this->phenotype_index;
+			};
+	
 		void calculate_phenotype(inds *species);
 	};
 
 class resource_fecundity_phenotype : public GenotypePhenotypeMap
 	{
 	public:
-		resource_fecundity_phenotype(inds *species, int index_case, int num_kids)
-			{
-			this->FECUNDITY_PHENOTYPE_INDEX = species->demeParameters->species_specific_values["FECUNDITY_PHENOTYPE_INDEX"];
-			this->Parameters = species->demeParameters->GeneticArchitecture->phen_gen_map_parm[FECUNDITY_PHENOTYPE_INDEX];
-			this->index_case = index_case;
-			this->num_kids = num_kids;
-			}
-	
 		int FECUNDITY_PHENOTYPE_INDEX;
+
+		resource_fecundity_phenotype(inds *species, int phenotype_index, int index_case, int num_kids) : GenotypePhenotypeMap(species, phenotype_index, index_case, num_kids)
+			{
+			FECUNDITY_PHENOTYPE_INDEX = this->phenotype_index;
+			};
+	
 		void calculate_phenotype(inds *species);
 	};
 
 class resource_defense_phenotype : public GenotypePhenotypeMap
 	{
 	public:
-		resource_defense_phenotype(inds *species, int index_case, int num_kids)
-			{
-			this->RESOURCE_DEFENSE_PHENOTYPE_INDEX = species->demeParameters->species_specific_values["RESOURCE_DEFENSE_PHENOTYPE_INDEX"];
-			this->Parameters = species->demeParameters->GeneticArchitecture->phen_gen_map_parm[RESOURCE_DEFENSE_PHENOTYPE_INDEX];
-			this->index_case = index_case;
-			this->num_kids = num_kids;
-			}
-	
 		int RESOURCE_DEFENSE_PHENOTYPE_INDEX;
+
+		resource_defense_phenotype(inds *species, int phenotype_index, int index_case, int num_kids) : GenotypePhenotypeMap(species, phenotype_index, index_case, num_kids)
+			{
+			RESOURCE_DEFENSE_PHENOTYPE_INDEX = this->phenotype_index;
+			};
+	
 		void calculate_phenotype(inds *species);
 	};
 
 class resource_competition_phenotype : public GenotypePhenotypeMap
 	{
 	public:
-		resource_competition_phenotype(inds *species, int index_case, int num_kids)
-			{
-			this->RESOURCE_COMPETITIVE_ABILITY_PHENOTYPE_INDEX = species->demeParameters->species_specific_values["RESOURCE_COMPETITIVE_ABILITY_PHENOTYPE_INDEX"];
-			this->Parameters = species->demeParameters->GeneticArchitecture->phen_gen_map_parm[RESOURCE_COMPETITIVE_ABILITY_PHENOTYPE_INDEX];
-			this->index_case = index_case;
-			this->num_kids = num_kids;
-			}
-	
 		int RESOURCE_COMPETITIVE_ABILITY_PHENOTYPE_INDEX;
+
+		resource_competition_phenotype(inds *species, int phenotype_index, int index_case, int num_kids) : GenotypePhenotypeMap(species, phenotype_index, index_case, num_kids)
+			{
+			RESOURCE_COMPETITIVE_ABILITY_PHENOTYPE_INDEX = this->phenotype_index;
+			};
+	
 		void calculate_phenotype(inds *species);
 	};
 

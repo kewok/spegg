@@ -4,6 +4,42 @@
 #include <math/histogram.h>
 
 // The operations in prepare_sampling_input() are also shared across species and contexts
+
+void SamplingInput::setup_sampling_individuals_demes(int num_demes, thrust::device_vector<int> &sampling_individuals_demes)
+	{
+	Num_Demes = num_demes;
+	deme_affiliation_of_sampling_individuals.resize(sampling_individuals_demes.size());
+	thrust::copy(sampling_individuals_demes.begin(), sampling_individuals_demes.end(), 	deme_affiliation_of_sampling_individuals.begin());	
+	}
+
+void SamplingInput::setup_sampleable_individuals_per_deme(thrust::device_vector<int> &num_sampleable_individuals_in_demes)
+	{
+	sampleable_individuals_per_deme.resize(Num_Demes);
+	thrust::copy(num_sampleable_individuals_in_demes.begin(), num_sampleable_individuals_in_demes.end(), sampleable_individuals_per_deme.begin());
+
+	// In demes with zero sampleable individuals, excise from the list of individuals potentially conducting sampling and their demes 
+	int smallest_deme = *(thrust::min_element(sampleable_individuals_per_deme.begin(), sampleable_individuals_per_deme.end()));
+
+	if (smallest_deme == 0)
+		{
+		thrust::device_vector<int> sampleable_individuals_in_sampling_individuals_deme(deme_affiliation_of_sampling_individuals.size());
+		thrust::gather(deme_affiliation_of_sampling_individuals.begin(), deme_affiliation_of_sampling_individuals.end(), sampleable_individuals_per_deme.begin(), sampleable_individuals_in_sampling_individuals_deme.begin());
+
+		list_of_individuals_potentially_conducting_sampling.erase(thrust::remove_if(list_of_individuals_potentially_conducting_sampling.begin(), list_of_individuals_potentially_conducting_sampling.end(), sampleable_individuals_in_sampling_individuals_deme.begin(), unary_less_equal<int>(0)), list_of_individuals_potentially_conducting_sampling.end());
+
+		if (deme_affiliation_of_sampling_individuals.size() > list_of_individuals_potentially_conducting_sampling.size())
+			{
+			deme_affiliation_of_sampling_individuals.erase(thrust::remove_if(deme_affiliation_of_sampling_individuals.begin(), deme_affiliation_of_sampling_individuals.end(), sampleable_individuals_in_sampling_individuals_deme.begin(), unary_less_equal<int>(0)), deme_affiliation_of_sampling_individuals.end());
+			}
+
+		if (number_of_other_individuals_sampled.size() >  list_of_individuals_potentially_conducting_sampling.size())
+			{
+			number_of_other_individuals_sampled.erase(thrust::remove_if(number_of_other_individuals_sampled.begin(), number_of_other_individuals_sampled.end(), sampleable_individuals_in_sampling_individuals_deme.begin(), unary_less_equal<int>(0)), number_of_other_individuals_sampled.end());
+			}
+		cudaThreadSynchronize();
+		}
+	}
+
 #if 0
 void SamplingInput::prepare_sampling_input()
 	{

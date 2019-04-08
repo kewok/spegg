@@ -24,9 +24,11 @@ class Assortative_mating_parents : public Parents
 		int total_reproductive_females;
 		int total_reproductive_males;
 	
-		thrust::device_vector<int> pair_populations;
+		thrust::device_vector<int> pair_demes;
 
+		int species_ID;
 	protected:
+
 		int ASSORTATIVE_MATING_PHENOTYPE_INDEX;
 
 		int mate_sampling_scheme;

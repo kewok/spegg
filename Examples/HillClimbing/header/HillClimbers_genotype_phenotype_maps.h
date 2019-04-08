@@ -5,14 +5,8 @@
 class fecundity_genotype_phenotype_map : public GenotypePhenotypeMap
 	{
 	public:
-		fecundity_genotype_phenotype_map(inds *species, int index_case, int num_kids)
-			{
-			this->index_case = index_case;
-			this->num_kids = num_kids;
-
-			this->phenotype_index = species->demeParameters->species_specific_values["FECUNDITY_PHENOTYPE_INDEX"];
-			this->Parameters = species->demeParameters->GeneticArchitecture->phen_gen_map_parm[phenotype_index];
-			}
+		fecundity_genotype_phenotype_map(inds *species, int phenotype_index, int index_case, int num_kids) : GenotypePhenotypeMap(species, phenotype_index, index_case, num_kids)
+			{};
 
 		void calculate_phenotype(inds *species);
 	};
@@ -68,13 +62,8 @@ allelic_effect4(allelic_effect_ptr4), allelic_effect5(allelic_effect_ptr5)
 class mortality_genotype_phenotype_map : public GenotypePhenotypeMap
 	{
 	public:
-		mortality_genotype_phenotype_map(inds *species, int index_case, int num_kids )
-			{
-			this->phenotype_index = species->demeParameters->species_specific_values["MORTALITY_PHENOTYPE_INDEX"];
-			this->Parameters = species->demeParameters->GeneticArchitecture -> phen_gen_map_parm[phenotype_index];
-			this->index_case = index_case;
-			this->num_kids = num_kids;
-			}
+		mortality_genotype_phenotype_map(inds *species, int phenotype_index, int index_case, int num_kids ) : GenotypePhenotypeMap(species, phenotype_index, index_case, num_kids)
+			{};
 
 		void calculate_phenotype(inds *species);
 	};

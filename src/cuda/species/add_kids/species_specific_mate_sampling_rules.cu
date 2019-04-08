@@ -10,7 +10,47 @@
 #define MAGIC_THRESHOLD 50 // specifies when to switch from poisson to gaussian
 #define MALE_CODE 1
 
-SamplingInput_Mating::SamplingInput_Mating(Parents *mating_parents, int Sampling_Parent)
+void SamplingInput_Mating::determine_mate_sampling_scheme(int species_ID)
+	{
+	std::cout << "Try to find the sampling scheme" << std::endl;
+	const char *filename = "deme_config.txt";
+
+	Config cfg;
+	
+	try
+		{
+		cfg.readFile(filename);
+		}
+	catch(const FileIOException &fioex)
+		{
+		std::cerr << "No deme config file." << std::endl;
+		exit(1);
+		}
+	catch(const ParseException &pex)
+		{
+		std::cerr << "Your " << pex.getFile() << " file is incorrectly specified. Make sure you check on or about line: " << pex.getLine() << " - " << pex.getError() << std::endl;
+		exit(1);
+		}
+
+	const Setting& root = cfg.getRoot();
+
+	// Read in the input
+
+	const Setting &species_specification = root["species_data"];
+
+	bool does_sampling_scheme_exist = species_specification[species_ID].lookupValue("MATE_SAMPLING_SCHEME", sampling_scheme);
+
+	std::cout << "sampling scheme is: " << sampling_scheme << std::endl;
+
+	if (!does_sampling_scheme_exist)
+		{
+		std::cerr << "No 'MATE_SAMPLING_SCHEME' value in species data in deme_config.txt. Simulation will exit." << std::endl;
+		exit(1);
+		}
+	}
+
+
+SamplingInput_Mating::SamplingInput_Mating(Assortative_mating_parents *mating_parents, int Sampling_Parent)
 	{
 	/* If females are doing the sampling */
 	if (Sampling_Parent != MALE_CODE)
@@ -35,6 +75,8 @@ SamplingInput_Mating::SamplingInput_Mating(Parents *mating_parents, int Sampling
 		sampleable_individuals_per_deme = mating_parents->reproductive_females_per_deme;
 		}
 
+	determine_mate_sampling_scheme(mating_parents->species_ID);
+
 	deme_affiliation_of_sampling_individuals.resize(list_of_individuals_potentially_conducting_sampling.size());
 	
 	thrust::gather(list_of_individuals_potentially_conducting_sampling.begin(), 
@@ -43,12 +85,11 @@ SamplingInput_Mating::SamplingInput_Mating(Parents *mating_parents, int Sampling
 		       deme_affiliation_of_sampling_individuals.begin());
 
 	mating_scheme = mating_parents->demeParameters->species_specific_values["mating_scheme"];
-	sampling_scheme = mating_parents->demeParameters->species_specific_values["mate_sampling_scheme"];
-
+	
 	Num_Demes = mating_parents->Num_Demes;
 	}
 
-void SamplingInput_Mating::determine_number_of_individuals_sampled(Parents *mating_parents)
+void SamplingInput_Mating::determine_number_of_individuals_sampled(Assortative_mating_parents *mating_parents)
 	{
 	if (mating_scheme == 0.0)
 		determine_number_of_individuals_to_be_sampled_poisson( mating_parents );
@@ -59,7 +100,7 @@ void SamplingInput_Mating::determine_number_of_individuals_sampled(Parents *mati
 
 
 // Methods to determine how many individuals each individual samples
-void SamplingInput_Mating::determine_number_of_individuals_to_be_sampled_poisson(Parents *mating_parents) 
+void SamplingInput_Mating::determine_number_of_individuals_to_be_sampled_poisson(Assortative_mating_parents *mating_parents) 
 	{
 	int number_of_individuals_doing_the_sampling = list_of_individuals_potentially_conducting_sampling.size();
 
@@ -92,7 +133,7 @@ void SamplingInput_Mating::determine_number_of_individuals_to_be_sampled_poisson
 
 
 // Method to set the same number of others sampled for all individuals in a deme
-void SamplingInput_Mating::determine_number_of_individuals_to_be_sampled_fixed(Parents *mating_parents) 
+void SamplingInput_Mating::determine_number_of_individuals_to_be_sampled_fixed(Assortative_mating_parents *mating_parents) 
 	{
 	int number_of_individuals_doing_the_sampling = list_of_individuals_potentially_conducting_sampling.size();
 

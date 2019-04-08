@@ -6,30 +6,18 @@
 class consumer_fecundity_phenotype : public GenotypePhenotypeMap
 	{
 	public:
-		consumer_fecundity_phenotype(inds *species, int index_case, int num_kids)
-			{
-			this->FECUNDITY_PHENOTYPE_INDEX = species->demeParameters->species_specific_values["FECUNDITY_PHENOTYPE_INDEX"];
-			this->Parameters = species->demeParameters->GeneticArchitecture->phen_gen_map_parm[FECUNDITY_PHENOTYPE_INDEX];
-			this->index_case = index_case;
-			this->num_kids = num_kids;
-			}
+		consumer_fecundity_phenotype(inds *species, int phenotype_index, int index_case, int num_kids) : GenotypePhenotypeMap(species, phenotype_index, index_case, num_kids)
+			{};
 	
-		int FECUNDITY_PHENOTYPE_INDEX;
 		void calculate_phenotype(inds *species);
 	};
 
 class consumer_mortality_phenotype : public GenotypePhenotypeMap
 	{
 	public:
-		consumer_mortality_phenotype(inds *species, int index_case, int num_kids)
-			{
-			this->MORTALITY_PHENOTYPE_INDEX = species->demeParameters->species_specific_values["MORTALITY_PHENOTYPE_INDEX"];
-			this->Parameters = species->demeParameters->GeneticArchitecture->phen_gen_map_parm[MORTALITY_PHENOTYPE_INDEX];
-			this->index_case = index_case;
-			this->num_kids = num_kids;
-			}
+		consumer_mortality_phenotype(inds *species, int phenotype_index, int index_case, int num_kids) : GenotypePhenotypeMap(species, phenotype_index, index_case, num_kids)
+			{};
 	
-		int MORTALITY_PHENOTYPE_INDEX;
 		void calculate_phenotype(inds *species);
 	};
 
@@ -37,15 +25,13 @@ class consumer_mortality_phenotype : public GenotypePhenotypeMap
 class consumer_attack_phenotype : public GenotypePhenotypeMap
 	{
 	public:
-		consumer_attack_phenotype(inds *species, int index_case, int num_kids)
-			{
-			this->CONSUMER_ATTACK_PHENOTYPE_INDEX = species->demeParameters->species_specific_values["CONSUMER_ATTACK_PHENOTYPE_INDEX"];
-			this->Parameters = species->demeParameters->GeneticArchitecture->phen_gen_map_parm[CONSUMER_ATTACK_PHENOTYPE_INDEX];
-			this->index_case = index_case;
-			this->num_kids = num_kids;
-			}
-	
 		int CONSUMER_ATTACK_PHENOTYPE_INDEX;
+
+		consumer_attack_phenotype(inds *species, int phenotype_index, int index_case, int num_kids) : GenotypePhenotypeMap(species, phenotype_index, index_case, num_kids)
+			{
+			CONSUMER_ATTACK_PHENOTYPE_INDEX = this->phenotype_index;
+			};
+
 		void calculate_phenotype(inds *species);
 	};
 
