@@ -59,6 +59,42 @@ struct adjust_randoms_functor
 		}
 	};
 
+
+
+struct adjust_randoms_functor_double
+	{
+	double *popRanges_in_cumulative;
+
+	adjust_randoms_functor_double(double *pop_range) : popRanges_in_cumulative(pop_range)
+	{};
+	
+	/*
+		Elements in the tuple.
+		----------------------
+		0: the kid's random number
+		1: the kid's population
+	*/
+	template <typename tuple>
+	__host__ __device__
+	void operator()(tuple t) {
+			int this_kids_pop = thrust::get<1>(t);
+			if (this_kids_pop != 0)
+				{
+				double interval = popRanges_in_cumulative[this_kids_pop] - popRanges_in_cumulative[this_kids_pop - 1];
+				thrust::get<0>(t) = thrust::get<0>(t)*interval +  popRanges_in_cumulative[this_kids_pop-1];
+				}
+
+	 // For the case of the kids in population zero
+
+			else
+				{
+				double interval = popRanges_in_cumulative[this_kids_pop];
+				thrust::get<0>(t) = thrust::get<0>(t)*interval;
+				}
+		}
+	};
+
+
 void mating_ThrustProbTable_demes::determine_key_offsets(int number_of_key_types, thrust::device_vector<int> &key_histogram_vector )
 	{
 	thrust::device_vector<int> temp_offsets( number_of_key_types ); 
@@ -100,3 +136,46 @@ thrust::device_vector<int>::iterator inds_demes_begin, thrust::device_vector<int
 				adjuster
 				);
 	}
+
+void mating_ThrustProbTable_demes_Double::determine_key_offsets(int number_of_key_types, thrust::device_vector<int> &key_histogram_vector )
+	{
+	thrust::device_vector<int> temp_offsets( number_of_key_types ); 
+	thrust::inclusive_scan(key_histogram_vector.begin(), key_histogram_vector.end(), temp_offsets.begin());
+
+	// Need to subtract one from the offsets (as offsets are based on counts, but we need to match index which starts at zero)
+	key_offsets.resize( number_of_key_types );	
+	thrust::transform_if(temp_offsets.begin(), temp_offsets.begin() + number_of_key_types, key_offsets.begin(), unary_minus<unsigned int>(1), unary_greater<unsigned int>(0));
+	}
+
+void mating_ThrustProbTable_demes_Double::adjust_randoms(thrust::device_vector<double>::iterator uniform_begin, thrust::device_vector<double>::iterator uniform_end,
+thrust::device_vector<int>::iterator inds_demes_begin, thrust::device_vector<int>::iterator inds_demes_end)
+	{
+	// Note the number of populations.
+
+	int n = thrust::distance(key_offsets.begin(), key_offsets.end());
+
+	// Figure out the bounds for each subpopulation in terms of their values in the cumulative probability table
+	thrust::device_vector<double> bounds(n);
+
+	thrust::gather(key_offsets.begin(), key_offsets.end(),cumulative_prob.begin(),bounds.begin());
+	
+	thrust::device_vector<int> temp(n);
+	thrust::copy(key_offsets.begin(), key_offsets.end(), temp.begin());
+
+	double *cumul_prob_bounds = raw_pointer_cast(&bounds[0]);
+	// Instantiate the random number adjuster
+	adjust_randoms_functor_double adjuster(cumul_prob_bounds);
+
+	// Adjust the random numbers to fall inside the correct interval
+	thrust::for_each( thrust::make_zip_iterator(thrust::make_tuple(
+				uniform_begin, 
+				inds_demes_begin
+				)),
+			thrust::make_zip_iterator(thrust::make_tuple(
+				uniform_end,
+				inds_demes_end					
+				)),
+				adjuster
+				);
+	}
+

@@ -17,4 +17,18 @@ class ThrustProbTable
 		thrust::device_vector<float> cumulative_prob;
 	};
 
+
+class ThrustProbTableDouble
+	{
+/* 
+* A look-up table to be used for simulating from arbitrary discrete distributions.
+*/
+	public:
+		void setup(thrust::device_vector<double>::iterator prob_begin, thrust::device_vector<double>::iterator prob_end);
+		void draw(thrust::device_vector<double>::iterator uniform_begin, thrust::device_vector<double>::iterator uniform_end, thrust::device_vector<int>::iterator result);
+		thrust::device_ptr<double> get_cumulative_probabilities_ptr();
+
+	protected:
+		thrust::device_vector<double> cumulative_prob;
+	};
 #endif
