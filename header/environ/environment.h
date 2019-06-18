@@ -15,6 +15,7 @@ class environment
 	{
 	public:
 		environment(int seed_val, int num_biotic_variables, int num_abiotic_variables, int num_demes);
+		void initialize_abiotic_variables(const char *filename);
 		~environment();
 
 		//Random number generator
