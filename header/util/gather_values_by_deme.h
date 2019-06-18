@@ -49,4 +49,9 @@ void gather_values_by_deme(thrust::device_vector<int> &indices,
 			   thrust::device_vector<float> &deme_specific_value, 
 			   thrust::device_vector<float> &ans);
 
+void gather_values_by_deme(thrust::device_vector<int> &indices,
+			   thrust::device_vector<int> &demes,
+                           thrust::device_vector<float>::iterator deme_specific_values_begin,
+                           thrust::device_vector<float> &ans);
+
 #endif

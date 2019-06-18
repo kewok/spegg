@@ -51,3 +51,16 @@ void gather_values_by_deme(thrust::device_vector<int> &indices,
 	
 	thrust::gather(demes_of_indices.begin(), demes_of_indices.end(), deme_specific_value.begin(), ans.begin());	
 	}
+
+void gather_values_by_deme(thrust::device_vector<int> &indices,
+			   thrust::device_vector<int> &demes,
+			   thrust::device_vector<float>::iterator deme_specific_values_begin,
+			   thrust::device_vector<float> &ans)
+	{
+	thrust::device_vector<int> demes_of_indices(indices.size());
+	thrust::gather(indices.begin(), indices.end(), demes.begin(), demes_of_indices.begin());
+
+	ans.resize(indices.size());
+
+	thrust::gather(demes_of_indices.begin(), demes_of_indices.end(), deme_specific_values_begin, ans.begin());
+	}
