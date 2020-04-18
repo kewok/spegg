@@ -1,0 +1,6 @@
+[submodule "header/util/csv-parser"]
+	path = header/util/csv-parser
+	url = https://github.com/AriaFallah/csv-parser.git
+[submodule "header/util/rapidcsv"]
+	path = header/util/rapidcsv
+	url = https://github.com/d99kris/rapidcsv.git

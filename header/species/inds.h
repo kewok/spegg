@@ -28,6 +28,7 @@ class inds
 		void removeDead();
 		void setMaxSize(int n);
 		void sortByDeme();
+		virtual void initialize_from_CSV(const char *filename);
 		void initialize_individuals(int nloci_val, int nphen_val);
 		void exportCsv();
 		void exportCsv(const char *filename);

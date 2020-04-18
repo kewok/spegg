@@ -1,6 +1,8 @@
 #include <species/inds.h>
 #include <math/thrust_probabilities.h>
 
+#include <util/rapidcsv/src/rapidcsv.h>
+
 #include <curand.h>
 #include <fstream>
 #include <sstream>
@@ -64,6 +66,156 @@ void inds::initialize_individuals(int nloci, int nphen)
 	fgenotype = new thrust::device_vector<float>[nloci];
 	mgenotype = new thrust::device_vector<float>[nloci];
 	phenotype = new thrust::device_vector<float>[nphen];
+	}
+
+void inds::initialize_from_CSV(const char *filename)
+	{
+	rapidcsv::Document csv(filename);
+
+	// Check that MaxSize is satisfied and exit if it isn't. 
+	size = csv.GetRowCount();
+	if (size > maxsize)
+		{
+		std::cerr << "Maximum size must be greater or equal to initial population size!" << std::endl;
+		exit(1);
+		}
+
+	// Make sure it's working:
+	thrust::fill(id.begin(), id.begin() + size, -5);
+	thrust::fill(mgenotype[1].begin(), mgenotype[1].begin() + size, -1.0);
+	for (int i=0; i < 5; i++)
+		std::cout << "Num inds " << size << " " << "ID and mgenotype1 before: " << id[i] << " " << mgenotype[1][i] << std::endl;
+
+	std::vector<int> id_in = csv.GetColumn<int>("Id");
+	thrust::copy(id_in.begin(), id_in.end(), id.begin());
+
+	std::vector<int> status_in = csv.GetColumn<int>("Status");
+	thrust::copy(status_in.begin(), status_in.end(), status.begin());
+
+	std::vector<int> sex_in = csv.GetColumn<int>("Sex");
+	thrust::copy(sex_in.begin(), sex_in.end(), sex.begin());
+
+	std::vector<int> age_in = csv.GetColumn<int>("Age");
+	thrust::copy(age_in.begin(), age_in.end(), age.begin());
+
+	std::vector<int> deme_in = csv.GetColumn<int>("Deme");
+	thrust::copy(deme_in.begin(), deme_in.end(), deme.begin());
+	
+	std::string mgen_in = "mgene";
+	std::string fgen_in = "fgene";
+
+	for (int i=0; i < nloci; i++)
+		{
+		std::stringstream tempm;
+		tempm << mgen_in << i ;
+		std::stringstream tempf;
+		tempf << fgen_in << i ;
+	
+		std::vector<float> mgenotype_in = csv.GetColumn<float>(tempm.str());
+		std::vector<float> fgenotype_in = csv.GetColumn<float>(tempf.str());
+		thrust::copy(mgenotype_in.begin(), mgenotype_in.end(), mgenotype[i].begin());
+		thrust::copy(fgenotype_in.begin(), fgenotype_in.end(), fgenotype[i].begin());
+		}
+
+	std::string phen_in = "phen";
+	for (int i=0; i < nphen; i++)
+		{
+		std::stringstream tempPh;
+		tempPh << phen_in << i;
+	
+		std::vector<float> phenotype_in = csv.GetColumn<float>(tempPh.str());
+		thrust::copy(phenotype_in.begin(), phenotype_in.end(), phenotype[i].begin());
+		}
+
+	for (int i=0; i < 5; i++)
+		std::cout << "ID and mgenotype1 after: " << id[i] << " " << mgenotype[1][i] << std::endl;
+
+	// Optionally import parental IDs
+	std::vector<std::string> columnNames = csv.GetColumnNames();
+	bool maternal_ID_exists = (std::find(columnNames.begin(), columnNames.end(), "maternal_ID") != columnNames.end());
+	if (maternal_ID_exists)
+		{
+		std::vector<int> maternal_id_in = csv.GetColumn<int>("maternal_ID");
+		thrust::copy(maternal_id_in.begin(), maternal_id_in.end(), maternal_id.begin());
+		}
+
+	bool paternal_ID_exists = (std::find(columnNames.begin(), columnNames.end(), "paternal_ID") != columnNames.end());
+	if (paternal_ID_exists)
+		{
+		std::vector<int> paternal_id_in = csv.GetColumn<int>("paternal_ID");
+		thrust::copy(paternal_id_in.begin(), paternal_id_in.end(), paternal_id.begin());
+		}
+
+//	for (auto & row : parser)
+//		{
+//		}
+//	std::string line;
+
+//	size=0;
+//	//Correct for the header; test if CSV file has a header by seeing if it includes the following:
+//	std::vector<std::string> header = {"Index", "ID", "Status", "Sex", "Age", "Deme", "fgene", "mgene", "phen"};
+//	
+//	int start_line = 1;
+
+//	while (std::getline(file, line))
+//		{
+//		if (start_line == 1)
+//			{
+//			for (int i=0; i < header.size(); i++)
+//				{
+//				if (line.find(header[i]) != std::string::npos)
+//					{
+//					start_line = 0;
+//					}
+//				}
+//			}
+//		else
+//			{
+//			
+//			size++;
+//			}
+//		}
+
+//	while (std::getline(file, line))
+//		{
+//		std::cout << line << std::endl;
+//		}
+//	//Correct for the header; test if CSV file has a header by seeing if it includes the following:
+//	std::vector<string> header[9] = {"Index", "ID", "Status", "Sex", "Age", "Deme", "fgene", "mgene", "phen"};
+//	for (int i=0; i < header.size(); i++)
+//		{
+//		if (std::getline(file, line).find(header[i]) != std::string::npos)
+//			{
+//			start_line = 1;
+//			}
+//		}
+//	if (start_line == 1)
+//		{
+//		size = size - 1;
+//		}
+
+//	// Prepare the individuals from the CSV file
+//	int individual_line = 0;
+//	while (std::getline(file, line))
+//		{
+//		id[individual_line] = 
+//		status[individual_line] = 
+//		sex[individual_line] = 
+//		age[individual_line] = 
+//		deme[individual_line] = 
+
+//		for (int j = 0; j < nloci; j++)
+//			{
+//			fgenotype[j][individual_line] = ;
+//			mgenotype[j][individual_line] = ;
+//			}
+
+//		for (int j = 0 ; j < nphen ; j++)
+//			{
+//			phenotype[j][individual_line] = ;
+//			}
+//		individual_line++;
+//		}
 	}
 
 inds::~inds()
