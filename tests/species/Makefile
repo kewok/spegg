@@ -42,7 +42,7 @@ OBJDIR = unitTests_objdir
 
 # Note all the objects to be created:
 
-OBJS := $(OBJDIR)/Test_Core.o $(OBJDIR)/RemoveDeadTest.o 
+OBJS := $(OBJDIR)/Test_Core.o $(OBJDIR)/RemoveDeadTest.o $(OBJDIR)/initialize_with_CSV_test.o 
 
 # House-keeping build targets.
 all : $(OBJDIR) $(OBJDIR_SPEGG) $(TESTS) $(IND_TESTS) TestSPEGGspp

@@ -17,14 +17,12 @@ void HillClimbers_Simulator::initialize_classes()
 
 	array[0] = new HillClimbers(initpop, maxpop, seed, demes, species_ID);
 
-	array[0]->initialize_from_CSV("initial_data.csv");
-
 	stats_hillclimber_fecundity = new Statistics(demes, "summary_statistics_fecundity.txt", 0);
 	stats_hillclimber_mortality = new Statistics(demes, "summary_statistics_mortality.txt", 0);
 
 	demographics = new DemographicStatistics(demes, "demographic_statistics.txt");
 
-//	array[0]-> exportCsv("initial_data.csv");
+	array[0]-> exportCsv("initial_data.csv");
 	}
 
 void HillClimbers_Simulator::run()
