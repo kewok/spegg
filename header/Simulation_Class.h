@@ -7,7 +7,6 @@
 #include <stdio.h>
 #include <vector>
 
-#include <ConfigFile.h>
 #include <libconfig.h++>
 
 class Simulation
