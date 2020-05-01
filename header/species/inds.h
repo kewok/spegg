@@ -32,6 +32,7 @@ class inds
 		void initialize_individuals(int nloci_val, int nphen_val);
 		void exportCsv();
 		void exportCsv(const char *filename);
+		void exportCsv(int timestep);
 		void exportCsv(const char *filename, int timestep);
 		void exportCsv(const char *filename, int timestep1, int timestep2);
 

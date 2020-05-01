@@ -51,7 +51,7 @@ $ cd </path/to/My_sPEGG_project>
 
 Using [git](http://git-scm.com/), clone sPEGG's git repository
 ```sh
-$ git clone https://github.com/kewok/spegg/
+$ git clone --recursive https://github.com/kewok/spegg/
 ```
 
 Enter the main code base for sPEGG 

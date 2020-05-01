@@ -15,7 +15,7 @@ Some of the tasks described here in the tutorial can be streamlined using a prog
 To get started, first obtain a copy of the source-code for sPEGG's GPU version into your working directory. If you have [git](http://git-scm.com/), go to your terminal and clone the git repository as we did in the Quickstart:
 
 ```sh
-$ git clone https://github.com/kewok/spegg
+$ git clone --recursive https://github.com/kewok/spegg
 ```
 
 Alternatively, you could just download the [zip folder](https://github.com/kewok/spegg/archive/master.zip) and unpack it to your working directory.
