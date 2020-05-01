@@ -20,13 +20,10 @@ all: $(OBJDIR) a.out
 
 export LD_LIBRARY_PATH=/usr/local/lib /usr/local/cuda/lib
 
-a.out : $(OBJDIR)/inds.o $(OBJDIR)/inds_stochastic.o $(OBJDIR)/inds_stochastic_migratory.o $(OBJDIR)/thrust_prob_table.o $(OBJDIR)/ConfigFile.o $(OBJDIR)/thrust_prob_table_demes.o $(OBJDIR)/mating_thrust_prob_table_demes.o $(OBJDIR)/environment.o $(OBJDIR)/amplify.o $(OBJDIR)/random_variables_functions.o $(OBJDIR)/reduce_by_key_with_zeroes.o $(OBJDIR)/statistics_class.o $(OBJDIR)/deme_specific_data_class.o $(OBJDIR)/parents_class.o $(OBJDIR)/neonates_class.o $(OBJDIR)/genetic_deme_specific_data.o $(OBJDIR)/determine_mortality.o $(OBJDIR)/MigrationFunctions.o $(OBJDIR)/one_dim_two_dim.o $(OBJDIR)/remove_duplicate_pairs.o $(OBJDIR)/which_function.o $(OBJDIR)/gather_values_by_deme.o $(OBJDIR)/histogram.o $(OBJDIR)/footimer2.o $(OBJDIR)/Sampling_Input.o $(OBJDIR)/species_specific_mate_sampling_rules.o $(OBJDIR)/Sampling_Event.o $(OBJDIR)/Sample_without_Replacement_1Pass.o $(OBJDIR)/Sample_without_Replacement_Test.o  $(OBJDIR)/Sample_without_Replacement_byDeme.o $(OBJDIR)/Sample_With_Replacement.o $(OBJDIR)/genotype_phenotype_map_parameters.o  $(OBJDIR)/demographic_statistics_class.o $(OBJDIR)/Simulation_Class.o $(OBJDIR)/Shuffle_by_Key.o
+a.out : $(OBJDIR)/inds.o $(OBJDIR)/inds_stochastic.o $(OBJDIR)/inds_stochastic_migratory.o $(OBJDIR)/thrust_prob_table.o $(OBJDIR)/thrust_prob_table_demes.o $(OBJDIR)/mating_thrust_prob_table_demes.o $(OBJDIR)/environment.o $(OBJDIR)/amplify.o $(OBJDIR)/random_variables_functions.o $(OBJDIR)/reduce_by_key_with_zeroes.o $(OBJDIR)/statistics_class.o $(OBJDIR)/deme_specific_data_class.o $(OBJDIR)/parents_class.o $(OBJDIR)/neonates_class.o $(OBJDIR)/genetic_deme_specific_data.o $(OBJDIR)/determine_mortality.o $(OBJDIR)/MigrationFunctions.o $(OBJDIR)/one_dim_two_dim.o $(OBJDIR)/remove_duplicate_pairs.o $(OBJDIR)/which_function.o $(OBJDIR)/gather_values_by_deme.o $(OBJDIR)/histogram.o $(OBJDIR)/footimer2.o $(OBJDIR)/Sampling_Input.o $(OBJDIR)/species_specific_mate_sampling_rules.o $(OBJDIR)/Sampling_Event.o $(OBJDIR)/Sample_without_Replacement_1Pass.o $(OBJDIR)/Sample_without_Replacement_Test.o  $(OBJDIR)/Sample_without_Replacement_byDeme.o $(OBJDIR)/Sample_With_Replacement.o $(OBJDIR)/genotype_phenotype_map_parameters.o  $(OBJDIR)/demographic_statistics_class.o $(OBJDIR)/Simulation_Class.o $(OBJDIR)/Shuffle_by_Key.o
 
 $(OBJDIR):
 	mkdir $(OBJDIR)
-
-$(OBJDIR)/ConfigFile.o : ${SRC}/ConfigFile.cpp
-	nvcc -c $(CFLAGS) ${HEADERS} ${SRC}/ConfigFile.cpp -o $(OBJDIR)/ConfigFile.o
 
 $(OBJDIR)/Simulation_Class.o : ${SRC}/Simulation_Class.cu
 	nvcc -c $(CFLAGS) ${HEADERS} ${SRC}/Simulation_Class.cu -o $(OBJDIR)/Simulation_Class.o

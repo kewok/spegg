@@ -151,7 +151,16 @@ inds::~inds()
 void inds::exportCsv()
 	{
 	std::ostringstream stream;
-	stream << "species" << species_ID << ".csv";
+	stream << "species_" << species_ID << ".csv";
+	std::string result = stream.str();
+	const char *mySpeciesTitle = result.c_str();
+	exportCsv(mySpeciesTitle);
+	}
+
+void inds::exportCsv(int timestep)
+	{
+	std::ostringstream stream;
+	stream << "species_" << species_ID << "_" << timestep << ".csv";
 	std::string result = stream.str();
 	const char *mySpeciesTitle = result.c_str();
 	exportCsv(mySpeciesTitle);

@@ -5,8 +5,10 @@
 #include <fstream>
 #include <iostream>
 #include <stdio.h>
+#include <vector>
+#include <algorithm>
 
-#include <ConfigFile.h>
+#include <libconfig.h++>
 
 class Simulation
 	{
@@ -29,6 +31,7 @@ class Simulation
 
 		int num_biotic_variables;
 		int num_abiotic_variables;
+		std::vector<int> steps_to_output_individuals_csv;
 
 		// methods
 		void read_simulation_settings();
