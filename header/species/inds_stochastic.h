@@ -16,6 +16,7 @@ class inds_stochastic : public inds
 		virtual void update(inds_stochastic **species, environment *habitat, int intra_step_time_steps, int current_time_step) {};
 
 		virtual void addKids() {};
+		virtual void addKids(environment *habitat) {};
 
 		int seed;
 
