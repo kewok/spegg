@@ -49,7 +49,7 @@ void Simulation::read_simulation_settings()
 		}
 	try
 		{
-		num_biotic_variables = cfg.lookup("num_abiotic_variables");
+		num_abiotic_variables = cfg.lookup("num_abiotic_variables");
 		}
  	catch(const SettingNotFoundException &nfex)
 		{
