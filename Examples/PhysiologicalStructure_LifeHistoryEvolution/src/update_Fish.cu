@@ -40,7 +40,7 @@ void update_Fish::update()
 			
 
 		// Calculate the values for the environmental variables
-		cudaThreadSynchronize();
+		cudaDeviceSynchronize();
 		reduce_by_key(species->deme.begin(), species->deme.begin() + size, resource_1_consumed.begin(), temp_demes.begin(), temp_eaten.begin());
 		thrust::scatter(temp_eaten.begin(), temp_eaten.end(), temp_demes.begin(), habitat->effect_of_inds_on_biotic_variable[0].begin());
 		reduce_by_key(species->deme.begin(), species->deme.begin() + size, resource_2_consumed.begin(), temp_demes.begin(), temp_eaten.begin());

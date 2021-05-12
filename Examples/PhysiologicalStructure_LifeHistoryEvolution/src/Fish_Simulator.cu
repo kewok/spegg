@@ -42,7 +42,7 @@ void Fish_Simulator::run()
 			array[i]->update(array, habitat);
 			array[i]->removeDead();
 
-			cudaThreadSynchronize();
+			cudaDeviceSynchronize();
 		
 			stats_eggsize->calculate_mean_phenotypes_by_deme(array[0], 5);
 			stats_eggsize->calculate_min_max_phenotypes_by_deme(array[0], 5);

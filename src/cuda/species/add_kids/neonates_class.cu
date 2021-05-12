@@ -42,7 +42,7 @@ void EggsNeonates::Determine_Neonate_Population_Sizes(DemeSettings *demeParamete
 	/*
 	* Because there are often more neonates than max_deme_sizes, this function culls the surplus neonates at random by determining the number of neonates each deme can contribute
 	*/
-	cudaThreadSynchronize();
+	cudaDeviceSynchronize();
 	reduce_by_key_with_zeros(everybodys_deme, kids_per_mom, Neonates_per_Deme, previous_pop_size, Num_Demes); 
 
 	// Make sure no population has more kids than there are spaces

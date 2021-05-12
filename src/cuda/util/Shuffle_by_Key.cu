@@ -18,7 +18,7 @@ void shuffle_by_key(thrust::device_vector<int> &keys, thrust::device_vector<int>
 				 int_to_double());
 
 		thrust::transform(temp_keys.begin(), temp_keys.end(), unique_uniform_rvs.begin(), unique_uniform_rvs.begin(), thrust::plus<double>());
-		cudaThreadSynchronize();
+		cudaDeviceSynchronize();
 		/* Test for any duplicates */
 		thrust::device_vector<double> sorted_rand(keys.size());
 

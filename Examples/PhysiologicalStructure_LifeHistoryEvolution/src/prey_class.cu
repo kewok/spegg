@@ -62,7 +62,7 @@ void prey:: update_prey_abundance(thrust::device_vector<float> &effect_of_indivi
 
 	thrust::for_each(zstart, zend,  update_prey());
 
-	cudaThreadSynchronize();
+	cudaDeviceSynchronize();
 
 	// Add random noise to the prey abundance
 	thrust::device_vector<float> stochastic_component(Num_Demes);

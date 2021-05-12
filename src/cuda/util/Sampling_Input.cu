@@ -36,7 +36,7 @@ void SamplingInput::setup_sampleable_individuals_per_deme(thrust::device_vector<
 			{
 			number_of_other_individuals_sampled.erase(thrust::remove_if(number_of_other_individuals_sampled.begin(), number_of_other_individuals_sampled.end(), sampleable_individuals_in_sampling_individuals_deme.begin(), unary_less_equal<int>(0)), number_of_other_individuals_sampled.end());
 			}
-		cudaThreadSynchronize();
+		cudaDeviceSynchronize();
 		}
 	}
 

@@ -86,7 +86,7 @@ void update_coevolvingSpecies::interact()
 							    seed_vals.end())),
 				 upit);
 
-	cudaThreadSynchronize();
+	cudaDeviceSynchronize();
 	}
 
 void update_coevolvingSpecies::calculate_cumulative_deme_sizes()

@@ -39,11 +39,11 @@ void MigrationBehavior::move_individuals(inds_stochastic_migratory *species)
 	* A generic function that simulates the migration of individuals during each time step by reassining their demes. 
 	*/
 	determine_destination(species);
-	cudaThreadSynchronize();
+	cudaDeviceSynchronize();
 
 	determine_if_individuals_migrate(species);
 
-	cudaThreadSynchronize();
+	cudaDeviceSynchronize();
 
 	thrust::for_each(thrust::make_zip_iterator(thrust::make_tuple(species->deme.begin(), will_migrate.begin(), migrant_destinations.begin())),
         		 thrust::make_zip_iterator(thrust::make_tuple(species->deme.begin() + size, will_migrate.begin() + size, migrant_destinations.begin() + size)),

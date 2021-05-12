@@ -19,7 +19,7 @@ void Sample_without_Replacement_byDeme::sample()
 			 thrust::make_zip_iterator(
 			 	thrust::make_tuple(sampling_individuals.end(), sampling_input->deme_affiliation_of_sampling_individuals.end(), index_to_sample.end())), idx_to_sample);
 
-	cudaThreadSynchronize();
+	cudaDeviceSynchronize();
 
 	while(max_number_of_duplicates > 0)
 		{
@@ -34,7 +34,7 @@ void Sample_without_Replacement_byDeme::sample()
 				 int_to_double());
 
 		thrust::transform(temp_demes.begin(), temp_demes.end(), unique_uniform_rvs.begin(), unique_uniform_rvs.begin(), thrust::plus<double>());
-		cudaThreadSynchronize();
+		cudaDeviceSynchronize();
 		/* Test for any duplicates */
 		thrust::device_vector<double> sorted_rand(sampling_input->list_of_individuals_potentially_subject_to_sampling.size());
 
