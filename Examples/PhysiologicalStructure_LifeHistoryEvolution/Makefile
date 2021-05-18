@@ -4,7 +4,6 @@ HEADERS = -I./../../header/ -I./header
 
 CFLAGS = -Xcompiler
 CFLAGS += -O3
-CFLAGS += -arch=sm_35
 
 SRC = ./src
 
