@@ -1388,19 +1388,19 @@ That pretty much covers the basics of what you need to build your own **sPEGG** 
 >	nvcc -c $(CFLAGS) ${HEADERS}  ${LOCATION_OF_NEW_SOURCEFILE}/My_New_Source_File.cu -o $(OBJDIR)/My_New_Source_File.o
 >```
 
->Also add instructions to append the resulting *.o file to the line beginning
+Also add instructions to append the resulting *.o file to the line beginning
 
 >```
 >a.out :
 >```
 
->and the line containing the compilation instructions:
+and the line containing the compilation instructions:
 
 >```
 >nvcc -O3 -lcurand -lrt -lcuda -lconfig++ 
 >```
 
->by preceding the .o file with the tag $(OBJDIR)/ e.g., 
+by preceding the .o file with the tag $(OBJDIR)/ e.g., 
 
 >```
 >a.out : $(OBJDIR)/My_New_Source_File.o
@@ -1492,7 +1492,7 @@ However, we're not done yet - we still need to add a for_each() instruction. We'
 <a name="setup_issues">
 ## Some possible issues with getting sPEGG set up
 </a>
-Depending on your system's configuration, there may be some manual steps you would need to keep in mind when setting up **sPEGG**. Unfortunately, some of these issues are the result of a few of the pre-requistes that I've found don't always work "out of the box". On Ubuntu, using some of the default packages through 
+Depending on your system's configuration, there may be some manual steps you would need to keep in mind when setting up **sPEGG**. Unfortunately, some of these issues are the result of a few of the pre-requisites that I've found don't always work "out of the box". On Ubuntu, using some of the default packages through 
 
 ```sh
 $ sudo apt-get <package>
