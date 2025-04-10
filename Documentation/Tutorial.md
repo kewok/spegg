@@ -6,15 +6,13 @@ Were you able to get everything from the Quickstart to work? Great :thumbsup: On
 
 ## Object-Oriented Programming (OOP) Kick-off:
 
-Initially, some familiarity with object-oriented programming would help ([this](http://sepwww.stanford.edu/sep/jon/family/jos/oop/oop1.htm) is an excellent and very accessible introduction; it's written to introduce students to java. What you would learn from this is how the author made useful real-life analogies to multiple OOP concepts, which are supposed to be hard to grasp but become easier with these analogies. But don't worry - what it says is almost entirely applicable to C++ as well).
+Initially, some familiarity with object-oriented programming would help ([this](https://web.archive.org/web/20240714034543/https://sep.stanford.edu/sep/jon/family/jos/oop/oop1.htm) is an excellent and very accessible introduction; it's written to introduce students to java. What you would learn from this is how the author made useful real-life analogies to multiple OOP concepts, which are supposed to be hard to grasp but become easier with these analogies. But don't worry - what it says is almost entirely applicable to C++ as well).
 
-Ironically, the official author group of Java, **_[Oracle](https://www.oracle.com/])_** also created a **[tutorial web page for OOP in Java](https://docs.oracle.com/javase/tutorial/index.html)**. Please refer to it if you desire to delve even deeper into the OOP world with the Java language! The topics that may be most relevant to this project are **_[Learning the Java Language](https://docs.oracle.com/javase/tutorial/java/index.html)_** and **_[Collections](https://docs.oracle.com/javase/tutorial/collections/index.html)_**.
-
-However, for `C++`, there is no official tutorial page from its author, but [this tutorial page](https://www.tutorialspoint.com/cplusplus/cpp_object_oriented.htm) also achieves the likely purpose to the Oracle's Documentation.
+That's above has been enough for working for this project! Nevertheless, for any zeal of delving deeper into `C++`-specific OOP, [this tutorial page](https://www.tutorialspoint.com/cplusplus/cpp_object_oriented.htm) covers almost all key OOP concepts needed.
 
 ## My first **sPEGG** project
 
-**sPEGG** makes extensive use of the **[thrust](https://github.com/thrust/thrust)** library to facilitate parallelization on the GPU. As such, we encourage users who are eager to try out **sPEGG** to become at least somewhat acquainted with how [thrust works](https://nvidia.github.io/cccl/thrust/). 
+**sPEGG** makes extensive use of the **[thrust](https://github.com/NVIDIA/cccl)** library to facilitate parallelization on the GPU. As such, we encourage users who are eager to try out **sPEGG** to become at least somewhat acquainted with how [thrust works](https://nvidia.github.io/cccl/thrust/). 
 
 The rest of this guide assumes you are looking to create a GPU simulation using forward-time population genetics for your eco-evolutionary model. The basic design is more or less identical for the CPU version; just be sure to checkout [the CPU version of the code](https://github.com/kewok/spegg/tree/CPU_version) at the start, use ```host_vector``` throughout instead of ```device_vector```, and modify the random number generator as needed along the way. See the examples in [the CPU version](https://github.com/kewok/spegg/tree/CPU_version/Examples) to get a feel for how to do that.
 
@@ -30,7 +28,7 @@ Alternatively, you could just download the [zip folder](https://github.com/kewok
 
 If you want, rename the folder as needs be (e.g., "My_sPEGG_project") and navigate into the folder.
 
-The whole tutorial can be skimmed to give you a broad overview of the logic of **sPEGG** projects. If you are new to C++, it might take a few hours or separate sessions to get through it with your own example up and running. If you haven't yet been confident with C++, visit the section [Object-Oriented Programming (OOP) Kick-off](#object-oriented-programming-(oop)-kick-off).
+The whole tutorial can be skimmed to give you a broad overview of the logic of **sPEGG** projects. If you are new to C++, it might take a few hours or separate sessions to get through it with your own example up and running. If you haven't yet been confident with C++, visit the section [Object-Oriented Programming (OOP) Kick-off](#object-oriented-programming-oop-kick-off).
 
 ## Code organization in a sPEGG project
 
@@ -1534,13 +1532,13 @@ $ sudo apt-get <package>
 can cause problems as of late 2015/early 2016. Here are some alternative approaches to consider until the situation is improved.
 
 ### Libconfig issues
-There is a debian package for libconfig, but if you manually download and install libconfig from its [webpage](http://www.hyperrealm.com/libconfig/) and run the configure and make scripts that come with the download as root, the executables etc... are by default saved to the ```/usr/local``` directories. You will need to update your library path, as described [below](#library_path) to point to the relevant directory for the .so file (often, ```/usr/local/lib``` is sufficient).
+There is a debian package for libconfig, but if you manually download and install libconfig from its [webpage](https://hyperrealm.github.io/libconfig/) and run the configure and make scripts that come with the download as root, the executables etc... are by default saved to the ```/usr/local``` directories. You will need to update your library path, as described [below](#library_path) to point to the relevant directory for the .so file (often, ```/usr/local/lib``` is sufficient).
 
 ### CUDA issues
-Installing CUDA and its compiler nvcc on Linux can be a pain, although this is rapidly improving on the [distros for which NVIDIA supports CUDA](http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-linux/#system-requirements). Part of the problem is that the drivers that come with the distro to handle NVIDIA GPUs (e.g., Nouveau) might not be compatible with NVIDIA's CUDA. Here's a [tutorial](http://http://www.r-tutor.com/gpu-computing/cuda-installation/cuda7.5-ubuntu) to get you started for Ubuntu. Generally, analogous approaches to installing CUDA should work on all [supported distros](http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-linux/#system-requirements), but I have occasionally had some issues with getting CUDA to work with (currently) unsupported distros, such as Linux Mint. 
+Installing CUDA and its compiler nvcc on Linux can be a pain, although this is rapidly improving on the [distros for which NVIDIA supports CUDA](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#system-requirements). Part of the problem is that the drivers that come with the distro to handle NVIDIA GPUs (e.g., Nouveau) might not be compatible with NVIDIA's CUDA. Here's a [tutorial](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#ubuntu-installation) to get you started for Ubuntu. Generally, analogous approaches to installing CUDA should work on all [supported distros](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#system-requirements), but I have occasionally had some issues with getting CUDA to work with (currently) unsupported distros, such as Linux Mint. 
 
 ### CPU version on non-CUDA enabled machines
-The CPU version of **sPEGG** should work without a CUDA-capable device, but this has not been extensively tested. Interested readers are encouraged to see if they can get a [basic thrust example](https://github.com/thrust/thrust/wiki/Quick-Start-Guide) running on such systems first.
+The CPU version of **sPEGG** should work without a CUDA-capable device, but this has not been extensively tested. Interested readers are encouraged to see if they can get a [basic thrust example](https://github.com/NVIDIA/cccl?tab=readme-ov-file#getting-started) running on such systems first.
 
 ### Non-root issues
 Unfortunately, as best we can gather the CUDA issues noted above will require root access to resolve. If you don't have root access to your computer and can't have the administrator install libconfig and libgsl, a version of the Makefile for linking to these libraries when you aren't root is currently in the works.
