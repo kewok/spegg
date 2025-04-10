@@ -4,13 +4,19 @@ Version 0.5
 
 Were you able to get everything from the Quickstart to work? Great :thumbsup: Once you have everything in place, this tutorial will walk you through what was going on behind the curtains there. Another goal of this tutorial is to provide you with a template that you can start modifying to simulate your model.
 
+## Object-Oriented Programming (OOP) Kick-off:
+
+Initially, some familiarity with object-oriented programming would help ([this](https://web.archive.org/web/20240714034543/https://sep.stanford.edu/sep/jon/family/jos/oop/oop1.htm) is an excellent and very accessible introduction; it's written to introduce students to java. What you would learn from this is how the author made useful real-life analogies to multiple OOP concepts, which are supposed to be hard to grasp but become easier with these analogies. But don't worry - what it says is almost entirely applicable to C++ as well).
+
+That's above has been enough for working for this project! Nevertheless, for any zeal of delving deeper into `C++`-specific OOP, [this tutorial page](https://www.tutorialspoint.com/cplusplus/cpp_object_oriented.htm) covers almost all key OOP concepts needed.
+
 ## My first **sPEGG** project
 
-**sPEGG** makes extensive use of the **[thrust](https://github.com/thrust/thrust)** library to facilitate parallelization on the GPU. As such, we encourage users who are eager to try out **sPEGG** to become at least somewhat acquainted with how [thrust works](https://github.com/thrust/thrust/wiki/Quick-Start-Guide). Finally, some familiarity with object-oriented programming would help ([this](http://sepwww.stanford.edu/sep/jon/family/jos/oop/oop1.htm) is an excellent and very accessible introduction; it's written to introduce students to java, but don't worry - what it says is almost entirely applicable to C++ as well).
+**sPEGG** makes extensive use of the **[thrust](https://github.com/NVIDIA/cccl)** library to facilitate parallelization on the GPU. As such, we encourage users who are eager to try out **sPEGG** to become at least somewhat acquainted with how [thrust works](https://nvidia.github.io/cccl/thrust/). 
 
-The rest of this guide assumes you are looking to create a GPU simulation using forward-time population genetics for your eco-evolutionary model. The basic design is more or less identical for the CPU version; just be sure to checkout [the CPU version of the code](https://github.com/kewok/spegg/tree/CPU_version) at the start, use ```host_vector``` throughout instead of ```device_vector```, and modify the random number generator as needed along the way. See the examples in [the CPU version] to get a feel for how to do that.
+The rest of this guide assumes you are looking to create a GPU simulation using forward-time population genetics for your eco-evolutionary model. The basic design is more or less identical for the CPU version; just be sure to checkout [the CPU version of the code](https://github.com/kewok/spegg/tree/CPU_version) at the start, use ```host_vector``` throughout instead of ```device_vector```, and modify the random number generator as needed along the way. See the examples in [the CPU version](https://github.com/kewok/spegg/tree/CPU_version/Examples) to get a feel for how to do that.
 
-Some of the tasks described here in the tutorial can be streamlined using a program like [NSight Eclipse](https://developer.nvidia.com/nsight-eclipse-edition). However, in what follows, I will assume all you are using is a basic text editor, a file browser, and the [prerequiste tools](/README.md#prereqs).
+Some of the tasks described here in the tutorial can be streamlined using a program like [NSight Eclipse](https://docs.nvidia.com/cuda/nsightee-plugins-install-guide/index.html). However, in what follows, I will assume all you are using is a basic text editor, a file browser, and the [prerequiste tools](/README.md#prereqs).
 
 To get started, first obtain a copy of the source-code for sPEGG's GPU version into your working directory. If you have [git](http://git-scm.com/), go to your terminal and clone the git repository as we did in the Quickstart:
 
@@ -22,7 +28,7 @@ Alternatively, you could just download the [zip folder](https://github.com/kewok
 
 If you want, rename the folder as needs be (e.g., "My_sPEGG_project") and navigate into the folder.
 
-The whole tutorial can be skimmed to give you a broad overview of the logic of **sPEGG** projects. If you are new to C++, it might take a few hours or separate sessions to get through it with your own example up and running.
+The whole tutorial can be skimmed to give you a broad overview of the logic of **sPEGG** projects. If you are new to C++, it might take a few hours or separate sessions to get through it with your own example up and running. If you haven't yet been confident with C++, visit the section [Object-Oriented Programming (OOP) Kick-off](#object-oriented-programming-oop-kick-off).
 
 ## Code organization in a sPEGG project
 
@@ -39,11 +45,11 @@ Now you're ready to begin building your simulation! For this tutorial, we'll jus
 The first thing you'll want to know is that **sPEGG** organizes individuals in a species using the [inds](/header/species/inds.h) object. [inds](/header/species/inds.h) is very basic - it merely:
 
 >    1. stores data on individuals, 
-    
+	
 >    2. let's you export this data to a csv file, 
-    
+	
 >    3. sorts individuals by deme, and 
-    
+	
 >    4. keeps track of who's alive and who's dead. 
 
 Because **sPEGG** aims to also accommodate deterministic models, we actually will use a derived variant of ```inds``` called ```inds_stochastic``` instead. The class ```inds_stochastic``` is identical to its parent ```inds```, except that it has associated with it a random number generator for the GPU, placeholders for parameters determining the baseline survival rates and fecundities, as well as unspecified reproduction and updating methods associated with it.
@@ -85,10 +91,11 @@ Let's look at the protected components. These are data and members that can only
 
 ### The .cu file
 
-Now let's actually write the code to handle the business logic for Penguins. Go back to the My_sPEGG_project directory and create and navigate to a folder called ```src/```. There, we'll make a file called Penguins.cu. In what follows, we will piece together different parts described above in this .cu file step-by-step.
+Now let's actually write the code to handle the business logic for Penguins. Go back to the **My_sPEGG_project** directory and create and navigate to a folder called ```src/```. There, we'll make a file called Penguins.cu. In what follows, we will piece together different parts described above in this .cu file step-by-step.
 
 The first thing you want to do is include some header files.
 <a name="header">
+
 ```c++
 #include "Penguins.h"
 
@@ -163,6 +170,7 @@ In this tutorial, mating is simulated using the method ```addKids()```. Simulati
 Below, we describe each of these steps.
 <a name="id_potential_parents">
 </a>
+
 ####  Determine who the potential parents are
 We will create a class to manage potential parents and perform basic operations on them (such as determining their reproductive potential). As hinted at [above](#header) we will use a derived version of the [Parents class](/header/species/add_kids/parents_class.h) to accomplish this.
 
@@ -230,10 +238,11 @@ The argument ```this``` refers to an instance of our Penguins class.
 Our first step will be to determine what the reproductive output should be for each individual. By default, this function identifies females, looks for a parameter in the parameter inputs specifying the per-capita fecundity for females, and sums the maximum reproductive output possible for all individuals. On occasion, we may have to modify this function to distinguish reproductively viable individuals from individuals that are not. For instance, in real-world penguin populations, females must often have a certain amount of energy reserves to be able to reproduce. Thus, behind the scenes, the method ```setup_parents()``` will have to on the phenotypes (e.g., current energy reserves) of individuals to determine this value. Although we won't pursue this approach here, for species with complicated rules governing the determination of parents, these rules can be specified further in the derived, species-specific ```Parents``` class.
 
 In most situations, we cannot allow all individuals to reproduce as many offspring as they are able to, because this will lead to exponential population growth which is neither biologically realistic nor computationally tractable (even on a GPU!). Therefore, to check the per-capita fecundity, the function ```setup_parents()``` will rescale parental reproductive output to no longer exceed the maximum population size in each deme. The sum of these scaled contributions will be stored in a variable called ```Potential_Number_of_Kids``` inside the Parents class. If there are no spaces left for new individuals, the value of ```Potential_Number_of_Kids``` is set to 0. These operations will all be called from within the ```addKids()``` method. 
-[//]: # "Generally, you will want to set the maximum population size well above the equilibriuim number of individuals in your simulation so as to not artificially introduce this sort of density-dependent regulation into your model."
+[//]: # (Generally, you will want to set the maximum population size well above the equilibrium number of individuals in your simulation so as to not artificially introduce this sort of density-dependent regulation into your model.)
 
 <a name="simulate_gene_transfer">
-####  Simulate the transmission of genetic information from parents to offspring
+
+#### Simulate the transmission of genetic information from parents to offspring
 </a>
 Provided there will be a reproduction event in this time step, we now want to create a class that manages the newborns for us. To do this, we will use the EggsNeonates class imported in the [header](#header) much as we used the Parents class to help us in the previous step. We'll initialize this as follows:
 
@@ -251,11 +260,13 @@ exampleNeonates->inherit_genotypes(exampleParents->probability_individual_become
 These two variables, ```probability_individual_becomes_female_parent``` and ```probability_individual_becomes_male_parent``` are members of the ```Parents``` class which weigh the reproductive contribution to the next generation of females and males, respectively. The function ```inherit_genotypes()``` simulates the mating/matching of parents, mutation and recombination for each offspring. The default behavior is to model sexual reproduction of a diploid species; versions of exampleNeonates that handle asexual reproduction, where we would only be interested in the reproductive contribution of female parents (since everyone would be female) are also supported, and future expansions will include support for other genetic systems such as haplodiploidy and horizontal gene transfer.
 
 <a name="integrate_newborns">
+
 #### Integrate the newborns into our species
 </a>
-Once the offspring have inherited the genotypes, we will determine their phenotypes at birth using the ```setPhenotype(exampleNeonates -> previous_pop_size, exampleNeonates->Total_Number_of_Neonates)``` function from our initialization routine. The differences between this call to ```setPhenotypes()``` and the previous call during initialization are twofold. Instead of the index individual being zero, the function will begin starting with the number of individuals in the population prior to the reproduction event (which will be stored in ```exampleNeonates -> previous_pop_size``` during the construction of exampleNeonates). Second, it will evaluate the phenotypes for the total number of new born offspring, rather than the total number of individuals in the simulation. This is performed using the [setPhenotype function](#gen_phen_map) whose discussion we defer for now. We will also assign the sex of the newborns using the [helper function](#helper_methods) ```assignSex()```.
 
-Finally, we perform a few book-keeping operations. To make sure all individuals in a given deme are contiguous in GPU memory, we will call a function ```sortByDeme()``` from inds, and recalculate the population sizes in each deme using ```demeCalculations()```, also from the inds base class. The parents and neonates classes are then cleared from memory. 
+Once the offspring have inherited the genotypes, we will determine their phenotypes at birth using the `setPhenotype(exampleNeonates -> previous_pop_size, exampleNeonates->Total_Number_of_Neonates)` function from our initialization routine. The differences between this call to `setPhenotypes()` and the previous call during initialization are twofold. Instead of the index individual being zero, the function will begin starting with the number of individuals in the population prior to the reproduction event (which will be stored in `exampleNeonates -> previous_pop_size` during the construction of exampleNeonates). Second, it will evaluate the phenotypes for the total number of new born offspring, rather than the total number of individuals in the simulation. This is performed using the [setPhenotype function](#gen_phen_map) whose discussion we defer for now. We will also assign the sex of the newborns using the [helper function](#helper_methods) `assignSex()`.
+
+Finally, we perform a few book-keeping operations. To make sure all individuals in a given deme are contiguous in GPU memory, we will call a function `sortByDeme()` from inds, and recalculate the population sizes in each deme using `demeCalculations()`, also from the inds base class. The parents and neonates classes are then cleared from memory. 
 
 Putting all the components described above together, the function addKids() which simulates mating and  reproduction then looks like:
 
@@ -285,11 +296,13 @@ void Penguins::addKids()
 ```
 
 <a name="gen_phen_map">
+
 ### The genotype-phenotype map
 </a>
+
 One function that is needed both during initialization and in simulating reproduction is a representation of the genotype-phenotype map. This segment of the code can actually be somewhat involved, so we have deferred discussing it until here. The basic idea is that for each phenotype, we create an object that will use a genotype-phenotype map to translate the genotypic values of individuals into their phenotypic values. 
 
-Why would we do things this way? When multiple traits are involved (as they often are in models of eco-evolutionary dynamics), there are a lot of different potential genotype-phenotype maps. As a result, it might be helpful to create separate classes to manage these maps, rather than spell out the logic of each genotype-phenotype map for all traits inside ```Penguins```. This could facilitate modularity in our code, and also allow us to potentially reuse a genotype-phenotype map for another species or change some of the rules for updating phenotypes without having to change the code inside the Penguins class. This tries to apply the so-called [strategy pattern](http://r3dux.org/2011/07/an-example-implementation-of-the-strategy-design-pattern-in-c/) to our simulation. This isn't always necessary, but for illustrative purposes we show how this kind of approach could be implemented in case you're interested in trying it. We'll discuss a little about the scope associated with pre-written **sPEGG** code.
+Why would we do things this way? When multiple traits are involved (as they often are in models of eco-evolutionary dynamics), there are a lot of different potential genotype-phenotype maps. As a result, it might be helpful to create separate classes to manage these maps, rather than spell out the logic of each genotype-phenotype map for all traits inside ```Penguins```. This could facilitate modularity in our code, and also allow us to potentially reuse a genotype-phenotype map for another species or change some of the rules for updating phenotypes without having to change the code inside the Penguins class. This tries to apply the so-called [strategy pattern](https://web.archive.org/web/20160625125844/http://r3dux.org/2011/07/an-example-implementation-of-the-strategy-design-pattern-in-c/) to our simulation. This isn't always necessary, but for illustrative purposes we show how this kind of approach could be implemented in case you're interested in trying it. We'll discuss a little about the scope associated with pre-written **sPEGG** code.
 
 We represent a genotype-phenotype map using the class GenotypePhenotypeMap. The class definition can be found in [/header/species/add_kids/genotype_phenotype_map.h](/header/species/add_kids/genotype_phenotype_map.h) The create_genotype_phenotype_map() function will initialize the particular genotype phenotype-map handler we want to create for phenotype *i*. We will then perform the actual calculations required to set the individual's phenotypes based on their genetic values. This class is defined as follows:
 
@@ -300,12 +313,12 @@ class GenotypePhenotypeMap
 		static GenotypePhenotypeMap *create_genotype_phenotype_map(inds *species, int phenotype_index, int index_case, int num_kids);
 
 		 GenotypePhenotypeMap(inds *species, int phenotype_index, int index_case, int num_kids)
-                        {
-                        this->phenotype_index = phenotype_index;
-                        this->Parameters = species->demeParameters->GeneticArchitecture->phen_gen_map_parm[phenotype_index];
-                        this->index_case = index_case;
-                        this->num_kids = num_kids;
-                        }
+						{
+						this->phenotype_index = phenotype_index;
+						this->Parameters = species->demeParameters->GeneticArchitecture->phen_gen_map_parm[phenotype_index];
+						this->index_case = index_case;
+						this->num_kids = num_kids;
+						}
 	
 		virtual void calculate_phenotype(inds *species)=0;
 
@@ -346,22 +359,22 @@ The method ```create_genotype_phenotype_map``` can be created following a templa
 
 ```c++
 GenotypePhenotypeMap *GenotypePhenotypeMap::create_genotype_phenotype_map(inds *species, int phenotype_index, int index_case, int num_kids)
-    {
-    if (phenotype_index == species->demeParameters->species_specific_values["FECUNDITY_PHENOTYPE_INDEX"]) 
+	{
+	if (phenotype_index == species->demeParameters->species_specific_values["FECUNDITY_PHENOTYPE_INDEX"]) 
 	   {       
 	   return new fecundity_phenotype(species, phenotype_index, index_case, num_kids);
 	   }
 
-    if (phenotype_index == species->demeParameters->species_specific_values["MORTALITY_PHENOTYPE_INDEX"])
+	if (phenotype_index == species->demeParameters->species_specific_values["MORTALITY_PHENOTYPE_INDEX"])
 	   {        
 	   return new mortality_phenotype(species, phenotype_index, index_case, num_kids);
 	   }
 
    if (phenotype_index == species->demeParameters->species_specific_values["CROWN_COLOR_INDEX"])
 	   {
-           return new crown_color_phenotype(species, phenotype_index, index_case, num_kids);
+		   return new crown_color_phenotype(species, phenotype_index, index_case, num_kids);
 	   }
-    }
+	}
 ```
 What this does is create instances of genotype-phenotype map objects, which we define below, that are in charge of managing the translation of genetic data into phenotypic values in our model. 
 
@@ -398,9 +411,10 @@ The class inherits from GenotypePhenotypeMap, and implements the ```calculate_ph
 
 <a name="functor_genphenmap">
 
-Now we are finally able to specify our genotype-phenotype map. To do this, we will use what is called a functor. Functors are explained further in the [thrust introduction](http://docs.nvidia.com/cuda/thrust/#algorithms). For now, you can think of them as customizable functions F() that map vectors like ```x=[x1,x2,x3,...,xn]``` and  ```y=[y1,y2,y3,...,yn]``` to a third vector ```F(x,y) = [F(x1,y1), F(x2,y2), F(x3,y3),...,F(xn,yn)]```. In thrust, functors get specified as structures. 
+Now we are finally able to specify our genotype-phenotype map. To do this, we will use what is called a functor. Functors are explained further in the [thrust introduction](https://nvidia.github.io/cccl/thrust/api_docs/algorithms.html). For now, you can think of them as customizable functions `F()` that map vectors like ```x=[x1,x2,x3,...,xn]``` and  ```y=[y1,y2,y3,...,yn]``` to a third vector ```F(x,y) = [F(x1,y1), F(x2,y2), F(x3,y3),...,F(xn,yn)]```. In thrust, functors get specified as structures. 
 
 </a>
+
 Here's what our functor mapping the individual's genotypes to their phenotypes might look like:
 ```c++
 struct fecundity_calculator
@@ -435,18 +449,20 @@ struct fecundity_calculator
 Let's walk through what is going on in this code above. The functor will access the parameter value at the individual's deme and apply an additive linear model, based on the underlying genetic values, to determine the phenotype.
 
 <a name="tuples_logic">
+</a>
+
 In **sPEGG**, as much as possible we try to have functors operating on more than two variables to operate on what are called tuples. For our purposes right now, you can think of tuples as thrust objects which basically glue together elements from different vectors. For example, suppose you represent each individual's properties with three vectors: **X**, **Y** and **Z**. An individual *i*'s properties can then be specified as a point in this three-dimensional space (X<sub>i</sub>, Y<sub>i</sub>, Z<sub>i</sub>). A tuple allows you to create an ordered structure of these points, which can be envisioned as a list looking something like: [(X<sub>1</sub>, Y<sub>1</sub>, Z<sub>1</sub>), (X<sub>2</sub>, Y<sub>2</sub>, Z<sub>2</sub>), ..., (X<sub>n</sub>, Y<sub>n</sub>, Z<sub>n</sub>)]. As you can imagine, this is very convenient for performing operations on multiple variables that go into describing an individual. For example, suppose we have three loci, whose allelic values we store in vectors **X**, **Y** and **Z**. If we want to evaluate the sum of all three allelic values for individual *i*, we would like a function that can perform operations on the triplet (X<sub>i</sub>, Y<sub>i</sub>, Z<sub>i</sub>). Here, we are going to glue together six vectors: the vector storing the demes of the individuals, two vectors storing the paternally inherited and maternally inherited allelic values of individuals at locus 0, two vectors storing the same data for locus 1, and the vector storing the phenotypic value of each individual at the fecundity phenotype. The elements of this last vector are calculated inside the ```operator()``` function. If, instead of looking at just the additive effects of different loci, we were interested in an epistatic effect, we might use something like:
 
 ```c++
 void operator()(tuple t) {
-	    int ind_deme = thrust::get<0>(t);
-	    thrust::get<5>(t) = map_constant[ind_deme] + map_coefficient_0[ind_deme] * (thrust::get<1>(t) + thrust::get<2>(t)) * (thrust::get<3>(t) + thrust::get<4>(t) );
+		int ind_deme = thrust::get<0>(t);
+		thrust::get<5>(t) = map_constant[ind_deme] + map_coefficient_0[ind_deme] * (thrust::get<1>(t) + thrust::get<2>(t)) * (thrust::get<3>(t) + thrust::get<4>(t) );
 		}	
 ```
 instead.
 
-We highlight that the thrust functor can also work with data that get passed into the functor as arguments instead of as tuples. In our example functor ```fecundity_calculator()```, these are represented as floating point arrays. This is not ideal, but is often necessary in the current version of Thrust. Indeed, currently Thrust only allows one to have up to 10 vectors "glued" together using tuples. The limitation is problematic. Suppose our gentoype-phenotype map needed to reference 12 genes rather than two. If we're interested in both maternally and paternally inherited allelic values, this would entail at least 24 vectors storing the individual's genotypes (one vector for each gene), and we would be unable to use tuples. In contrast to tuples, you can pass as many vectors as you need to the functor itself as arguments, and reference the elements of the vectors separately. There is some (potentially nontrivial) performance penalty, and there are also more elaborate solutions like having tuples of tuples one could try in the interim. [Thrust will eventually handle more than 10 vectors in a tuple] (https://github.com/thrust/thrust/issues/524). Until then, there isn't a single obvious way around this problem.
-</a>
+We highlight that the thrust functor can also work with data that get passed into the functor as arguments instead of as tuples. In our example functor ```fecundity_calculator()```, these are represented as floating point arrays. This is not ideal, but is often necessary in the current version of Thrust. Indeed, currently Thrust only allows one to have up to 10 vectors "glued" together using tuples. The limitation is problematic. Suppose our gentoype-phenotype map needed to reference 12 genes rather than two. If we're interested in both maternally and paternally inherited allelic values, this would entail at least 24 vectors storing the individual's genotypes (one vector for each gene), and we would be unable to use tuples. In contrast to tuples, you can pass as many vectors as you need to the functor itself as arguments, and reference the elements of the vectors separately. There is some (potentially nontrivial) performance penalty, and there are also more elaborate solutions like having tuples of tuples one could try in the interim. [Thrust will eventually handle more than 10 vectors in a tuple](https://github.com/thrust/thrust/issues/524). Until then, there isn't a single obvious way around this problem.
+
 In any event, we'll call this functor from the method ```calculate_phenotype()``` defined for our ```fecundity_phenotype``` class. We can store the code inside a .cu file, ```Penguins_genotype_phenotype_maps.cu```, inside ```src```. Inside calculate_phenotype(), the functor fecundity_calculator (which remember is a structure) will then get instantiated. We will then "glue" the appropriate vectors together using two thrust operations: ```make_tuple``` and ```make_zip_iterator```. They are described further in the thrust documentation [here](#https://thrust.github.io/doc/group__tuple.html#ga48cf9f1740f033f22386c8c0310c0510) and [here](https://thrust.github.io/doc/group__fancyiterator.html#ga338d4f994660c4dc89e2bb3cf0a6a60f). For now, just know that these are calls to thrust that are necessary to build your tuples. 
 
 Here is the code for calling your functor:
@@ -523,8 +539,8 @@ void mortality_phenotype::calculate_phenotype(inds *species )
 
 	//Perform mortality operation with for_each.
 	thrust::for_each(thrust::make_zip_iterator(thrust::make_tuple(species->deme.begin() + index_case, species->fgenotype[0].begin() + index_case, species->mgenotype[0].begin() + index_case, species->phenotype[phenotype_index].begin() + index_case)),
-	                 thrust::make_zip_iterator(thrust::make_tuple(species->deme.begin() + index_case + num_kids, species->fgenotype[0].begin() + index_case + num_kids, species->mgenotype[0].begin() + index_case + num_kids, species->phenotype[phenotype_index].begin() + index_case + num_kids)),
-	                 mortality_calculator_functor);
+					 thrust::make_zip_iterator(thrust::make_tuple(species->deme.begin() + index_case + num_kids, species->fgenotype[0].begin() + index_case + num_kids, species->mgenotype[0].begin() + index_case + num_kids, species->phenotype[phenotype_index].begin() + index_case + num_kids)),
+					 mortality_calculator_functor);
 	}
 ```
 Notice that the logic of mortality_phenotype is identical to our fecundity_phenotype except rather than using both loci 0 and 1 to determine the phenotype, we only use one (locus 0). We could have forced further abstractions (e.g., a derived class of ```GenotypePhenotypeMap``` for additively-determined traits) but at this point there is probably little need to in this examle. The advantage of the strategy pattern is that we don't have to modify anything in our code for Penguins to add any other phenotypes. That responsibility gets delegated to the GenotypePhenotypeMap class. This keeps your code self-contained, modular (so you can re-use it for other species or add more phenotypes later, for instance), and makes it easier to test it as you go along.
@@ -585,17 +601,18 @@ void crown_color_phenotype::calculate_phenotype(inds *species )
 
 	//Perform genotype-phenotype map operation with for_each.
 	thrust::for_each(thrust::make_zip_iterator(thrust::make_tuple(species->deme.begin() + index_case, species->fgenotype[2].begin() + index_case, species->mgenotype[2].begin() + index_case, species->phenotype[CROWN_COLOR_INDEX].begin() + index_case)),
-	                 thrust::make_zip_iterator(thrust::make_tuple(species->deme.begin() + index_case + num_kids, species->fgenotype[2].begin() + index_case + num_kids, species->mgenotype[2].begin() + index_case + num_kids, species->phenotype[CROWN_COLOR_INDEX].begin() + index_case + num_kids)),
-	                 crown_color_functor);
+					 thrust::make_zip_iterator(thrust::make_tuple(species->deme.begin() + index_case + num_kids, species->fgenotype[2].begin() + index_case + num_kids, species->mgenotype[2].begin() + index_case + num_kids, species->phenotype[CROWN_COLOR_INDEX].begin() + index_case + num_kids)),
+					 crown_color_functor);
 	}
 ```
 will implement the calculations for this genotype-phenotype map using the third locus.
 
 <a name="updating">
+
 ### Updating phenotypes
 </a>
 
-The basic idea here is to describe how the phenotypes of individuals change between one time step of the simulation to the next. This could happen, for instance, as a result of ontogenic development (e.g., increase in body mass representing growth), or as a result of interactions with the environment (e.g., reduced viability due to parasitism or prolongued drought). As with the case of the genoytpe-phenotype map, again there are many ways we might want to represent how the phenotypes of individuals get updated. Thus, we'll try to re-use the [strategy pattern](http://r3dux.org/2011/07/an-example-implementation-of-the-strategy-design-pattern-in-c/) to assign the updating behavior its own class. As with the genotype-phenotype map, this isn't strictly necessary, but we will include it here for illustrative purposes for how this could work for the updating component of our simulation.
+The basic idea here is to describe how the phenotypes of individuals change between one time step of the simulation to the next. This could happen, for instance, as a result of ontogenic development (e.g., increase in body mass representing growth), or as a result of interactions with the environment (e.g., reduced viability due to parasitism or prolongued drought). As with the case of the genoytpe-phenotype map, again there are many ways we might want to represent how the phenotypes of individuals get updated. Thus, we'll try to re-use the [strategy pattern](https://web.archive.org/web/20160625125844/http://r3dux.org/2011/07/an-example-implementation-of-the-strategy-design-pattern-in-c/) to assign the updating behavior its own class. As with the genotype-phenotype map, this isn't strictly necessary, but we will include it here for illustrative purposes for how this could work for the updating component of our simulation.
 
 As was the case for the genotype-phenotype map, we'll have a base class to manage calling the appropriate updating behavior for our species. We'll call this class UpdateBehavior, and it is defined in ```/header/species/update/updatebehavior.h``` as:
 
@@ -625,9 +642,9 @@ class UpdateBehavior
 
 #endif
 ```
-
 <a name="update_behavior_header"></a>
-The create_updateBehavior function will then be defined by us in a file we'll call ```UpdateBehavior.cu``` in the ```src/``` of the ```My_sPEGG_project``` folder; a template is provided in ```src/cuda/species/update/UpdateBehavior_TEMPLATE.cu``` of the main **sPEGG** repository.
+
+The `create_updateBehavior()` function will then be defined by us in a file we'll call ```UpdateBehavior.cu``` in the ```src/``` of the ```My_sPEGG_project``` folder; a template is provided in ```src/cuda/species/update/UpdateBehavior_TEMPLATE.cu``` of the main **sPEGG** repository.
 
 We'll call this function create_updateBehavior inside our local ```UpdateBehavior.cu``` as:
 
@@ -635,15 +652,16 @@ We'll call this function create_updateBehavior inside our local ```UpdateBehavio
 #include "update_Penguins.h"
 
 UpdateBehavior * UpdateBehavior::create_updateBehavior(inds_stochastic **species, environment *habitat, int species_ID)
-    {
-    if (species_ID==0)
+	{
+	if (species_ID==0)
 	   return new update_Penguins(species[0]);
-    }
+	}
 ```
 Notice, once again that as in the case of [the genotype-phenotype map above](#gen_phen_map_header), we instantiate a class ```update_Penguins``` that is specific to our tutorial species. Therefore, we need to include an appropriate header file (```update_Penguins.h```) that define this class, so that we can apply the strategy pattern.
 
 To call ```UpdateBehavior``` from the ```Penguins``` class, simply define the ```update()``` member function of ```Penguins``` as:
 <a name="update_method">
+
 ```c++
 void Penguins::update(inds_stochastic **species)
 	{
@@ -654,7 +672,7 @@ void Penguins::update(inds_stochastic **species)
 ```
 </a>
 
-Since we aren't modeling the environmental variables in this tutorial, this is passed as NULL when create_updateBehavior is invoked in the Penguins class. If we were explicitly modeling the environmental variables and wanted to describe how they affect our phenotypes of interest, we would have to redefine ```void Penguins::update(inds_stochastic **species)``` to instead be ```void Penguins::update(inds_stochastic **species, environment *habitat)```. ```inds_stochastic``` supports the potential use of both ```update``` methods. However, when a new class is created based on ```inds_stochastic```, the update functions are actually hidden from the new class. This is why we had to invoke ```using inds_stochastic::update;``` when we were defining our ```Penguins``` class.  The only remaining variable we worry about here is the species ID, which, because we only have one species, is set to zero. Note that this code can be easily expanded to specify the updates for other species, and the code for ```update()``` in Penguins remains unchanged except for a flag telling create_updateBehavior what species to work with as the focal species.
+Since we aren't modeling the environmental variables in this tutorial, this is passed as `NULL` when `create_updateBehavior()` is invoked in the `Penguins` class. If we were explicitly modeling the environmental variables and wanted to describe how they affect our phenotypes of interest, we would have to redefine ```void Penguins::update(inds_stochastic **species)``` to instead be ```void Penguins::update(inds_stochastic **species, environment *habitat)```. ```inds_stochastic``` supports the potential use of both ```update``` methods. However, when a new class is created based on ```inds_stochastic```, the update functions are actually hidden from the new class. This is why we had to invoke ```using inds_stochastic::update;``` when we were defining our ```Penguins``` class.  The only remaining variable we worry about here is the species ID, which, because we only have one species, is set to zero. Note that this code can be easily expanded to specify the updates for other species, and the code for ```update()``` in Penguins remains unchanged except for a flag telling create_updateBehavior what species to work with as the focal species.
 
 The first line of the method ```update()``` creates an instance of the UpdateBehavior class. You specify for this class which particular UpdateBehavior you want to simulate. The function ```create_updateBehavior``` will then create an instance of this specification. Finally, the ```update()``` method is called. 
 
@@ -673,30 +691,30 @@ class update_Penguins : public UpdateBehavior
 	class inds_stochastic *species;
 	// Constructor
 	public:
-    	update_Penguins(inds_stochastic *species) 
-    	 	{
-    		this->species = species;
-    
-    		// Copy the constants 
-    		this->size = species->size;
-    		this->Number_of_Demes = species->Num_Demes;
-    		}
-    
-    	void update();
+		update_Penguins(inds_stochastic *species) 
+			{
+			this->species = species;
+	
+			// Copy the constants 
+			this->size = species->size;
+			this->Number_of_Demes = species->Num_Demes;
+			}
+	
+		void update();
 
 	protected:
 		void update_color();
 
-    	// variable names
-    	int MORTALITY_PHENOTYPE_INDEX;
-    	int CROWN_COLOR_INDEX;
-    	int size;
-    	int Number_of_Demes;
-    	void survive();
-    };
+		// variable names
+		int MORTALITY_PHENOTYPE_INDEX;
+		int CROWN_COLOR_INDEX;
+		int size;
+		int Number_of_Demes;
+		void survive();
+	};
 ```
 
-Notice that the class Penguins.h is not defined, and instead a place holder for an object of the ```inds_stochastic``` class is specified instead. We present this to illustrate an alternative approach to implementing the strategy pattern like we have here. One potential advantage of the approach we illustrate is that it can reduce the dependence of update_Penguins on the actual penguins class, and only requires knowledge of the inds_stochastic class. This might be helpful if, for instance, we want to use the functionality associated with changing the vital state and the crown color in a simulation of a different bird species altogether.
+Notice that the class `Penguins.h` is not defined, and instead a place holder for an object of the ```inds_stochastic``` class is specified instead. We present this to illustrate an alternative approach to implementing the strategy pattern like we have here. One potential advantage of the approach we illustrate is that it can reduce the dependence of update_Penguins on the actual penguins class, and only requires knowledge of the inds_stochastic class. This might be helpful if, for instance, we want to use the functionality associated with changing the vital state and the crown color in a simulation of a different bird species altogether.
 
 The ```update()``` method, which gets called by [Penguins](#update_method), serves as the interface to this class that is responsible for updating the penguins. We define its functionality in a .cu file ```update_Penguins.cu``` inside our ```src``` folder. It, too, has a pretty straightforward structure:
 
@@ -765,13 +783,15 @@ struct simulate_mortality
 			thrust::get<1>(t) = vital_state;
 			}
 		}	
-    };
+	};
 ```
 Notice that we've used [tuples](#tuples_logic) again and access them through the ```thrust::get``` operation. Our tuple consists of three vectors: the vector storing the indices of the individuals (i.e,. [0,1,2,..,n]; these are not the same as the individual's IDs), the vector storing their vital states, and the vector storing their probability of survivorship (which is equal for everyone). Technically, we could have also included the vector of uniform random variates in this list, but we chose to leave that as an argument to illustrate how you can also pass the vectors as arguments to your functors.
 
 Next, we'll actually invoke this functor in the function "determine_mortality()" described above. This method will first create the indices of individuals. Next, it will draw a uniform random number for each individual. The functor will then get instantiated and called, using the "glued" vectors that contain the indices, the vital states, and the probabilities of survivorship. 
+
 <a name="survive_kernel">
 </a>
+
 ```c++
 void UpdateBehavior::determine_mortality(inds_stochastic *species)
 	{
@@ -799,22 +819,23 @@ Admittedly, this ```determine_mortaility()``` function is a lot more complicated
 
 ```c++
 void UpdateBehavior::determine_mortaility()
-    {	
+	{	
 	for (int i=0; i < species->size; i++)
-	       {
-	       u = draw_uniform(0,1);
-	       if (u < species->phenotype[species->MORTALITY_PHENOTYPE_INDEX][i])
-	                  species->status[i] = 1;
-	       else
-	                  species->status[i] = 0;
-	       }
-    }
+		   {
+		   u = draw_uniform(0,1);
+		   if (u < species->phenotype[species->MORTALITY_PHENOTYPE_INDEX][i])
+					  species->status[i] = 1;
+		   else
+					  species->status[i] = 0;
+		   }
+	}
 ```
 
 It turns out for this particular problem, the performance gains for moving to the GPU are modest. But as we argue in our [accompanying manuscript](/Documentation/1603.09255v1.pdf), once one works with something beyond relatively trivial models, the speed-up provided by modeling updating of the phenotype using CUDA can be considerable.
 
 <a name="update_color">
 </a>
+
 In addition to simulating the mortality of individuals, our ```update()``` kernel includes a function for updating the color of the crown for each individual to simulate greying as they age. Our approach to implementing this functionality is very similar to our approach to implementing mortality. First, we will define a method to simulate this greying inside the class ```update_Penguins```. Then, we will specify a functor to offload the actual calcuations across individuals on the GPU. To do this, we begin by specifying a functor, ```crown_color_updater``` that will actually change the color of the crown for each individual. Because this is a functor, we will again declare it as a struct inside the header file associated with the updating operations. We note, however, that this operation is modeled as being specific to simulated penguins (unlike updating mortality, which we assumed was generic to any inds_stochastic object). We therefore include the functor ```crown_color_updater``` in the same ```update_Penguins.h``` header where the object ```update_Penguins``` is defined. Here is the functor:
 
 ```c++
@@ -865,23 +886,23 @@ void update_Penguins::update_color()
 	// Step 2. Set up functor
 	crown_color_updater crown_color_functor(crown_colors, target_crown_colors);
 
-    // Step 3. Create a vector which, for each individual, stores the crown color decay rate associated with their deme.
-    		// Step 3a. Create a one-time vector, demewise_color_decays that copies the deme-specific color decay rates.
+	// Step 3. Create a vector which, for each individual, stores the crown color decay rate associated with their deme.
+			// Step 3a. Create a one-time vector, demewise_color_decays that copies the deme-specific color decay rates.
 	thrust::device_vector<float> demewise_color_decays(species->Num_Demes);
 	thrust::copy(species->demeParameters->get_vector_ptr("CROWN_COLOR_DECAY"), species->demeParameters->get_vector_ptr("CROWN_COLOR_DECAY") + species->Num_Demes, demewise_color_decays.begin());
 
-    		// Step 3b. Create a vector, color_decays of length size (i.e., the number of living individuals) which stores, for each individual, the crown color decay rate associated with their deme.
+			// Step 3b. Create a vector, color_decays of length size (i.e., the number of living individuals) which stores, for each individual, the crown color decay rate associated with their deme.
 	thrust::device_vector<float> color_decays(size);
 	amplify_float(demewise_color_decays, species->deme_sizes, color_decays);
 
-    // Step 4. specify the indices of individuals
+	// Step 4. specify the indices of individuals
 	thrust::device_vector<int> individuals(size);
 	thrust::sequence(individuals.begin(), individuals.begin() + size, 0);
 
 	// Step 5. Perform greying operation with for_each.
 	thrust::for_each(thrust::make_zip_iterator(thrust::make_tuple(individuals.begin(), species->deme.begin(), color_decays.begin())),
-	                 thrust::make_zip_iterator(thrust::make_tuple(individuals.begin() + size, species->deme.begin() + size, color_decays.begin() + size)),
-	                 crown_color_functor);
+					 thrust::make_zip_iterator(thrust::make_tuple(individuals.begin() + size, species->deme.begin() + size, color_decays.begin() + size)),
+					 crown_color_functor);
 	}
 ```
 Casting the thrust vectors storing the individual crown colors to an array pointer ```crown_colors```, as we do in step (1), should be familiar at this point. The ```demeParameters``` object contains a vector that stores, for each deme, the target crown color for that deme. Thus, this line simply casts this vector into an array to be used when we instantiate our functor in Step 2. 
@@ -895,8 +916,10 @@ Step 4 then simply creates a vector storing the lists of individuals indices, an
 Once the survivors have been determined and ```update_color()``` has been called, the ```update()``` [kernel](#update_method) ends by incrementing the age of survivors by one. 
 
 <a name="helper_methods">
+
 ### Helper methods
 </a>
+
 Hopefully, by now you've gotten a bit of a sense for how thrust will work with the data elements in **sPEGG**. In particular, you have probably gotten a good feel for the centrality of an individual's deme affiliation to the simulation. Earlier, we glossed over the helper function ```initialize_demes()``` when the ```Penguins``` object is initialized. Discussion of this function was relegated to here so the code above can be made somewhat more concise without getting too much into the book-keeping details.
 
 We'll write a short function to place individuals into demes at the initialization stage. In more realistic models, you might want to allocate the starting deme sizes to have different numbers of individuals, perhaps reflective of spatial variation in starting population sizes. Here, we will assume that each deme has the same carrying capacities and the same starting number of individuals.
@@ -918,11 +941,11 @@ A final helper function, assignSex, will randomly assign sex to new borns. We wi
 
 ```c++
 void Penguins::assignSex(int index, int num_inds_to_calculate)
-    {
-    thrust::device_vector<int> neonates_sex(num_inds_to_calculate);
-    draw_bernoulli(num_inds_to_calculate, 0.5, neonates_sex, gen);
-    thrust::copy(neonates_sex.begin(), neonates_sex.begin() + num_inds_to_calculate, sex.begin() + index);
-    }
+	{
+	thrust::device_vector<int> neonates_sex(num_inds_to_calculate);
+	draw_bernoulli(num_inds_to_calculate, 0.5, neonates_sex, gen);
+	thrust::copy(neonates_sex.begin(), neonates_sex.begin() + num_inds_to_calculate, sex.begin() + index);
+	}
 ```
 
 The resulting Penguins.cu file that integrates everything we've covered so far can be downloaded [here](Penguins.cu).
@@ -1036,6 +1059,7 @@ Penguin_Drift_Simulator::~Penguin_Drift_Simulator()
 
 
 <a name="main_cpp_fixing">
+
 ## The main.cpp file
 
 To actually run our simulation, we'll create a C++ file in the main directory (```My_sPEGG_project```). There, create a file called ```main.cpp```. In addition to the standard C++ headings, a header for the ```Penguin_Drift_Simulator``` class will be referenced. We will instantiate our simulation, run it, and free the memory on the GPU. Here is the code:
@@ -1061,13 +1085,13 @@ int main(void)
 In the main.cpp file, we'll have only a single function, ```int main(void)```. By initializing the ```Penguing_Drift_Simulator``` object, our ```main()``` function sets in motion the following sequence of activities:
 
 >    1. read in the basic simulation settings, 
-    
+	
 >    2. initialize our classes, 
-    
+	
 >    3. save the individual-level data at the start of the simulation into a CSV spreadsheet
 
 Then, when it calls the ```run()``` function, the following happen:
-    
+	
 >    4. run the simulation,
 
 >    5. calculate the average genotypes at locus 2 for the two demes at the end of the simulation,
@@ -1094,6 +1118,7 @@ To that end, each model implemented in **sPEGG** has associated with it four inp
 Below, we briefly describe each of these input files, which you can create right now in the folder ```My_sPEGG_project```.
 
 ### Simulation.conf
+
 This file is deliberately kept short and limited. It configures the simulation by specifying (i) the number of time steps (n_timesteps), which can be thought of as corresponding to the number of reproductive bouts, (ii) the number of demes (ndemes), (iii) the number of time steps simulated between reproductive events within a time step, if any, (intra_step_time_steps - e.g., months of a year for an annually reproducing species; this might also allow you to build a model that approximates continuous-time processes between reproductive events), (iv) the number of biotic variables (num_biotic_variables) in the environment, (v) the number of abiotic variables (num_abiotic_variables) in the environment, and (vi) the starting random number seed. For this tutorial, our Simulation.conf file looks something like:
 
 ```sh
@@ -1106,8 +1131,10 @@ random_seed = 314159
 ```
 
 <a name="demesettings">
+
 ### deme_config.txt and environment_config.txt
 </a>
+
 Since we're simulating genetic drift and our loci are neutral markers, there might not seem to be a need for specifying differences among the demes. However, our code still makes use of several parameter inputs, such as the coefficients defining the allelic effects in the genotype-phenotype map and the decay rate for crown color. <a name="demeParameters"> This input gets stored in an object called ```demeParameters```</a> included in the ```inds``` base class. So although some of the following code might seem a bit redundant/unnecessary, it's in this tutorial because these same principles will apply when you want to use **sPEGG** to model a more conceptually interesting or realistic problem.
 
 #### the deme_config.txt file
@@ -1135,54 +1162,55 @@ Each of the ```{inputs for species *x*}``` within the list ```species_data``` sp
 The distinction between ```species_specific_values``` and parameters in **sPEGG** are that the former (1) will never vary across demes, and (2) help manage the code rather than modify the trajectory of the simulation. An example will probably help clarify the distinction.
 
 In our example, we only have one species - our ```Penguins```. Therefore, our species_data setting should look something like ```species_data = ({inputs for demes of species 0})```. Here is how we specify the inputs for demes:
+
 ```sh
 species_data = ({
-                number_of_species_specific_values = 3
-                species_specific_values_names = ["FECUNDITY_PHENOTYPE_INDEX","MORTALITY_PHENOTYPE_INDEX","CROWN_COLOR_INDEX"]
+				number_of_species_specific_values = 3
+				species_specific_values_names = ["FECUNDITY_PHENOTYPE_INDEX","MORTALITY_PHENOTYPE_INDEX","CROWN_COLOR_INDEX"]
 
-                FECUNDITY_PHENOTYPE_INDEX  =  0.000000
-                MORTALITY_PHENOTYPE_INDEX  =  1.000000 
-                CROWN_COLOR_INDEX = 2.00000
+				FECUNDITY_PHENOTYPE_INDEX  =  0.000000
+				MORTALITY_PHENOTYPE_INDEX  =  1.000000 
+				CROWN_COLOR_INDEX = 2.00000
 
-                number_of_parameters = 4
-                parameter_names = ["M_reproductive_advantage", "F_reproductive_advantage","TARGET_CROWN_COLOR","CROWN_COLOR_DECAY"]
+				number_of_parameters = 4
+				parameter_names = ["M_reproductive_advantage","F_reproductive_advantage","TARGET_CROWN_COLOR","CROWN_COLOR_DECAY"]
 
-                deme_specifications = (
-                                        {#deme0
-                                        M_reproductive_advantage = 1.0
-                                        F_reproductive_advantage = 1.0
-                                        TARGET_CROWN_COLOR = 0.808080
-                                        CROWN_COLOR_DECAY = 0.1
-                                        },
-                                        {#deme1
-                                        M_reproductive_advantage = 1.0
-                                        F_reproductive_advantage = 1.0
-                                        TARGET_CROWN_COLOR = 0.809120
-                                        CROWN_COLOR_DECAY = 0.01
-                                        }
-                                      )               
-                }
-               )
+				deme_specifications = (
+										{#deme0
+										M_reproductive_advantage = 1.0
+										F_reproductive_advantage = 1.0
+										TARGET_CROWN_COLOR = 0.808080
+										CROWN_COLOR_DECAY = 0.1
+										},
+										{#deme1
+										M_reproductive_advantage = 1.0
+										F_reproductive_advantage = 1.0
+										TARGET_CROWN_COLOR = 0.809120
+										CROWN_COLOR_DECAY = 0.01
+										}
+									  )               
+				}
+			   )
 ```
 
-In our example, we consider two parameters: (1) a parameter controlling the reproductive skew towards males with higher fecundity (i.e,. if *y[i]* is a male *i*'s fecundity, the parameter ```M_reproductive_advantage``` controls the relative probability that a male will sire an offspring according to *y[i]^(M_reproductive_advantage)*, and (2) a parameter controlling the reproductive skew towards females with higher fecundity. For our tutorial, we'll assume these values are identical across the two demes; however, you can imagine a situation where there is greater reproductive inequality among individuals in deme 0 than in deme 1 - e.g., if you want to explore a gradient of this value to see whether varying reproductive skew affects dynamics. Under these cases, your deme_specifications list may look instead like:
+In our example, we consider two parameters: (1) a parameter controlling the reproductive skew towards males with higher fecundity (i.e,. if *y[i]* is a male *i*'s fecundity, the parameter ```M_reproductive_advantage``` controls the relative probability that a male will sire an offspring according to *y[i]^(M_reproductive_advantage)*), and (2) a parameter controlling the reproductive skew towards females with higher fecundity. For our tutorial, we'll assume these values are identical across the two demes; however, you can imagine a situation where there is greater reproductive inequality among individuals in deme 0 than in deme 1 - e.g., if you want to explore a gradient of this value to see whether varying reproductive skew affects dynamics. Under these cases, your deme_specifications list may look instead like:
 
 
 ```sh
-       deme_specifications = (
-                                        {#deme0
-                                        M_reproductive_advantage = 1.0
-                                        F_reproductive_advantage = 2.5
-                                        TARGET_CROWN_COLOR = 0.808080
-                                        CROWN_COLOR_DECAY = 0.1
-                                        },
-                                        {#deme1
-                                        M_reproductive_advantage = 1.0
-                                        F_reproductive_advantage = 1.0
-                                        TARGET_CROWN_COLOR = 0.809120
-                                        CROWN_COLOR_DECAY = 0.01
-                                        }
-                                      ) 
+	   deme_specifications = (
+										{#deme0
+										M_reproductive_advantage = 1.0
+										F_reproductive_advantage = 2.5
+										TARGET_CROWN_COLOR = 0.808080
+										CROWN_COLOR_DECAY = 0.1
+										},
+										{#deme1
+										M_reproductive_advantage = 1.0
+										F_reproductive_advantage = 1.0
+										TARGET_CROWN_COLOR = 0.809120
+										CROWN_COLOR_DECAY = 0.01
+										}
+									  ) 
 ```
 
 We should add at this point that libconfig doesn't care about whitespace, and comments can be added by placing ```#``` right before the comment (thus, the phrases "deme0" and "deme1" above are ignored at run-time).
@@ -1200,13 +1228,13 @@ The ```species_genetics``` list is defined in much the same way. For each specie
 Here's a basic outline, using pseudo-code
 ```sh
 species_genetics = ({#species0
-                number_of_loci = nL
-                number_of_phenotypes = nP 
-                phenotype_names = [ "PHEN1", "PHEN2" ]
+				number_of_loci = nL
+				number_of_phenotypes = nP 
+				phenotype_names = ["PHEN1","PHEN2"]
 
-                recombination_rates = [ recombination rates ]
+				recombination_rates = [recombination rates]
 
-                locus_specifications = (
+				locus_specifications = (
 					{#locus0
 					mutation_parameters = (
 								{#deme0
@@ -1232,20 +1260,20 @@ species_genetics = ({#species0
 								)
 					}, ...
 					)
-                phenotype_specifications = (
-                                        {#phenotype0
-                                        number_of_genotype_phenotype_map_parameters = nP0
-                                        names_of_genotype_phenotype_map_parameters = [parameter names]
-                                        genotype_phenotype_map_parameters = ({parameter values in deme 0},{parameter values in deme 1})
-                                        },
-                                       {#phenotype1
-                                        number_of_genotype_phenotype_map_parameters = nP1
-                                        names_of_genotype_phenotype_map_parameters = [parameter names]
-                                        genotype_phenotype_map_parameters = ({parameter values in deme 0},{parameter values in deme 1})
-                                        }, ...
-                                      )               
-                }
-               )
+				phenotype_specifications = (
+										{#phenotype0
+										number_of_genotype_phenotype_map_parameters = nP0
+										names_of_genotype_phenotype_map_parameters = [parameter names]
+										genotype_phenotype_map_parameters = ({parameter values in deme 0},{parameter values in deme 1})
+										},
+									   {#phenotype1
+										number_of_genotype_phenotype_map_parameters = nP1
+										names_of_genotype_phenotype_map_parameters = [parameter names]
+										genotype_phenotype_map_parameters = ({parameter values in deme 0},{parameter values in deme 1})
+										}, ...
+									  )               
+				}
+			   )
 ```
 Most of the terms here are pretty self-explanatory. The basic logic is that only the numerical parameters governing the genotype-phenotype map, which are stored in a list called ```genotype_phenotype_map_parameters```, would vary by deme (for instance, if you want to model how different genotype-phenotype maps - i.e., genetic architectures - would affect your simulation's results, you'd simulate multiple demes to look at how varying the constituent parameters affect the evolutionary trajectory). The rest of the genetic architecture is assumed to be constant across all demes, as is the recombination rates among loci. Potentially the recombination rate among loci can be modified according to deme, and this is a candidate feature for future releases. Note also that you can render some loci unimportant in specific demes by setting the parameter corresponding to their allelic effects to zero.
 
@@ -1254,11 +1282,11 @@ Our resulting genetic specification (refer to [the section on the genetic archit
 ```sh
 
 species_genetics = ({#species0
-                number_of_loci = 3
-               
-                number_of_phenotypes = 3 
-  		phenotype_names = [ "FECUNDITY_PHENOTYPE_INDEX", "MORTALITY_PHENOTYPE_INDEX", "CROWN_COLOR_INDEX" ]
-  		recombination_rates = [ 0.5, 0.5, 0.5 ]
+				number_of_loci = 3
+			   
+				number_of_phenotypes = 3 
+		phenotype_names = [ "FECUNDITY_PHENOTYPE_INDEX", "MORTALITY_PHENOTYPE_INDEX", "CROWN_COLOR_INDEX" ]
+		recombination_rates = [ 0.5, 0.5, 0.5 ]
 
 		locus_specifications = (
 					{#locus0
@@ -1299,54 +1327,54 @@ species_genetics = ({#species0
 					}
 					)
 
-                phenotype_specifications = (
-                                        {#phenotype0
+				phenotype_specifications = (
+										{#phenotype0
 					number_of_genotype_phenotype_map_parameters = 3
 					names_of_genotype_phenotype_map_parameters = ["GENPHEN_MAP_CONSTANT", "GENPHEN_MAP_COEF0","GENPHEN_MAP_COEF1"]
 					genotype_phenotype_map_parameters  = (
-				                                            {#deme0
-									    GENPHEN_MAP_CONSTANT = 10.0
-				                                            GENPHEN_MAP_COEF0 = 0.0
-				                                            GENPHEN_MAP_COEF1 = 0.0
-				                                            }, 
-				                                            {#deme1
-									    GENPHEN_MAP_CONSTANT = 10.0
-				                                            GENPHEN_MAP_COEF0 = 0.0
-				                                            GENPHEN_MAP_COEF1 = 0.0
-				                                            }
-                                                          )
-                                        },
-                                        {#phenotype1
+															{#deme0
+										GENPHEN_MAP_CONSTANT = 10.0
+															GENPHEN_MAP_COEF0 = 0.0
+															GENPHEN_MAP_COEF1 = 0.0
+															}, 
+															{#deme1
+										GENPHEN_MAP_CONSTANT = 10.0
+															GENPHEN_MAP_COEF0 = 0.0
+															GENPHEN_MAP_COEF1 = 0.0
+															}
+														  )
+										},
+										{#phenotype1
 					number_of_genotype_phenotype_map_parameters = 2
 					names_of_genotype_phenotype_map_parameters = ["GENPHEN_MAP_CONSTANT", "GENPHEN_MAP_COEF0"]
 					genotype_phenotype_map_parameters  = (
-                                                            {#deme0
-							    GENPHEN_MAP_CONSTANT = 0.5
-                                                            GENPHEN_MAP_COEF0 = 0.0
-                                                            }, 
-                                                            {#deme1
-							    GENPHEN_MAP_CONSTANT = 0.5
-                                                            GENPHEN_MAP_COEF0 = 0.0
-                                                            }
-                                                          )
-                                        },
+															{#deme0
+								GENPHEN_MAP_CONSTANT = 0.5
+															GENPHEN_MAP_COEF0 = 0.0
+															}, 
+															{#deme1
+								GENPHEN_MAP_CONSTANT = 0.5
+															GENPHEN_MAP_COEF0 = 0.0
+															}
+														  )
+										},
 					{#phenotype2
 					number_of_genotype_phenotype_map_parameters = 2
 					names_of_genotype_phenotype_map_parameters = ["GENPHEN_MAP_CONSTANT", "GENPHEN_MAP_COEF0"]
 					genotype_phenotype_map_parameters  = (
-                                                            {#deme0
-							    GENPHEN_MAP_CONSTANT = 0.25
-                                                            GENPHEN_MAP_COEF0 = 3.0
-                                                            }, 
-                                                            {#deme1
-							    GENPHEN_MAP_CONSTANT = 0.25
-                                                            GENPHEN_MAP_COEF0 = 3.0
-                                                            }
-                                                          )
-                                        }
-                                      )               
-                }
-               )
+															{#deme0
+								GENPHEN_MAP_CONSTANT = 0.25
+															GENPHEN_MAP_COEF0 = 3.0
+															}, 
+															{#deme1
+								GENPHEN_MAP_CONSTANT = 0.25
+															GENPHEN_MAP_COEF0 = 3.0
+															}
+														  )
+										}
+									  )               
+				}
+			   )
 ```
 Since we don't assume there are genetic differences among individuals in fitness or fecundity, their coefficients governing how they map onto phenotypes controlling fitness are zero, and our genotype-phenotype map looks something like (*F(x) = A*, where *A* is the value in the variable ```GENPHEN_MAP_CONSTANT```). 
 
@@ -1365,7 +1393,7 @@ abiotic_variable_initialization =
 		{#deme1
 		 dummy=1.0
 		}
-    )
+	)
 ```
 
 If there is sufficient interest, a later tutorial module might go into some detail about how the environmental components that aren't modeled on an individual level would be simulated. In the mean time, to get a feel for what the environment_config.txt for a model with resource dynamics (where the resource - e.g., prey - is not tracked at the individual level) might look like, see [this example](/Examples/PhysiologicalStructure_LifeHistoryEvolution/environment_config.txt).
@@ -1380,32 +1408,34 @@ That pretty much covers the basics of what you need to build your own **sPEGG** 
 
 <a name="makefile_fixing">
 </a>
->## The Makefile
->In the directory <My_sPEGG_project> you will also create a file called ```Makefile```. This can be somewhat involved, but one thing you may have to change is the directory in which the main sPEGG codebase was saved and built. As you add source files to your project, you will want to keep adding compilation instructions for those files to your Makefile - i.e.:
 
->```
->(OBJDIR)/My_New_Source_File.o : ${LOCATION_OF_NEW_SOURCEFILE}/My_New_Source_File.cu
->	nvcc -c $(CFLAGS) ${HEADERS}  ${LOCATION_OF_NEW_SOURCEFILE}/My_New_Source_File.cu -o $(OBJDIR)/My_New_Source_File.o
->```
+## The Makefile
+
+In the directory <My_sPEGG_project> you will also create a file called ```Makefile```. This can be somewhat involved, but one thing you may have to change is the directory in which the main sPEGG codebase was saved and built. As you add source files to your project, you will want to keep adding compilation instructions for those files to your Makefile - i.e.:
+
+```Makefile
+(OBJDIR)/My_New_Source_File.o : ${LOCATION_OF_NEW_SOURCEFILE}/My_New_Source_File.cu
+	nvcc -c $(CFLAGS) ${HEADERS}  ${LOCATION_OF_NEW_SOURCEFILE}/My_New_Source_File.cu -o $(OBJDIR)/My_New_Source_File.o
+```
 
 Also add instructions to append the resulting *.o file to the line beginning
 
->```
->a.out :
->```
+```Makefile
+a.out :
+```
 
 and the line containing the compilation instructions:
 
->```
->nvcc -O3 -lcurand -lrt -lcuda -lconfig++ 
->```
+```sh
+nvcc -O3 -lcurand -lrt -lcuda -lconfig++ 
+```
 
 by preceding the .o file with the tag $(OBJDIR)/ e.g., 
 
->```
->a.out : $(OBJDIR)/My_New_Source_File.o
->nvcc -O3 -lcurand -lrt -lcuda -lconfig++ $(OBJDIR)/My_New_Source_File.o
->```
+```sh
+a.out : $(OBJDIR)/My_New_Source_File.o
+nvcc -O3 -lcurand -lrt -lcuda -lconfig++ $(OBJDIR)/My_New_Source_File.o
+```
 
 A Makefile for this tutorial can be found [here](/Examples/Tutorial_Simulation/Makefile).
 
@@ -1426,14 +1456,14 @@ A more elaborate (non-stochastic) way to simulate of this might involve defining
 
 ```c++
 struct death_from_old_age
-    {
+	{
 	float *max_age;
 	death_from_old_age(float *maximum_age) : max_age(maximum_age)
 	{};
 	/* 
 		Elements in the tuple.
-        ---------------------
-        0: individual's index
+		---------------------
+		0: individual's index
 		1: individual's vitality status
 		2: probability of survivorship
 		3: individual's deme
@@ -1446,13 +1476,13 @@ struct death_from_old_age
 		if (thrust::get<1>(t)==1) /* If the individual is alive */
 			{
 			int deme = thrust::get<3>(t);
-            float age = (float) thrust::get<4>(t); 
-            if (age > max_age[deme])
-                 {
-                 thrust::get<2>(t) = 0;
-			     }
+			float age = (float) thrust::get<4>(t); 
+			if (age > max_age[deme])
+				 {
+				 thrust::get<2>(t) = 0;
+				 }
 			}
-    };
+	};
 ```
 
 Next, we could add a function to to our ```update_Penguins``` class that includes the following lines:
@@ -1463,25 +1493,25 @@ death_from_old_age death_from_old_age(rand_ptr, max_ages);
 ```
 The function ```get_vector_ptr()``` in the demeParameters class returns a pointer to the float vector storing the maximum ages of individuals permissible in the different demes. This then gets passed as an argument to the death_from_old_age functor. The relevant segments in our corresponding new deme_config.txt file now looks like:
 ```c++
-                number_of_parameters = 5
-                parameter_names = ["M_reproductive_advantage", "F_reproductive_advantage","TARGET_CROWN_COLOR","CROWN_COLOR_DECAY", "Maximum_Age"]
+				number_of_parameters = 5
+				parameter_names = ["M_reproductive_advantage", "F_reproductive_advantage","TARGET_CROWN_COLOR","CROWN_COLOR_DECAY", "Maximum_Age"]
 
-                deme_specifications = (
-                                        {#deme0
-                                        M_reproductive_advantage = 1.0
-                                        F_reproductive_advantage = 1.0
-                                        TARGET_CROWN_COLOR = 0.808080
-                                        CROWN_COLOR_DECAY = 0.1
-                                        Maximum_Age = 5.0
-                                        },
-                                        {#deme1
-                                        M_reproductive_advantage = 1.0
-                                        F_reproductive_advantage = 1.0
-                                        TARGET_CROWN_COLOR = 0.809120
-                                        CROWN_COLOR_DECAY = 0.01
-                                        Maximum_Age = 25.0
-                                        }
-                                      ) 
+				deme_specifications = (
+										{#deme0
+										M_reproductive_advantage = 1.0
+										F_reproductive_advantage = 1.0
+										TARGET_CROWN_COLOR = 0.808080
+										CROWN_COLOR_DECAY = 0.1
+										Maximum_Age = 5.0
+										},
+										{#deme1
+										M_reproductive_advantage = 1.0
+										F_reproductive_advantage = 1.0
+										TARGET_CROWN_COLOR = 0.809120
+										CROWN_COLOR_DECAY = 0.01
+										Maximum_Age = 25.0
+										}
+									  ) 
 ```
 
 However, we're not done yet - we still need to add a for_each() instruction. We'll leave this part as an exercise for the reader.
@@ -1490,8 +1520,10 @@ However, we're not done yet - we still need to add a for_each() instruction. We'
 
 
 <a name="setup_issues">
+
 ## Some possible issues with getting sPEGG set up
 </a>
+
 Depending on your system's configuration, there may be some manual steps you would need to keep in mind when setting up **sPEGG**. Unfortunately, some of these issues are the result of a few of the pre-requisites that I've found don't always work "out of the box". On Ubuntu, using some of the default packages through 
 
 ```sh
@@ -1499,19 +1531,20 @@ $ sudo apt-get <package>
 ```
 can cause problems as of late 2015/early 2016. Here are some alternative approaches to consider until the situation is improved.
 
->### Libconfig issues
->There is a debian package for libconfig, but if you manually download and install libconfig from its [webpage](http://www.hyperrealm.com/libconfig/) and run the configure and make scripts that come with the download as root, the executables etc... are by default saved to the ```/usr/local``` directories. You will need to update your library path, as described [below](#library_path) to point to the relevant directory for the .so file (often, ```/usr/local/lib``` is sufficient).
+### Libconfig issues
+There is a debian package for libconfig, but if you manually download and install libconfig from its [webpage](https://hyperrealm.github.io/libconfig/) and run the configure and make scripts that come with the download as root, the executables etc... are by default saved to the ```/usr/local``` directories. You will need to update your library path, as described [below](#library_path) to point to the relevant directory for the .so file (often, ```/usr/local/lib``` is sufficient).
 
->### CUDA issues
->Installing CUDA and its compiler nvcc on Linux can be a pain, although this is rapidly improving on the [distros for which NVIDIA supports CUDA](http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-linux/#system-requirements). Part of the problem is that the drivers that come with the distro to handle NVIDIA GPUs (e.g., Nouveau) might not be compatible with NVIDIA's CUDA. Here's a [tutorial](http://http://www.r-tutor.com/gpu-computing/cuda-installation/cuda7.5-ubuntu) to get you started for Ubuntu. Generally, analogous approaches to installing CUDA should work on all [supported distros](http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-linux/#system-requirements), but I have occasionally had some issues with getting CUDA to work with (currently) unsupported distros, such as Linux Mint. 
+### CUDA issues
+Installing CUDA and its compiler nvcc on Linux can be a pain, although this is rapidly improving on the [distros for which NVIDIA supports CUDA](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#system-requirements). Part of the problem is that the drivers that come with the distro to handle NVIDIA GPUs (e.g., Nouveau) might not be compatible with NVIDIA's CUDA. Here's a [tutorial](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#ubuntu-installation) to get you started for Ubuntu. Generally, analogous approaches to installing CUDA should work on all [supported distros](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#system-requirements), but I have occasionally had some issues with getting CUDA to work with (currently) unsupported distros, such as Linux Mint. 
 
->### CPU version on non-CUDA enabled machines
->The CPU version of **sPEGG** should work without a CUDA-capable device, but this has not been extensively tested. Interested readers are encouraged to see if they can get a [basic thrust example](https://github.com/thrust/thrust/wiki/Quick-Start-Guide) running on such systems first.
+### CPU version on non-CUDA enabled machines
+The CPU version of **sPEGG** should work without a CUDA-capable device, but this has not been extensively tested. Interested readers are encouraged to see if they can get a [basic thrust example](https://github.com/NVIDIA/cccl?tab=readme-ov-file#getting-started) running on such systems first.
 
->### Non-root issues
-> Unfortunately, as best we can gather the CUDA issues noted above will require root access to resolve. If you don't have root access to your computer and can't have the administrator install libconfig and libgsl, a version of the Makefile for linking to these libraries when you aren't root is currently in the works.
+### Non-root issues
+Unfortunately, as best we can gather the CUDA issues noted above will require root access to resolve. If you don't have root access to your computer and can't have the administrator install libconfig and libgsl, a version of the Makefile for linking to these libraries when you aren't root is currently in the works.
 
 Finally, if you want to call nvcc as you go, you would need to install CUDA in your .bashrc file (or the equivalent for your distro). This assumes you are installing CUDA v.7.5.
+
 <a name="library_path">
 
 ```sh
@@ -1522,6 +1555,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
 PATH=${CUDA_HOME}/bin:${PATH} 
 export PATH 
 ```
+</a>
 
 ## License
 
