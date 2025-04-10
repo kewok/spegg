@@ -5,3 +5,4 @@
 *.cpp~
 *.swp
 *~
+tests/

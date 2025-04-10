@@ -14,17 +14,22 @@
 
 Currently, **sPEGG** has only been tested on Linux (debian-based distributions to be specific). If you encounter platform-specific commands that need to be added while porting **sPEGG** to other operating systems, please [create an issue](https://github.com/kewok/spegg/issues) and I will update the documentation. Or, if you can get it to work reliably, consider becoming a [contributor](https://github.com/kewok/spegg/contributors)!
 
+## New updates for Colab users
+
+If users for some reason are not able to afford a GPU backend, please don't just clone the repository first. Instead, first, download the [firstStepSpegg.ipynb](firstStepSpegg.ipynb) file. On Colab, create a new notebook, then choose `File (top-left corner) > Upload notebook > Upload > Browse (right in the center of the window) > location of the firstStepSpegg.ipynb file you just downloaded`. Then, the notebook should be correctly imported into your current Colab notebook. Set the `PATH_TO_YOUR_SPEGG_IN_DRIVE` variable specifying where in your GoogleDrive you want to store this repository. Then, press the play buttons from the top until you hit the end of the notebook. When these steps are done, you should find your spegg directory in your specified location in your GoogleDrive. Follow step 8 in the `firstStepSpegg.ipynb` when you come back and work with spegg codebase again.
+
 <a name="prereqs">
+
 ## Pre-requisites
 </a>
 
-  * Linux OS
+  * Linux OS: [Ubuntu-Linux](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#ubuntu-installation)
 
-  * The latest [NVIDIA CUDA](https://developer.nvidia.com/cuda-downloads) for your distro; appropriate drivers and the required thrust library should come with this.
+  * The latest [NVIDIA CUDA](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#system-requirements) for your distro; appropriate drivers and the required thrust library should come with this.
   
   * [gcc](https://gcc.gnu.org/)
   
-  * [libconfig](http://www.hyperrealm.com/libconfig/)
+  * [libconfig](https://hyperrealm.github.io/libconfig/)
   
   * [ConfigFile](http://ai.stanford.edu/~gal/Code/FindMotifs/ConfigFile.h)(included)
   
@@ -87,25 +92,25 @@ $ ./a.out
 
 However, the genetic drift simulator you downloaded is only configured to run for a single generation. Open the file Simulation.conf using a text editor (e.g., gedit) and change this line:
 
-```sh
+```
 n_timesteps = 1
 ```
 
 to something like:
 
-```sh
+```
 n_timesteps = 10000
 ```
 
 Now launch  the **sPEGG** simulation by running this executable you created from the terminal via 
 
 ```sh
-$ ./a.out 
+./a.out 
 ```
 
 If all went well, you should have output that looks something like:
 
-```sh
+```
 The average genotypes at locus 1 for the two demes are:
 -0.596273 0.99806 
 ```

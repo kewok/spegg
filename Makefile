@@ -2,6 +2,7 @@ HEADERS = -I./header
 
 CFLAGS = -Xcompiler
 CFLAGS += -O3
+CFLAGS += -arch=sm_75
 
 SRC = ./src
 CUDA = ./src/cuda
